@@ -10,7 +10,8 @@
 
 html, body{
   height:100%;
-  overflow-x:hidden; /* verhindert horizontal scroll auf mobile */
+  max-width: 100%;
+  overflow-x:hidden; 
 }
 
 body{
@@ -40,9 +41,9 @@ img{ display:block; max-width:100%; height:auto; }
 }
 
 .brand__logo--hero{
-  height: 100px;
+  height: 90px;
   width:auto;
-  max-width:100%;
+  max-width: 70vw;
 }
 
 .nav{
@@ -68,7 +69,7 @@ img{ display:block; max-width:100%; height:auto; }
   align-items:center;
 }
 
-.hero__left, .hero__right{ min-width:0; }
+.hero__left, .hero__right{ min-width:0; max-width: 100%;}
 
 .hero__left{
   max-width: 680px;
