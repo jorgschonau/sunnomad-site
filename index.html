@@ -8,19 +8,19 @@
   <meta name="theme-color" content="#fbf7ef" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
- <style>
+<style>
   .screenshots-section { background: #F5F0E8; padding: 48px 32px; }
   .ss-wrap { max-width: 740px; margin: 0 auto; }
   .ss-heading { font-size: 42px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.03em; margin-bottom: 8px; }
-  .ss-sub { font-size: 18px; color: #666; margin-bottom: 20px; }
-  .ss-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 16px; margin-top: 44px; }
-  .ss-editorial + .ss-label { margin-top: 54px; }
-  .ss-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ss-sub { font-size: 18px; color: #666; margin-bottom: 44px; }
+  .ss-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin: 0 0 16px 0; }
+  .ss-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 44px; }
+  .ss-grid:last-child { margin-bottom: 0; }
   .ss-phone { position: relative; border-radius: 44px; background: #111; padding: 11px; box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 30px 80px rgba(0,0,0,0.22), 0 8px 24px rgba(0,0,0,0.14); aspect-ratio: 9 / 19.5; overflow: hidden; cursor: pointer; }
   .ss-phone::before { content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 88px; height: 26px; background: #111; border-radius: 0 0 16px 16px; z-index: 10; }
   .ss-screen { width: 100%; height: 100%; border-radius: 34px; overflow: hidden; background: #e8f0fb; }
   .ss-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; pointer-events: none; }
-  .ss-editorial { overflow: visible; padding-top: 10px; margin-top: -10px; }
+  .ss-editorial { overflow: visible; padding-top: 10px; margin-bottom: 54px; }
   .ss-editorial .ss-phone { transform: translateY(-10px); box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 44px 100px rgba(0,0,0,0.26), 0 12px 32px rgba(0,0,0,0.16); }
   .lightbox { display: none; }
   .lightbox.active { display: flex; }
