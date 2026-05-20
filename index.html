@@ -8,28 +8,29 @@
   <meta name="theme-color" content="#fbf7ef" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .screenshots-section { background: #F5F0E8; padding: 80px 32px; }
-    .ss-wrap { max-width: 600px; margin: 0 auto; }
-    .ss-heading { font-size: 42px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.03em; margin-bottom: 8px; }
-    .ss-sub { font-size: 18px; color: #666; margin-bottom: 48px; }
-    .ss-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 16px; margin-top: 44px; }
-    .ss-label:first-of-type { margin-top: 0; }
-    .ss-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .ss-phone { position: relative; border-radius: 44px; background: #111; padding: 11px; box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 30px 80px rgba(0,0,0,0.22), 0 8px 24px rgba(0,0,0,0.14); aspect-ratio: 9 / 19.5; overflow: hidden; }
-    .ss-phone::before { content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 88px; height: 26px; background: #111; border-radius: 0 0 16px 16px; z-index: 10; }
-    .ss-screen { width: 100%; height: 100%; border-radius: 34px; overflow: hidden; background: #e8f0fb; }
-    .ss-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-    .ss-editorial .ss-phone { transform: translateY(-10px); box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 44px 100px rgba(0,0,0,0.26), 0 12px 32px rgba(0,0,0,0.16); }
-    @media (max-width: 640px) {
-      .ss-grid { gap: 10px; }
-      .ss-phone { border-radius: 28px; padding: 7px; }
-      .ss-screen { border-radius: 22px; }
-      .ss-phone::before { width: 60px; height: 18px; top: 7px; }
-      .ss-heading { font-size: 28px; }
-      .screenshots-section { padding: 60px 16px; }
-    }
-  </style>
+ <style>
+  .screenshots-section { background: #F5F0E8; padding: 80px 32px; }
+  .ss-wrap { max-width: 700px; margin: 0 auto; }
+  .ss-heading { font-size: 42px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.03em; margin-bottom: 8px; }
+  .ss-sub { font-size: 18px; color: #666; margin-bottom: 48px; }
+  .ss-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 16px; margin-top: 44px; }
+  .ss-label:first-of-type { margin-top: 0; }
+  .ss-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ss-phone { position: relative; border-radius: 44px; background: #111; padding: 11px; box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 30px 80px rgba(0,0,0,0.22), 0 8px 24px rgba(0,0,0,0.14); aspect-ratio: 9 / 19.5; overflow: hidden; cursor: pointer; }
+  .ss-phone::before { content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 88px; height: 26px; background: #111; border-radius: 0 0 16px 16px; z-index: 10; }
+  .ss-screen { width: 100%; height: 100%; border-radius: 34px; overflow: hidden; background: #e8f0fb; }
+  .ss-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; pointer-events: none; }
+  .ss-editorial .ss-phone { transform: translateY(-10px); box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 44px 100px rgba(0,0,0,0.26), 0 12px 32px rgba(0,0,0,0.16); }
+  @media (max-width: 640px) {
+    .screenshots-section { padding: 40px 16px; }
+    .ss-wrap { max-width: 100%; }
+    .ss-grid { gap: 10px; }
+    .ss-phone { border-radius: 28px; padding: 7px; }
+    .ss-screen { border-radius: 22px; }
+    .ss-phone::before { width: 60px; height: 18px; top: 7px; }
+    .ss-heading { font-size: 28px; }
+  }
+</style>
 </head>
 <body>
   <header class="header">
@@ -160,47 +161,56 @@
     </div>
   </div>
 
-  <script>
-    const shots = document.querySelectorAll(".shot");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    shots.forEach(img => {
-      img.addEventListener("click", () => {
-        lightbox.classList.add("active");
-        lightbox.setAttribute("aria-hidden", "false");
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || "Screenshot";
-        document.body.style.overflow = "hidden";
-      });
-    });
-    function closeLightbox(){
-      lightbox.classList.remove("active");
-      lightbox.setAttribute("aria-hidden", "true");
-      lightboxImg.src = "";
-      document.body.style.overflow = "";
-    }
-    lightbox.addEventListener("click", closeLightbox);
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") { closeLightbox(); closeModal(); }
-    });
-    const modal = document.getElementById("modal");
-    const modalText = document.getElementById("modalText");
-    function openModal(type){
-      const text = {
-        imprint: `<h2 id="modalTitle">Imprint</h2><p><strong>GoldieApps</strong></p><p>Email: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`,
-        privacy: `<h2 id="modalTitle">Privacy</h2><p>No tracking by default.</p><p>Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`
-      };
-      modalText.innerHTML = text[type] || "<h2 id='modalTitle'>Info</h2><p>Not found.</p>";
-      modal.classList.add("modal--open");
-      modal.setAttribute("aria-hidden", "false");
+ <script>
+  // Screenshot lightbox
+  document.querySelectorAll(".ss-phone").forEach(phone => {
+    phone.addEventListener("click", () => {
+      const img = phone.querySelector("img");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightbox.classList.add("active");
+      lightbox.setAttribute("aria-hidden", "false");
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
       document.body.style.overflow = "hidden";
-    }
-    function closeModal(){
-      modal.classList.remove("modal--open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
-    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
-  </script>
+    });
+  });
+
+  function closeLightbox(){
+    const lightbox = document.getElementById("lightbox");
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.getElementById("lightbox-img").src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("lightbox").addEventListener("click", closeLightbox);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { closeLightbox(); closeModal(); }
+  });
+
+  const modal = document.getElementById("modal");
+  const modalText = document.getElementById("modalText");
+
+  function openModal(type){
+    const text = {
+      imprint: `<h2 id="modalTitle">Imprint</h2><p><strong>GoldieApps</strong></p><p>Email: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`,
+      privacy: `<h2 id="modalTitle">Privacy</h2><p>No tracking by default.</p><p>Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`
+    };
+    modalText.innerHTML = text[type] || "<h2 id='modalTitle'>Info</h2><p>Not found.</p>";
+    modal.classList.add("modal--open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(){
+    modal.classList.remove("modal--open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+</script>
 </body>
 </html>
