@@ -4,46 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SunNomad — Find better weather. Instantly.</title>
-  <meta name="description" content="Your co-pilot for road trips, van life and camping - SunNomad helps you steer around the rain and park in the sun." />
+  <meta name="description" content="Der Co-Pilot für Roadtrips, Vanlife & Camper: SunNomad hilft dir, Regen zu umfahren und in der Sonne zu parken." />
   <meta name="theme-color" content="#fbf7ef" />
+
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
-<style>
-  .screenshots-section { background: #F5F0E8; padding: 48px 32px; }
-  .ss-wrap { max-width: 740px; margin: 0 auto; }
-  .ss-heading { font-size: 42px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.03em; margin-bottom: 8px; }
-  .ss-sub { font-size: 18px; color: #666; margin-bottom: 44px; }
-  .ss-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin: 0 0 16px 0; }
-  .ss-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 44px; }
-  .ss-grid:last-child { margin-bottom: 0; }
-  .ss-phone { position: relative; border-radius: 44px; background: #111; padding: 11px; box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 30px 80px rgba(0,0,0,0.22), 0 8px 24px rgba(0,0,0,0.14); aspect-ratio: 9 / 19.5; overflow: hidden; cursor: pointer; }
-  .ss-phone::before { content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 88px; height: 26px; background: #111; border-radius: 0 0 16px 16px; z-index: 10; }
-  .ss-screen { width: 100%; height: 100%; border-radius: 34px; overflow: hidden; background: #e8f0fb; }
-  .ss-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; pointer-events: none; }
-  .ss-editorial { overflow: visible; padding-top: 10px; margin-bottom: 54px; }
-  .ss-editorial .ss-phone { transform: translateY(-10px); box-shadow: 0 0 0 1px rgba(255,255,255,0.07) inset, 0 44px 100px rgba(0,0,0,0.26), 0 12px 32px rgba(0,0,0,0.16); }
-  .lightbox { display: none; }
-  .lightbox.active { display: flex; }
-  .modal { display: none; }
-  .modal--open { display: flex; }
-  .card p { font-weight: 400; }
-  .footer { font-weight: 400; }
-  @media (max-width: 640px) {
-    .screenshots-section { padding: 40px 16px; }
-    .ss-wrap { max-width: 100%; }
-    .ss-grid { gap: 10px; }
-    .ss-phone { border-radius: 28px; padding: 7px; }
-    .ss-screen { border-radius: 22px; }
-    .ss-phone::before { width: 60px; height: 18px; top: 7px; }
-    .ss-heading { font-size: 28px; }
-  }
-</style>
 </head>
+
 <body>
   <header class="header">
     <a class="brand" href="#top" aria-label="SunNomad home">
       <img class="brand__logo--hero" src="assets/sunnomad-logo.png" alt="SunNomad logo" />
     </a>
+
     <nav class="nav">
       <a class="nav__link" href="#screenshots">Screenshots</a>
       <a class="nav__link" href="#about">About</a>
@@ -51,51 +24,78 @@
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero">
       <div class="hero__left">
         <div class="pill">
           <span class="pill__dot">☀️</span>
           <span>READY FOR A ROAD TRIP?</span>
         </div>
+
         <h1 class="h1">
           Find better <br />
           weather.<span class="accent">Instantly.</span>
         </h1>
+
         <p class="lead">
           The essential co-pilot for roadtrippers, van lifers, and campers.
           SunNomad helps you navigate around the rain and park in the sun.
         </p>
+
+        <div class="tf-notice">
+          <span class="tf-notice__dot"></span>
+          <span>🧪 Test version ready — iOS beta available now</span>
+        </div>
+
         <div id="download" class="cta">
+          <a class="btn btn--tf" href="mailto:hola@sunnomad.app?subject=TestFlight%20Access%20Request&body=Hi%2C%20I%27d%20love%20to%20test%20SunNomad%20on%20iOS%20via%20TestFlight!">
+            <span class="btn__icon">🧪</span>
+            <span class="btn__text">Request TestFlight Access</span>
+          </a>
+
           <a class="btn btn--dark btn--soon" href="#" aria-disabled="true" data-state="soon">
-            <span class="btn__icon"></span>
+            <span class="btn__icon"></span>
             <span class="btn__text">App Store</span>
             <span class="btn__badge">Coming soon</span>
           </a>
+
           <a class="btn btn--light btn--disabled" href="#" aria-disabled="true" data-state="disabled">
             <span class="btn__icon">▶</span>
             <span class="btn__text">Google Play</span>
             <span class="btn__badge">Later</span>
           </a>
+
           <a class="btn btn--ghost" href="mailto:hola@sunnomad.app?subject=SunNomad%20Release%20Updates&body=Please%20notify%20me%20when%20SunNomad%20is%20available%20in%20the%20stores.">
             <span class="btn__icon">✉️</span>
             <span class="btn__text">Get notified</span>
           </a>
         </div>
+
         <div class="featureRow">
           <div class="feature">
             <div class="feature__icon">🌍</div>
-            <div class="feature__title">Available in <strong>EN · DE · <span style="opacity:0.35">FR</span></div>
+            <div class="feature__title">Available in <strong>EN · DE · FR</strong></div>
           </div>
+
           <div class="feature">
             <div class="feature__icon">🗺️</div>
             <div class="feature__title">Trip Planning</div>
           </div>
+
+          <!--
+          <div class="feature">
+            <div class="feature__icon">📡</div>
+            <div class="feature__title">Offline Access</div>
+          </div>
+          -->
+
           <div class="feature">
             <div class="feature__icon">✨</div>
             <div class="feature__title">Smart Guidance</div>
           </div>
         </div>
       </div>
+
       <div class="hero__right">
         <div class="phoneWrap">
           <img class="phone" src="assets/phone.png" alt="SunNomad app screenshot" />
@@ -103,31 +103,21 @@
       </div>
     </section>
 
-    <section id="screenshots" class="screenshots-section">
-      <div class="ss-wrap">
-        <h2 class="ss-heading">Screenshots</h2>
-        <p class="ss-sub">A quick look inside the app.</p>
-        <p class="ss-label">How It Works</p>
-        <div class="ss-grid">
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/berlin_map.webp" alt="SunNomad weather map over Europe" loading="lazy"></div></div>
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/filter_us.webp" alt="SunNomad filter panel" loading="lazy"></div></div>
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/moab_stopstay.webp" alt="SunNomad Stop & Stay Moab" loading="lazy"></div></div>
-        </div>
-        <p class="ss-label">The World Looks Better in the Sun</p>
-        <div class="ss-grid ss-editorial">
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/malaga_grafiti.webp" alt="Málaga" loading="lazy"></div></div>
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/bardenas.webp" alt="Bardenas Reales" loading="lazy"></div></div>
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/pacific_coast_highway.webp" alt="Pacific Coast Highway" loading="lazy"></div></div>
-        </div>
-        <p class="ss-label">From Corsica to Temple Bar</p>
-        <div class="ss-grid">
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/monument_valley_goldie.webp" alt="Monument Valley" loading="lazy"></div></div>
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/plage_de_saleccia.webp" alt="Plage de Saleccia" loading="lazy"></div></div>
-          <div class="ss-phone"><div class="ss-screen"><img src="assets/dublin_goldie.webp" alt="Dublin" loading="lazy"></div></div>
-        </div>
+    <!-- SCREENSHOTS -->
+    <section id="screenshots" class="section">
+      <div class="section__head">
+        <h2 class="h2">Screenshots</h2>
+        <p class="muted">A quick look inside the app.</p>
+      </div>
+
+      <div class="shots" role="list">
+        <img src="assets/screenshot-1.png" class="shot" alt="Screenshot 1" role="listitem" loading="lazy" />
+        <img src="assets/screenshot-2.png" class="shot" alt="Screenshot 2" role="listitem" loading="lazy" />
+        <img src="assets/screenshot-3.png" class="shot" alt="Screenshot 3" role="listitem" loading="lazy" />
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section section--tight">
       <div class="card">
         <h2 class="h2">About SunNomad</h2>
@@ -139,28 +129,31 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__left">
       <div class="publisher">
         <img class="publisher__logo" src="assets/goldieapps.png" alt="GoldieApps" />
         <div class="publisher__text">
           <div class="publisher__line"><strong>GoldieApps</strong></div>
-          <div class="publisher__line">Built for van life. Inspired by dog life.</div>
-          <div class="publisher__line">Ball-fetching. Sun-chasing. Tail-wagging.</div>
+          <div class="publisher__line">Publisher / Legal entity</div>
         </div>
       </div>
     </div>
+
     <div class="footer__right">
-      <a href="/terms">Terms</a>
-      <a href="/privacy">Privacy</a>
+      <a href="#" onclick="openModal('imprint'); return false;">Imprint</a>
+      <a href="#" onclick="openModal('privacy'); return false;">Privacy</a>
       <a href="mailto:hola@sunnomad.app">Contact</a>
     </div>
   </footer>
 
+  <!-- LIGHTBOX (Screenshots) -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <img id="lightbox-img" alt="" />
   </div>
 
+  <!-- MODAL (Imprint/Privacy) -->
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal__close" type="button" onclick="closeModal()" aria-label="Close">×</button>
@@ -168,56 +161,72 @@
     </div>
   </div>
 
- <script>
-  // Screenshot lightbox
-  document.querySelectorAll(".ss-phone").forEach(phone => {
-    phone.addEventListener("click", () => {
-      const img = phone.querySelector("img");
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      lightbox.classList.add("active");
-      lightbox.setAttribute("aria-hidden", "false");
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      document.body.style.overflow = "hidden";
-    });
-  });
-
-  function closeLightbox(){
+  <script>
+    // Screenshot lightbox
+    const shots = document.querySelectorAll(".shot");
     const lightbox = document.getElementById("lightbox");
-    lightbox.classList.remove("active");
-    lightbox.setAttribute("aria-hidden", "true");
-    document.getElementById("lightbox-img").src = "";
-    document.body.style.overflow = "";
-  }
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  document.getElementById("lightbox").addEventListener("click", closeLightbox);
+    shots.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || "Screenshot";
+        document.body.style.overflow = "hidden";
+      });
+    });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") { closeLightbox(); closeModal(); }
-  });
+    function closeLightbox(){
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+    }
 
-  const modal = document.getElementById("modal");
-  const modalText = document.getElementById("modalText");
+    lightbox.addEventListener("click", closeLightbox);
 
-  function openModal(type){
-    const text = {
-      imprint: `<h2 id="modalTitle">Imprint</h2><p><strong>GoldieApps</strong></p><p>Email: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`,
-      privacy: `<h2 id="modalTitle">Privacy</h2><p>No tracking by default.</p><p>Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`
-    };
-    modalText.innerHTML = text[type] || "<h2 id='modalTitle'>Info</h2><p>Not found.</p>";
-    modal.classList.add("modal--open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeLightbox();
+        closeModal();
+      }
+    });
 
-  function closeModal(){
-    modal.classList.remove("modal--open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
+    // Imprint/Privacy modal
+    const modal = document.getElementById("modal");
+    const modalText = document.getElementById("modalText");
 
-  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
-</script>
+    function openModal(type){
+      const text = {
+        imprint: `
+          <h2 id="modalTitle">Imprint</h2>
+          <p><strong>GoldieApps</strong></p>
+          <p>Email: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+        `,
+        privacy: `
+          <h2 id="modalTitle">Privacy</h2>
+          <p>No tracking by default.</p>
+          <p>Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+        `
+      };
+
+      modalText.innerHTML = text[type] || "<h2 id='modalTitle'>Info</h2><p>Not found.</p>";
+      modal.classList.add("modal--open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      modal.classList.remove("modal--open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    // close modal when clicking backdrop
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  </script>
 </body>
 </html>

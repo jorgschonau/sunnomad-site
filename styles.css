@@ -10,8 +10,7 @@
 
 html, body{
   height:100%;
-  max-width: 100%;
-  overflow-x:hidden; 
+  overflow-x:hidden; /* verhindert horizontal scroll auf mobile */
 }
 
 body{
@@ -41,9 +40,9 @@ img{ display:block; max-width:100%; height:auto; }
 }
 
 .brand__logo--hero{
-  height: 90px;
+  height: 100px;
   width:auto;
-  max-width: 70vw;
+  max-width:100%;
 }
 
 .nav{
@@ -69,7 +68,7 @@ img{ display:block; max-width:100%; height:auto; }
   align-items:center;
 }
 
-.hero__left, .hero__right{ min-width:0; max-width: 100%;}
+.hero__left, .hero__right{ min-width:0; }
 
 .hero__left{
   max-width: 680px;
@@ -151,6 +150,16 @@ img{ display:block; max-width:100%; height:auto; }
   color: rgba(15,27,45,.72);
 }
 
+.btn--tf{
+  background: #1a7f4b;
+  color: #fff;
+  border-color: #1a7f4b;
+}
+.btn--tf:hover{
+  background: #16693e;
+  border-color: #16693e;
+}
+
 .btn[aria-disabled="true"]{
   cursor:not-allowed;
   opacity:.88;
@@ -158,6 +167,31 @@ img{ display:block; max-width:100%; height:auto; }
 .btn[aria-disabled="true"]:hover{
   transform:none;
   box-shadow:none;
+}
+
+/* TestFlight notice */
+.tf-notice{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:10px;
+  font-size:14px;
+  font-weight:600;
+  color: #1a7f4b;
+}
+
+.tf-notice__dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background: #1a7f4b;
+  animation: pulse 1.8s ease-in-out infinite;
+  flex-shrink:0;
+}
+
+@keyframes pulse{
+  0%, 100%{ opacity:1; transform:scale(1); }
+  50%{ opacity:.45; transform:scale(.75); }
 }
 
 /* ================= FEATURES (PILLS FIX – bulletproof) ================= */
@@ -413,14 +447,44 @@ img{ display:block; max-width:100%; height:auto; }
   transform: scale(1);
 }
 
-.highlight {
-  background: rgba(15,27,45,.04);
-  border-left: 3px solid var(--ink);
-  border-radius: 0 8px 8px 0;
-  padding: 14px 18px;
-  margin: 14px 0;
+
+/* ===== MODAL ===== */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:.2s ease;
+  z-index:999;
 }
-.highlight p { margin: 0; }
+
+.modal--open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.modal__content{
+  background:white;
+  padding:32px;
+  border-radius:16px;
+  max-width:500px;
+  width:90%;
+  box-shadow:0 30px 80px rgba(0,0,0,.2);
+  position:relative;
+}
+
+.modal__close{
+  position:absolute;
+  top:12px;
+  right:16px;
+  font-size:22px;
+  cursor:pointer;
+}
 
 
 /* ================= RESPONSIVE ================= */
