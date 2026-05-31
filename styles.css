@@ -151,13 +151,17 @@ img{ display:block; max-width:100%; height:auto; }
 }
 
 .btn--tf{
-  background: #1a7f4b;
+  background: linear-gradient(135deg, #1a9e5c, #1a7f4b);
   color: #fff;
   border-color: #1a7f4b;
+  box-shadow: 0 4px 20px rgba(26,127,75,.40);
+  font-size: 16px;
+  padding: 16px 22px;
 }
 .btn--tf:hover{
-  background: #16693e;
+  background: linear-gradient(135deg, #1db368, #16693e);
   border-color: #16693e;
+  box-shadow: 0 8px 30px rgba(26,127,75,.55);
 }
 
 .btn[aria-disabled="true"]{
