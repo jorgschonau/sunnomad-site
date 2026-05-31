@@ -155,14 +155,47 @@ img{ display:block; max-width:100%; height:auto; }
   color: #fff;
   border-color: #1a7f4b;
   box-shadow: 0 4px 20px rgba(26,127,75,.40);
-  font-size: 16px;
-  padding: 16px 22px;
 }
 .btn--tf:hover{
   background: linear-gradient(135deg, #1db368, #16693e);
   border-color: #16693e;
   box-shadow: 0 8px 30px rgba(26,127,75,.55);
 }
+
+.btn--tf-hero{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 18px 24px;
+  font-size: 18px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 28px rgba(26,127,75,.45);
+}
+.btn--tf-hero .btn__icon{
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.btn--tf-hero__text{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.btn--tf-hero__label{
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.btn--tf-hero__sub{
+  font-size: 13px;
+  font-weight: 500;
+  opacity: .8;
+}
+
+/* TestFlight notice */
 
 .btn[aria-disabled="true"]{
   cursor:not-allowed;
