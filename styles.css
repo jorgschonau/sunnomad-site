@@ -435,6 +435,16 @@ img{ display:block; max-width:100%; height:auto; }
   font-size:15px;
 }
 
+.faq__item a{
+  color:var(--accent);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+.faq__item a:hover{
+  color:#a85612;
+}
+
 @media (max-width:720px){
   .seo-grid{ grid-template-columns:1fr; }
 }
