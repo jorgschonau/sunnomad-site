@@ -3,11 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SunNomad — Find better weather. Instantly.</title>
-  <meta name="description" content="The essential co-pilot for roadtrippers, van lifers, and campers. SunNomad helps you navigate around the rain and park in the sun." />
+  <title>SunNomad — Weather App for Van Life, Camping & Road Trips</title>
+  <meta name="description" content="SunNomad is the weather app for van lifers, campers, and road trippers. Find sunny destinations on a map, set your radius, pick a day, and plan your next stop around the weather." />
   <meta name="theme-color" content="#fbf7ef" />
+  <link rel="canonical" href="https://sunnomad.app/" />
+  <meta property="og:title" content="SunNomad — Find better weather. Instantly." />
+  <meta property="og:description" content="The weather app for van life and road trips. Find sunny stops, dodge the rain, and plan your next destination." />
+  <meta property="og:url" content="https://sunnomad.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sunnomad.app/assets/phone.png" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "SunNomad",
+    "operatingSystem": "iOS",
+    "applicationCategory": "TravelApplication",
+    "description": "Weather app for van lifers, campers, and road trippers. Find sunny destinations and plan trips around the weather.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "GoldieApps" }
+  }
+  </script>
 <style>
   .screenshots-section { background: #F5F0E8; padding: 48px 32px; }
   .ss-wrap { max-width: 740px; margin: 0 auto; }
@@ -45,8 +63,9 @@
       <img class="brand__logo--hero" src="assets/sunnomad-logo.png" alt="SunNomad logo" />
     </a>
     <nav class="nav">
+      <a class="nav__link" href="#features">Features</a>
       <a class="nav__link" href="#screenshots">Screenshots</a>
-      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#faq">FAQ</a>
     </nav>
   </header>
 
@@ -137,13 +156,67 @@
       </div>
     </section>
 
+    <section id="features" class="section">
+      <h2 class="h2">Weather planning for life on the road</h2>
+      <p class="muted">SunNomad helps van lifers, campers, and road trippers find better weather — before they drive into the rain.</p>
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h3 class="seo-block__title">Find sunny destinations nearby</h3>
+          <p class="body">Open the map, set a search radius, and see where the weather looks good. SunNomad shows you sunny spots around your current location or anywhere in Europe — perfect when you're deciding where to head next.</p>
+        </div>
+        <div class="seo-block">
+          <h3 class="seo-block__title">Plan around the forecast</h3>
+          <p class="body">Pick a day and filter by weather conditions. Whether you're in a camper van, motorhome, or tent, SunNomad helps you avoid grey skies and find the sun — without juggling five different weather apps.</p>
+        </div>
+        <div class="seo-block">
+          <h3 class="seo-block__title">Discover places worth stopping for</h3>
+          <p class="body">Every destination comes with photos, context, and a clear weather read. From coastal roads to desert campsites, SunNomad turns weather data into trip inspiration — so you park where it feels good.</p>
+        </div>
+        <div class="seo-block">
+          <h3 class="seo-block__title">Built for nomads, not tourists</h3>
+          <p class="body">SunNomad is made for people who live on the road: van lifers chasing warmth, weekend campers escaping the city, and overlanders planning their next leg. Simple, fast, and focused on where you actually want to be.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="section section--tight">
       <div class="card">
         <h2 class="h2">About SunNomad</h2>
         <p class="body">
-          SunNomad is built for people who live on the road.<br />
-          <strong>Always know where the weather is good.</strong> Set a radius, pick a day, and find your next sunny stop — simple as that.
+          SunNomad is a weather and trip-planning app built for people who live on the road — van lifers, campers, motorhomers, and anyone who'd rather follow the sun than sit in the rain.
         </p>
+        <p class="body">
+          <strong>Always know where the weather is good.</strong> Set a radius, pick a day, and find your next sunny stop. No clutter, no guesswork — just a clear map of where life feels better under blue skies.
+        </p>
+        <p class="body">
+          SunNomad is currently available as an iOS beta via TestFlight. The full App Store release is coming soon. Available in English and German, with French on the way.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2 class="h2">Frequently asked questions</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>What is SunNomad?</summary>
+          <p>SunNomad is a weather app for van life, camping, and road trips. It shows you sunny destinations on a map so you can plan where to go based on the forecast — not the other way around.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Who is SunNomad for?</summary>
+          <p>Van lifers, campers, motorhomers, overlanders, and anyone who travels by road and cares about the weather. If you've ever changed plans because of rain, SunNomad is for you.</p>
+        </details>
+        <details class="faq__item">
+          <summary>How do I get the app?</summary>
+          <p>Join the iOS beta via TestFlight using the button at the top of this page. The App Store release is coming soon — sign up for updates if you'd like to be notified.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Does SunNomad work in Europe?</summary>
+          <p>Yes. SunNomad covers destinations across Europe and helps you find sunny spots wherever your road trip takes you.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Is SunNomad free?</summary>
+          <p>The beta is free to join via TestFlight. Pricing for the full release will be announced when the app launches on the App Store.</p>
+        </details>
       </div>
     </section>
   </main>

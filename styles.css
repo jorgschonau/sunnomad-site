@@ -384,6 +384,61 @@ img{ display:block; max-width:100%; height:auto; }
   line-height:1.7;
 }
 
+/* ================= SEO CONTENT ================= */
+
+.seo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:28px;
+}
+
+.seo-block{
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(15,27,45,.08);
+  border-radius:16px;
+  padding:24px;
+}
+
+.seo-block__title{
+  margin:0 0 8px;
+  font-size:18px;
+  letter-spacing:-.01em;
+}
+
+.faq{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.faq__item{
+  background:rgba(255,255,255,.80);
+  border:1px solid rgba(15,27,45,.08);
+  border-radius:14px;
+  padding:16px 20px;
+}
+
+.faq__item summary{
+  font-weight:700;
+  cursor:pointer;
+  list-style:none;
+}
+
+.faq__item summary::-webkit-details-marker{ display:none; }
+
+.faq__item p{
+  margin:12px 0 0;
+  color:rgba(15,27,45,.72);
+  line-height:1.6;
+  font-size:15px;
+}
+
+@media (max-width:720px){
+  .seo-grid{ grid-template-columns:1fr; }
+}
+
 /* ================= FOOTER ================= */
 
 .footer{
