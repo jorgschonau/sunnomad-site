@@ -314,13 +314,24 @@ img{ display:block; max-width:100%; height:auto; }
 
 .phoneWrap{
   position:relative;
-  width:min(374px,100%);
+  width:min(520px,100%);
   z-index:1;
+  display:block;
+}
+
+.phoneWrap--link{
+  cursor:pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.phoneWrap--link:hover{
+  transform:translateY(-3px);
+  filter: drop-shadow(0 38px 80px rgba(15,27,45,.24));
 }
 
 .phone{
   width:100%;
-  border-radius:28px;
+  border-radius:16px;
   background:transparent;
   filter: drop-shadow(0 34px 70px rgba(15,27,45,.20));
 }
@@ -575,5 +586,5 @@ img{ display:block; max-width:100%; height:auto; }
 
   .brand__logo--hero{ height:70px; }
 
-  .phoneWrap{ width:min(340px,100%); }
+  .phoneWrap{ width:min(100%,480px); }
 }
