@@ -315,7 +315,7 @@ img{ display:block; max-width:100%; height:auto; }
 
 .phoneWrap{
   position:relative;
-  width:min(520px,100%);
+  width:min(480px,100%);
   z-index:1;
   display:block;
 }
