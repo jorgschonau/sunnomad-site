@@ -65,7 +65,7 @@ img{ display:block; max-width:100%; height:auto; }
   display:grid;
   grid-template-columns: 1.1fr .9fr;
   gap:40px;
-  align-items:center;
+  align-items:start;
 }
 
 .hero__left, .hero__right{ min-width:0; }
@@ -307,7 +307,8 @@ img{ display:block; max-width:100%; height:auto; }
   position:relative;
   display:flex;
   justify-content:flex-end;
-  align-items:center;
+  align-items:flex-start;
+  margin-top:46px;
 }
 
 .hero__right::before{ content:none; }
@@ -578,6 +579,7 @@ img{ display:block; max-width:100%; height:auto; }
   .hero__right{
     order:-1;
     justify-content:center;
+    margin-top:0;
   }
 
   .nav{ display:none; }
