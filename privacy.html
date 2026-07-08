@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy – SunNomad</title>
+  <meta name="description" content="Privacy Policy / Datenschutzerklärung for SunNomad by GoldieApps">
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .container{max-width:720px;margin:0 auto;padding:56px 20px 96px;}
     .pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(197,106,26,.12);color:var(--accent);font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;}
     h1{font-size:clamp(36px,5vw,52px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:0 0 10px;color:var(--ink);}
-    .updated{color:var(--muted);font-size:14px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--line);}
+    .updated{color:var(--muted);font-size:14px;margin-bottom:24px;}
+    .lang-nav{display:flex;gap:10px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--line);}
+    .lang-nav a{font-size:14px;font-weight:700;color:var(--accent);text-decoration:none;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(15,27,45,.03);}
+    .lang-nav a:hover{background:rgba(197,106,26,.10);text-decoration:none;}
+    .section-divider{margin:56px 0;padding-top:56px;border-top:2px solid var(--line);}
+    .lang-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
     h2{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin:36px 0 10px;}
+    h2:first-of-type{margin-top:0;}
+    h3{font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;}
     p{margin:0 0 14px;color:rgba(15,27,45,.72);font-size:16px;line-height:1.7;}
     ul{margin:6px 0 14px 20px;color:rgba(15,27,45,.72);font-size:16px;line-height:1.7;}
     ul li{margin-bottom:5px;}
@@ -20,6 +28,8 @@
     .back-link{font-size:14px;color:rgba(15,27,45,.70);text-decoration:none;font-weight:600;}
     .back-link:hover{color:var(--ink);text-decoration:none;}
     .brand__logo--hero{height:60px;width:auto;}
+    .summary{background:rgba(15,27,45,.04);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0 24px;}
+    .summary p{margin:0;}
   </style>
 </head>
 <body>
@@ -34,52 +44,198 @@
 <div class="container">
   <div class="pill">📄 Legal</div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: March 2026</p>
+  <p class="updated">Last updated: 9 July 2026 · Version 1.0</p>
 
-  <p>SunNomad ("we", "our", or "the app") is built by GoldieApps. We take your privacy seriously. This policy explains what data we collect, how we use it, and your rights.</p>
+  <nav class="lang-nav" aria-label="Language">
+    <a href="#en">English</a>
+    <a href="#de">Deutsch</a>
+  </nav>
 
-  <h2>1. Data We Collect</h2>
-  <p>SunNomad collects only what's necessary to function:</p>
-  <ul>
-    <li><strong>Location data (GPS)</strong> — used only on-device to show nearby destinations. Never stored on our servers.</li>
-    <li><strong>Favorites</strong> — stored locally on your device only.</li>
-    <li><strong>Anonymous usage data</strong> — via Mixpanel analytics. No personal data attached.</li>
-  </ul>
+  <!-- ── ENGLISH ── -->
+  <section id="en" lang="en">
+    <span class="lang-tag">English</span>
 
-  <h2>2. How We Use Your Data</h2>
-  <ul>
-    <li>Location is used solely to center the map and find nearby destinations.</li>
-    <li>We do not sell, rent, or share your data with third parties.</li>
-    <li>We do not store your location on our servers.</li>
-    <li>Analytics help us improve the app — all data is anonymous.</li>
-  </ul>
+    <h2>1. Controller</h2>
+    <p>The data controller within the meaning of the General Data Protection Regulation (GDPR) is:</p>
+    <p>
+      <strong>GoldieApps</strong><br>
+      [Name, Adresse]<br>
+      Germany
+    </p>
+    <p>Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
 
-  <h2>3. Third Party Services</h2>
-  <p>SunNomad uses the following third-party services:</p>
-  <ul>
-    <li><strong>Open-Meteo</strong> (<a href="https://open-meteo.com" target="_blank">open-meteo.com</a>) — weather data</li>
-    <li><strong>Google Maps</strong> — map display and place search</li>
-    <li><strong>Supabase</strong> — destination database (no personal data stored)</li>
-    <li><strong>Mixpanel</strong> — anonymous usage analytics</li>
-  </ul>
+    <h2>2. Overview</h2>
+    <p>SunNomad is a mobile app that helps you discover sunny travel destinations based on weather data. This policy explains what data the app processes, why, and what rights you have.</p>
+    <div class="summary">
+      <p><strong>Summary (v1):</strong> SunNomad does not require user accounts, does not store personal data on our servers, does not use analytics, advertising, or tracking tools, and does not set cookies on this website.</p>
+    </div>
 
-  <h2>4. Data Retention</h2>
-  <p>Location data is never stored. Favorites are stored locally on your device and cleared when you delete the app.</p>
+    <h2>3. Data We Process</h2>
 
-  <h2>5. Children's Privacy</h2>
-  <p>SunNomad is not directed at children under 13. We do not knowingly collect data from children.</p>
+    <h3>3.1 Device Location</h3>
+    <p>With your explicit permission, the app accesses your device's location (<em>“while using the app”</em> / foreground only). Location data is used solely to:</p>
+    <ul>
+      <li>show destinations near you on the map,</li>
+      <li>calculate distances and travel-related information,</li>
+      <li>personalise weather comparisons relative to your current position.</li>
+    </ul>
+    <p>Your location is processed <strong>locally on your device</strong> and is <strong>not transmitted to or stored on our servers</strong>. You can revoke location access at any time in your device settings.</p>
 
-  <h2>6. Your Rights</h2>
-  <p>Since we do not store personal data on our servers, there is nothing to delete or export. Questions? Contact us below.</p>
+    <h3>3.2 Backend Data (Supabase, EU Region)</h3>
+    <p>The app connects to a Supabase backend hosted in the <strong>European Union</strong>. Requests are <strong>read-only</strong> and retrieve publicly available destination and weather information. The backend does <strong>not</strong> store user accounts, profiles, or other personal data in connection with your use of the app (v1).</p>
 
-  <h2>7. Changes to This Policy</h2>
-  <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+    <h3>3.3 Weather Data (Third-Party API)</h3>
+    <p>Weather forecasts are provided by <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. Requests contain <strong>geographic coordinates only</strong> — no name, email, device identifier, or other personal data is sent.</p>
 
-  <div class="card">
-    <h2>8. Contact</h2>
-    <p>Questions about this policy?<br><a href="mailto:hola@sunnomad.com">hola@sunnomad.com</a></p>
-    <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
-  </div>
+    <h3>3.4 Data We Do Not Collect (v1)</h3>
+    <ul>
+      <li>No user accounts or registration</li>
+      <li>No analytics or usage tracking</li>
+      <li>No advertising or ad identifiers</li>
+      <li>No cookies or similar technologies on this website</li>
+      <li>No sale or sharing of personal data with third parties for marketing purposes</li>
+    </ul>
+
+    <h2>4. Legal Basis (Art. 6 GDPR)</h2>
+    <ul>
+      <li><strong>Art. 6(1)(a) GDPR — Consent:</strong> access to your device location, which you grant via the system permission dialog. You may withdraw consent at any time through your device settings.</li>
+      <li><strong>Art. 6(1)(f) GDPR — Legitimate interests:</strong> retrieving non-personal destination and weather data from our EU backend and the weather API to operate the core functionality of the app.</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <p>Location data exists only in the app's runtime memory on your device and is not persistently stored by us. Backend and weather API requests are not linked to an identifiable user.</p>
+
+    <h2>6. Disclosure to Third Parties</h2>
+    <p>We do <strong>not</strong> sell, rent, or otherwise disclose personal data to third parties. The only external services involved in app operation are:</p>
+    <ul>
+      <li><strong>Supabase</strong> (EU hosting) — read-only access to destination/weather data; no personal data stored.</li>
+      <li><strong>Open-Meteo</strong> — coordinate-based weather queries only.</li>
+    </ul>
+    <p>No data is transferred outside the European Economic Area (EEA) as part of our backend operations.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>Under the GDPR, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li>Right of access (Art. 15 GDPR)</li>
+      <li>Right to rectification (Art. 16 GDPR)</li>
+      <li>Right to erasure (Art. 17 GDPR)</li>
+      <li>Right to restriction of processing (Art. 18 GDPR)</li>
+      <li>Right to data portability (Art. 20 GDPR)</li>
+      <li>Right to object (Art. 21 GDPR)</li>
+      <li>Right to withdraw consent at any time (Art. 7(3) GDPR)</li>
+      <li>Right to lodge a complaint with a supervisory authority (Art. 77 GDPR)</li>
+    </ul>
+    <p>To exercise your rights, contact us at <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a>.</p>
+
+    <h2>8. Children</h2>
+    <p>SunNomad is not directed at children under 16. We do not knowingly collect personal data from children.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this privacy policy when the app or legal requirements change. The current version is always available at <a href="https://sunnomad.app/privacy">sunnomad.app/privacy</a>.</p>
+
+    <h2>10. This Website</h2>
+    <p>This static page does not use cookies, local storage, or tracking scripts. No cookie banner is required.</p>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Questions about this policy?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+      <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
+    </div>
+  </section>
+
+  <!-- ── DEUTSCH ── -->
+  <section id="de" lang="de" class="section-divider">
+    <span class="lang-tag">Deutsch</span>
+    <h1 style="font-size:clamp(28px,4vw,40px);margin-bottom:10px;">Datenschutzerklärung</h1>
+    <p class="updated">Stand: 9. Juli 2026 · Version 1.0</p>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+    <p>
+      <strong>GoldieApps</strong><br>
+      [Name, Adresse]<br>
+      Deutschland
+    </p>
+    <p>Kontakt: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+
+    <h2>2. Überblick</h2>
+    <p>SunNomad ist eine mobile App, mit der du sonnige Reiseziele anhand von Wetterdaten entdecken kannst. Diese Erklärung beschreibt, welche Daten die App verarbeitet, zu welchem Zweck und welche Rechte dir zustehen.</p>
+    <div class="summary">
+      <p><strong>Kurzfassung (v1):</strong> SunNomad erfordert kein Benutzerkonto, speichert keine personenbezogenen Daten auf unseren Servern, setzt keine Analyse-, Werbe- oder Tracking-Tools ein und verwendet auf dieser Website keine Cookies.</p>
+    </div>
+
+    <h2>3. Verarbeitete Daten</h2>
+
+    <h3>3.1 Gerätestandort</h3>
+    <p>Mit deiner ausdrücklichen Einwilligung greift die App auf den Standort deines Geräts zu (<em>„Bei Nutzung der App“</em> / nur im Vordergrund). Standortdaten werden ausschließlich verwendet, um:</p>
+    <ul>
+      <li>Ziele in deiner Nähe auf der Karte anzuzeigen,</li>
+      <li>Entfernungen und fahrtbezogene Informationen zu berechnen,</li>
+      <li>Wettervergleiche relativ zu deiner aktuellen Position zu ermöglichen.</li>
+    </ul>
+    <p>Dein Standort wird <strong>lokal auf deinem Gerät</strong> verarbeitet und <strong>weder an unsere Server übermittelt noch dort gespeichert</strong>. Du kannst den Standortzugriff jederzeit in den Geräteeinstellungen widerrufen.</p>
+
+    <h3>3.2 Backend-Daten (Supabase, EU-Region)</h3>
+    <p>Die App verbindet sich mit einem Supabase-Backend in der <strong>Europäischen Union</strong>. Anfragen sind <strong>rein lesend</strong> und rufen öffentlich verfügbare Ziel- und Wetterinformationen ab. Das Backend speichert <strong>keine</strong> Benutzerkonten, Profile oder sonstige personenbezogene Daten im Zusammenhang mit deiner App-Nutzung (v1).</p>
+
+    <h3>3.3 Wetterdaten (Drittanbieter-API)</h3>
+    <p>Wetterprognosen werden über <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> bereitgestellt. Anfragen enthalten <strong>ausschließlich geografische Koordinaten</strong> — kein Name, keine E-Mail, keine Gerätekennung oder andere personenbezogene Daten.</p>
+
+    <h3>3.4 Daten, die wir nicht erheben (v1)</h3>
+    <ul>
+      <li>Keine Benutzerkonten oder Registrierung</li>
+      <li>Keine Analyse- oder Nutzungsstatistiken</li>
+      <li>Keine Werbung oder Werbe-Identifikatoren</li>
+      <li>Keine Cookies oder vergleichbare Technologien auf dieser Website</li>
+      <li>Kein Verkauf oder keine Weitergabe personenbezogener Daten zu Marketingzwecken</li>
+    </ul>
+
+    <h2>4. Rechtsgrundlagen (Art. 6 DSGVO)</h2>
+    <ul>
+      <li><strong>Art. 6 Abs. 1 lit. a DSGVO — Einwilligung:</strong> Zugriff auf den Gerätestandort, den du über den Systemberechtigungsdialog erteilst. Die Einwilligung kannst du jederzeit in den Geräteeinstellungen widerrufen.</li>
+      <li><strong>Art. 6 Abs. 1 lit. f DSGVO — Berechtigtes Interesse:</strong> Abruf nicht-personenbezogener Ziel- und Wetterdaten aus unserem EU-Backend sowie von der Wetter-API zur Bereitstellung der Kernfunktionen der App.</li>
+    </ul>
+
+    <h2>5. Speicherdauer</h2>
+    <p>Standortdaten existieren nur im Laufzeitspeicher der App auf deinem Gerät und werden von uns nicht dauerhaft gespeichert. Backend- und Wetter-API-Anfragen sind keinem identifizierbaren Nutzer zugeordnet.</p>
+
+    <h2>6. Weitergabe an Dritte</h2>
+    <p>Wir <strong>verkaufen, vermieten oder geben personenbezogene Daten nicht</strong> an Dritte weiter. Die einzigen externen Dienste im Rahmen des App-Betriebs sind:</p>
+    <ul>
+      <li><strong>Supabase</strong> (EU-Hosting) — lesender Zugriff auf Ziel-/Wetterdaten; keine Speicherung personenbezogener Daten.</li>
+      <li><strong>Open-Meteo</strong> — Wetterabfragen auf Basis von Koordinaten.</li>
+    </ul>
+    <p>Im Rahmen unseres Backend-Betriebs erfolgt keine Übermittlung in Drittländer außerhalb des Europäischen Wirtschaftsraums (EWR).</p>
+
+    <h2>7. Betroffenenrechte</h2>
+    <p>Dir stehen nach der DSGVO folgende Rechte zu:</p>
+    <ul>
+      <li>Auskunftsrecht (Art. 15 DSGVO)</li>
+      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+      <li>Recht auf Widerruf der Einwilligung jederzeit (Art. 7 Abs. 3 DSGVO)</li>
+      <li>Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+    </ul>
+    <p>Zur Ausübung deiner Rechte: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+
+    <h2>8. Kinder</h2>
+    <p>SunNomad richtet sich nicht an Kinder unter 16 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern.</p>
+
+    <h2>9. Änderungen</h2>
+    <p>Die aktuelle Fassung ist stets unter <a href="https://sunnomad.app/privacy">sunnomad.app/privacy</a> abrufbar.</p>
+
+    <h2>10. Diese Website</h2>
+    <p>Diese statische Seite verwendet keine Cookies, keinen Local Storage und keine Tracking-Skripte. Ein Cookie-Banner ist nicht erforderlich.</p>
+
+    <div class="card">
+      <h2>Kontakt</h2>
+      <p>Fragen zu dieser Erklärung?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+      <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
+    </div>
+  </section>
 </div>
 
 <footer class="footer">
@@ -89,7 +245,7 @@
   <div class="footer__right">
     <a href="/terms">Terms</a>
     <a href="/privacy">Privacy</a>
-    <a href="mailto:hola@sunnomad.com">Contact</a>
+    <a href="mailto:hola@sunnomad.app">Contact</a>
   </div>
 </footer>
 
