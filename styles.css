@@ -569,6 +569,15 @@ img{ display:block; max-width:100%; height:auto; }
   margin:0 0 6px;
 }
 
+.update__img{
+  width:100%;
+  max-width:360px;
+  border-radius:12px;
+  margin:12px 0;
+  display:block;
+  box-shadow:0 12px 32px rgba(15,27,45,.12);
+}
+
 .update__body{
   margin:0;
   color:rgba(15,27,45,.72);
