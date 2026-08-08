@@ -4,22 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy – SunNomad</title>
-  <meta name="description" content="Privacy Policy / Datenschutzerklärung for SunNomad by GoldieApps">
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .container{max-width:720px;margin:0 auto;padding:56px 20px 96px;}
     .pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(197,106,26,.12);color:var(--accent);font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;}
     h1{font-size:clamp(36px,5vw,52px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:0 0 10px;color:var(--ink);}
-    .updated{color:var(--muted);font-size:14px;margin-bottom:24px;}
-    .lang-nav{display:flex;gap:10px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--line);}
-    .lang-nav a{font-size:14px;font-weight:700;color:var(--accent);text-decoration:none;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(15,27,45,.03);}
-    .lang-nav a:hover{background:rgba(197,106,26,.10);text-decoration:none;}
-    .section-divider{margin:56px 0;padding-top:56px;border-top:2px solid var(--line);}
-    .lang-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+    .updated{color:var(--muted);font-size:14px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--line);}
     h2{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin:36px 0 10px;}
-    h2:first-of-type{margin-top:0;}
-    h3{font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;}
     p{margin:0 0 14px;color:rgba(15,27,45,.72);font-size:16px;line-height:1.7;}
     ul{margin:6px 0 14px 20px;color:rgba(15,27,45,.72);font-size:16px;line-height:1.7;}
     ul li{margin-bottom:5px;}
@@ -28,8 +20,6 @@
     .back-link{font-size:14px;color:rgba(15,27,45,.70);text-decoration:none;font-weight:600;}
     .back-link:hover{color:var(--ink);text-decoration:none;}
     .brand__logo--hero{height:60px;width:auto;}
-    .summary{background:rgba(15,27,45,.04);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0 24px;}
-    .summary p{margin:0;}
   </style>
 </head>
 <body>
@@ -44,214 +34,52 @@
 <div class="container">
   <div class="pill">📄 Legal</div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 30 July 2026 · Version 1.1</p>
+  <p class="updated">Last updated: July 2026</p>
 
-  <nav class="lang-nav" aria-label="Language">
-    <a href="#en">English</a>
-    <a href="#de">Deutsch</a>
-  </nav>
+  <p>SunNomad ("we", "our", or "the app") is built by GoldieApps. We take your privacy seriously. This policy explains what data we collect, how we use it, and your rights.</p>
 
-  <!-- ── ENGLISH ── -->
-  <section id="en" lang="en">
-    <span class="lang-tag">English</span>
+  <h2>1. Data We Collect</h2>
+  <p>SunNomad collects only what's necessary to function:</p>
+  <ul>
+    <li><strong>Location data (GPS)</strong> — used only on-device to show nearby destinations. Never stored on our servers.</li>
+    <li><strong>Favorites</strong> — stored locally on your device only.</li>
+    <li><strong>Anonymous usage data</strong> — via Mixpanel analytics. No personal data attached.</li>
+  </ul>
 
-    <h2>1. Controller</h2>
-    <p>The data controller within the meaning of the General Data Protection Regulation (GDPR) is:</p>
-    <p>
-      <strong>GoldieApps</strong><br>
-      Germany
-    </p>
-    <p>Contact (preferred): <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+  <h2>2. How We Use Your Data</h2>
+  <ul>
+    <li>Location is used solely to center the map and find nearby destinations.</li>
+    <li>We do not sell, rent, or share your data with third parties.</li>
+    <li>We do not store your location on our servers.</li>
+    <li>Analytics help us improve the app — all data is anonymous.</li>
+  </ul>
 
-    <h2>2. Overview</h2>
-    <p>SunNomad is a mobile app that helps you discover sunny travel destinations based on weather data. This policy explains what data we process, why, and what rights you have.</p>
-    <div class="summary">
-      <p><strong>Summary:</strong> Core map and weather browsing works without an account. Optional account features (favourites sync, profile) store account data on our EU Supabase backend. We use Mixpanel (EU) for product analytics and Sentry for crash reporting. Device location is used only while you use the app and is not stored on our servers. You can delete your account in the app at any time.</p>
-    </div>
+  <h2>3. Third Party Services</h2>
+  <p>SunNomad uses the following third-party services:</p>
+  <ul>
+    <li><strong>Open-Meteo</strong> (<a href="https://open-meteo.com" target="_blank">open-meteo.com</a>) — weather data</li>
+    <li><strong>Google Maps</strong> — map display and place search</li>
+    <li><strong>Supabase</strong> — destination database (no personal data stored)</li>
+    <li><strong>Mixpanel</strong> — anonymous usage analytics</li>
+  </ul>
 
-    <h2>3. Data We Process</h2>
+  <h2>4. Data Retention</h2>
+  <p>Location data is never stored. Favorites are stored locally on your device and cleared when you delete the app.</p>
 
-    <h3>3.1 Device Location</h3>
-    <p>With your permission, the app accesses your device location <em>while using the app</em> (foreground only). Location is used to:</p>
-    <ul>
-      <li>center the map and show destinations near you,</li>
-      <li>calculate distances,</li>
-      <li>personalise weather comparisons relative to your position.</li>
-    </ul>
-    <p>Location is processed on your device for these features and is <strong>not stored as your user location on our servers</strong>. You can revoke access in system settings.</p>
+  <h2>5. Children's Privacy</h2>
+  <p>SunNomad is not directed at children under 13. We do not knowingly collect data from children.</p>
 
-    <h3>3.2 Optional Account &amp; Profile (Supabase, EU)</h3>
-    <p>If you create an account, we store:</p>
-    <ul>
-      <li>email address and authentication credentials (handled by Supabase Auth),</li>
-      <li>profile fields such as username / display name and app preferences (e.g. language, units, search radius, theme),</li>
-      <li>favourites you save (synced to our database so they are available across devices),</li>
-      <li>optional in-app feedback you submit,</li>
-      <li>basic usage counters needed for in-app features (e.g. app open count for profile copy).</li>
-    </ul>
-    <p>Guest use of the map and destination content does not require an account. Destination and weather content itself is public reference data, not personal data about you.</p>
+  <h2>6. Your Rights</h2>
+  <p>Since we do not store personal data on our servers, there is nothing to delete or export. Questions? Contact us below.</p>
 
-    <h3>3.3 Product Analytics (Mixpanel EU)</h3>
-    <p>We use <strong>Mixpanel</strong> with an <strong>EU data residency</strong> endpoint to understand how the app is used (e.g. screens opened, feature taps). Events are tied to an anonymous device id; after login they may be associated with your account id so we can improve the product. We do not use Mixpanel for advertising or selling data.</p>
+  <h2>7. Changes to This Policy</h2>
+  <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
 
-    <h3>3.4 Crash &amp; Error Reporting (Sentry)</h3>
-    <p>We use <strong>Sentry</strong> to collect crash reports and technical diagnostics (device/app version, stack traces). This helps us fix bugs. Reports are not used for advertising.</p>
-
-    <h3>3.5 Maps &amp; Weather Third Parties</h3>
-    <ul>
-      <li><strong>Google Maps</strong> — map display and related map services (subject to Google’s terms and privacy policy).</li>
-      <li><strong>Open-Meteo</strong> — weather forecasts; requests use geographic coordinates for the destination or area you are viewing.</li>
-    </ul>
-
-    <h3>3.6 What We Do Not Do</h3>
-    <ul>
-      <li>No advertising SDKs or ad identifiers for ads</li>
-      <li>No sale of personal data</li>
-      <li>No cookies or tracking scripts on this marketing website</li>
-    </ul>
-
-    <h2>4. Legal Basis (Art. 6 GDPR)</h2>
-    <ul>
-      <li><strong>Art. 6(1)(a) — Consent:</strong> device location permission.</li>
-      <li><strong>Art. 6(1)(b) — Contract:</strong> creating and operating your optional account, favourites sync, and related account features.</li>
-      <li><strong>Art. 6(1)(f) — Legitimate interests:</strong> operating the app (serving destination/weather data), product analytics, and crash reporting to keep the service reliable and improve it. You may object where applicable.</li>
-    </ul>
-
-    <h2>5. Retention</h2>
-    <p>Account, profile, favourites, and feedback data are kept while your account exists. Device location is not retained on our servers as a stored “home location”. Analytics and crash data are retained according to the respective provider settings and our need to debug/improve the app. After account deletion, personal account data is removed from our systems as described below.</p>
-
-    <h2>6. Disclosure to Third Parties / Processors</h2>
-    <p>We do not sell personal data. We use processors/services to run the app:</p>
-    <ul>
-      <li><strong>Supabase</strong> (EU) — auth, database, account features</li>
-      <li><strong>Mixpanel</strong> (EU endpoint) — product analytics</li>
-      <li><strong>Sentry</strong> — crash/error reporting</li>
-      <li><strong>Google Maps</strong> — maps</li>
-      <li><strong>Open-Meteo</strong> — weather data</li>
-    </ul>
-    <p>Some providers may process data outside the EEA under appropriate safeguards (e.g. standard contractual clauses), depending on their infrastructure. Mixpanel analytics for SunNomad are configured to use the EU API endpoint.</p>
-
-    <h2>7. Your Rights &amp; Account Deletion</h2>
-    <p>Under the GDPR you may have rights of access, rectification, erasure, restriction, portability, objection, and withdrawal of consent, and the right to lodge a complaint with a supervisory authority.</p>
-    <p>You can delete your account in the app (Profile → Delete account). This removes your account and associated personal data from our backend (including favourites tied to that account), subject to short technical retention needed to complete deletion and any legal obligations. Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a>.</p>
-
-    <h2>8. Children</h2>
-    <p>SunNomad is not directed at children under 16. We do not knowingly collect personal data from children.</p>
-
-    <h2>9. Changes</h2>
-    <p>We may update this policy when the app or legal requirements change. The current version is always at <a href="https://sunnomad.app/privacy">sunnomad.app/privacy</a>.</p>
-
-    <h2>10. This Website</h2>
-    <p>This static marketing site does not use cookies, local storage, or tracking scripts.</p>
-
-    <div class="card">
-      <h2>Contact</h2>
-      <p>Questions about this policy?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
-      <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
-    </div>
-  </section>
-
-  <!-- ── DEUTSCH ── -->
-  <section id="de" lang="de" class="section-divider">
-    <span class="lang-tag">Deutsch</span>
-    <h1 style="font-size:clamp(28px,4vw,40px);margin-bottom:10px;">Datenschutzerklärung</h1>
-    <p class="updated">Stand: 30. Juli 2026 · Version 1.1</p>
-
-    <h2>1. Verantwortlicher</h2>
-    <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
-    <p>
-      <strong>GoldieApps</strong><br>
-      Deutschland
-    </p>
-    <p>Kontakt (bevorzugt): <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
-
-    <h2>2. Überblick</h2>
-    <p>SunNomad ist eine mobile App, mit der du sonnige Reiseziele anhand von Wetterdaten entdecken kannst. Diese Erklärung beschreibt, welche Daten wir verarbeiten, wozu, und welche Rechte du hast.</p>
-    <div class="summary">
-      <p><strong>Kurzfassung:</strong> Karte und Wetter funktionieren ohne Konto. Optionale Account-Features (Favourites-Sync, Profil) speichern Kontodaten auf unserem EU-Supabase-Backend. Wir nutzen Mixpanel (EU) für Produkt-Analytics und Sentry für Crash-Reports. Der Gerätestandort wird nur bei Nutzung der App verwendet und nicht als Nutzerstandort auf unseren Servern gespeichert. Konto löschen geht jederzeit in der App.</p>
-    </div>
-
-    <h2>3. Verarbeitete Daten</h2>
-
-    <h3>3.1 Gerätestandort</h3>
-    <p>Mit deiner Erlaubnis greift die App auf den Standort zu (<em>„Bei Nutzung der App“</em> / Vordergrund). Verwendung:</p>
-    <ul>
-      <li>Karte zentrieren und Ziele in der Nähe zeigen,</li>
-      <li>Entfernungen berechnen,</li>
-      <li>Wettervergleiche relativ zu deiner Position.</li>
-    </ul>
-    <p>Der Standort wird dafür auf dem Gerät verarbeitet und <strong>nicht als dein Nutzerstandort auf unseren Servern gespeichert</strong>. Widerruf jederzeit in den Systemeinstellungen.</p>
-
-    <h3>3.2 Optionales Konto &amp; Profil (Supabase, EU)</h3>
-    <p>Wenn du ein Konto anlegst, speichern wir:</p>
-    <ul>
-      <li>E-Mail und Auth-Daten (über Supabase Auth),</li>
-      <li>Profilfelder wie Username / Anzeigename und App-Einstellungen (z. B. Sprache, Einheiten, Radius, Theme),</li>
-      <li>gespeicherte Favourites (Sync in unserer Datenbank),</li>
-      <li>optionales In-App-Feedback,</li>
-      <li>einfache Nutzungszähler für App-Features (z. B. App-Open-Count).</li>
-    </ul>
-    <p>Die Nutzung von Karte und Zielinhalten ohne Konto ist möglich. Ziel- und Wetterinhalte sind öffentliche Referenzdaten, keine personenbezogenen Daten über dich.</p>
-
-    <h3>3.3 Produkt-Analytics (Mixpanel EU)</h3>
-    <p>Wir nutzen <strong>Mixpanel</strong> mit <strong>EU-Datenresidenz</strong>, um die App-Nutzung zu verstehen (z. B. Screens, Feature-Taps). Events hängen an einer anonymen Geräte-ID; nach Login können sie mit deiner Account-ID verknüpft werden. Keine Nutzung für Werbung oder Datenverkauf.</p>
-
-    <h3>3.4 Crash- &amp; Fehlerberichte (Sentry)</h3>
-    <p>Wir nutzen <strong>Sentry</strong> für Crash-Reports und technische Diagnosen (Gerät/App-Version, Stack Traces), um Bugs zu beheben — nicht für Werbung.</p>
-
-    <h3>3.5 Karten &amp; Wetter</h3>
-    <ul>
-      <li><strong>Google Maps</strong> — Kartendarstellung (eigene Bedingungen/Datenschutz von Google).</li>
-      <li><strong>Open-Meteo</strong> — Wetterprognosen; Anfragen mit Koordinaten des betrachteten Orts/Gebiets.</li>
-    </ul>
-
-    <h3>3.6 Was wir nicht tun</h3>
-    <ul>
-      <li>Keine Werbe-SDKs / keine Ad-IDs für Ads</li>
-      <li>Kein Verkauf personenbezogener Daten</li>
-      <li>Keine Cookies/Tracking-Skripte auf dieser Marketing-Website</li>
-    </ul>
-
-    <h2>4. Rechtsgrundlagen (Art. 6 DSGVO)</h2>
-    <ul>
-      <li><strong>Art. 6 Abs. 1 lit. a — Einwilligung:</strong> Standortberechtigung.</li>
-      <li><strong>Art. 6 Abs. 1 lit. b — Vertrag:</strong> optionales Konto, Favourites-Sync und zugehörige Account-Features.</li>
-      <li><strong>Art. 6 Abs. 1 lit. f — Berechtigtes Interesse:</strong> App-Betrieb, Produkt-Analytics und Crash-Reporting zur Stabilität und Verbesserung. Widerspruch wo anwendbar möglich.</li>
-    </ul>
-
-    <h2>5. Speicherdauer</h2>
-    <p>Konto-, Profil-, Favourites- und Feedback-Daten bleiben, solange dein Konto besteht. Der Gerätestandort wird von uns nicht als gespeicherter „Heimatstandort“ gehalten. Analytics- und Crash-Daten gemäß Provider-Einstellungen und Bedarf zur Fehlerbehebung. Nach Kontolöschung entfernen wir personenbezogene Kontodaten wie unten beschrieben.</p>
-
-    <h2>6. Weitergabe / Auftragsverarbeiter</h2>
-    <p>Kein Verkauf personenbezogener Daten. Eingesetzte Dienste:</p>
-    <ul>
-      <li><strong>Supabase</strong> (EU) — Auth, Datenbank, Account-Features</li>
-      <li><strong>Mixpanel</strong> (EU-Endpoint) — Produkt-Analytics</li>
-      <li><strong>Sentry</strong> — Crash-/Fehlerberichte</li>
-      <li><strong>Google Maps</strong> — Karten</li>
-      <li><strong>Open-Meteo</strong> — Wetterdaten</li>
-    </ul>
-    <p>Einige Anbieter können Daten außerhalb des EWR unter geeigneten Garantien verarbeiten. Mixpanel-Analytics für SunNomad laufen über den EU-API-Endpoint.</p>
-
-    <h2>7. Betroffenenrechte &amp; Kontolöschung</h2>
-    <p>Nach DSGVO stehen dir u. a. Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch, Widerruf der Einwilligung sowie Beschwerde bei einer Aufsichtsbehörde zu.</p>
-    <p>Konto löschen: in der App unter Profil → Konto löschen. Damit werden Konto und zugehörige personenbezogene Daten im Backend entfernt (inkl. Favourites), vorbehaltlich kurzer technischer Nachlaufzeiten und gesetzlicher Pflichten. Kontakt: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a>.</p>
-
-    <h2>8. Kinder</h2>
-    <p>SunNomad richtet sich nicht an Kinder unter 16 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern.</p>
-
-    <h2>9. Änderungen</h2>
-    <p>Aktuelle Fassung stets unter <a href="https://sunnomad.app/privacy">sunnomad.app/privacy</a>.</p>
-
-    <h2>10. Diese Website</h2>
-    <p>Diese statische Seite verwendet keine Cookies, keinen Local Storage und keine Tracking-Skripte.</p>
-
-    <div class="card">
-      <h2>Kontakt</h2>
-      <p>Fragen zu dieser Erklärung?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
-      <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
-    </div>
-  </section>
+  <div class="card">
+    <h2>8. Contact</h2>
+    <p>Questions about this policy?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+    <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
+  </div>
 </div>
 
 <footer class="footer">
