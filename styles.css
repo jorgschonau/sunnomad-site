@@ -461,6 +461,134 @@ img{ display:block; max-width:100%; height:auto; }
   .seo-grid{ grid-template-columns:1fr; }
 }
 
+/* ================= UPDATES PAGE ================= */
+
+.page{
+  max-width:720px;
+  margin:0 auto;
+  padding:20px 20px 80px;
+}
+
+.page__pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 14px;
+  border-radius:999px;
+  background:rgba(197,106,26,.12);
+  color:var(--accent);
+  font-weight:800;
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.page__title{
+  font-size:clamp(36px,5vw,52px);
+  font-weight:800;
+  letter-spacing:-.04em;
+  line-height:1.05;
+  margin:0 0 10px;
+}
+
+.page__lead{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+  margin:0 0 40px;
+}
+
+.back-link{
+  font-size:14px;
+  color:rgba(15,27,45,.70);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.back-link:hover{
+  color:var(--ink);
+}
+
+.updates{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+.update{
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:24px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.update:first-child{
+  padding-top:0;
+}
+
+.update__date{
+  font-size:13px;
+  font-weight:700;
+  color:rgba(15,27,45,.45);
+  letter-spacing:.02em;
+  padding-top:4px;
+}
+
+.update__tag{
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:3px 9px;
+  border-radius:999px;
+  margin-bottom:8px;
+}
+
+.update__tag--milestone{
+  background:rgba(26,127,75,.12);
+  color:#1a7f4b;
+}
+
+.update__tag--update{
+  background:rgba(197,106,26,.12);
+  color:var(--accent);
+}
+
+.update__tag--announcement{
+  background:rgba(15,27,45,.08);
+  color:rgba(15,27,45,.65);
+}
+
+.update__title{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-.01em;
+  margin:0 0 6px;
+}
+
+.update__body{
+  margin:0;
+  color:rgba(15,27,45,.72);
+  font-size:15px;
+  line-height:1.65;
+}
+
+.update__body a{
+  color:var(--accent);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+@media (max-width:520px){
+  .update{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+}
+
 /* ================= FOOTER ================= */
 
 .footer{
