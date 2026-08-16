@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy – SunNomad</title>
+  <title>Privacy Policy / Datenschutz – SunNomad</title>
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .container{max-width:720px;margin:0 auto;padding:56px 20px 96px;}
     .pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(197,106,26,.12);color:var(--accent);font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;}
     h1{font-size:clamp(36px,5vw,52px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:0 0 10px;color:var(--ink);}
-    .updated{color:var(--muted);font-size:14px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--line);}
+    .updated{color:var(--muted);font-size:14px;margin-bottom:24px;}
+    .lang-nav{font-size:15px;font-weight:600;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--line);}
+    .lang-nav a{color:var(--accent);}
+    .lang-nav span{color:rgba(15,27,45,.35);margin:0 10px;}
+    .lang-section{padding-top:8px;}
+    .lang-divider{margin:56px 0;padding-top:56px;border-top:2px solid var(--line);}
     h2{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin:36px 0 10px;}
     p{margin:0 0 14px;color:rgba(15,27,45,.72);font-size:16px;line-height:1.7;}
     ul{margin:6px 0 14px 20px;color:rgba(15,27,45,.72);font-size:16px;line-height:1.7;}
@@ -35,83 +40,168 @@
   <div class="pill">📄 Legal</div>
   <h1>Privacy Policy</h1>
   <p class="updated">Last updated: August 2026</p>
+  <p class="lang-nav"><a href="#en">English</a><span>·</span><a href="#de">Deutsch</a></p>
 
-  <p>SunNomad is built by GoldieApps. This policy explains what data we collect when you use the app, where it is stored, and what you can do about it.</p>
+  <section id="en" class="lang-section">
+    <p>SunNomad is built by GoldieApps. This policy explains what data we collect when you use the app, where it is stored, and what you can do about it.</p>
 
-  <h2>1. Account &amp; profile data</h2>
-  <p>SunNomad requires an account. When you register, we store:</p>
-  <ul>
-    <li><strong>Email address</strong> and <strong>password</strong> (managed by Supabase Auth — we never store your password in plain text)</li>
-    <li><strong>Username</strong> (required) and optional <strong>display name</strong></li>
-    <li><strong>Account metadata</strong> such as when your account was created and when you last opened the app</li>
-  </ul>
-  <p>This data is stored on our servers (Supabase) so you can sign in and sync favourites across devices.</p>
+    <h2>1. Account &amp; profile data</h2>
+    <p>SunNomad requires an account. When you register, we store:</p>
+    <ul>
+      <li><strong>Email address</strong> and <strong>password</strong> (managed by Supabase Auth — we never store your password in plain text)</li>
+      <li><strong>Username</strong> (required) and optional <strong>display name</strong></li>
+      <li><strong>Account metadata</strong> such as when your account was created and when you last opened the app</li>
+    </ul>
+    <p>This data is stored on our servers (Supabase) so you can sign in and sync favourites across devices.</p>
 
-  <h2>2. Favourites &amp; feedback</h2>
-  <ul>
-    <li><strong>Favourites</strong> — saved places are stored in your account on our servers, linked to your user ID. They sync when you log in on another device.</li>
-    <li><strong>Feedback</strong> — if you send feedback through the app, we store your message and may include your email address if you provide it.</li>
-  </ul>
+    <h2>2. Favourites &amp; feedback</h2>
+    <ul>
+      <li><strong>Favourites</strong> — saved places are stored in your account on our servers, linked to your user ID. They sync when you log in on another device.</li>
+      <li><strong>Feedback</strong> — if you send feedback through the app, we store your message and may include your email address if you provide it.</li>
+    </ul>
 
-  <h2>3. Data stored on your device only</h2>
-  <p>The following stays on your phone and is not uploaded to our servers:</p>
-  <ul>
-    <li>App settings (theme, units, language, map radius, filters)</li>
-    <li>Onboarding progress and UI preferences</li>
-    <li>Cached map data for faster loading</li>
-    <li>Your login session token</li>
-  </ul>
+    <h2>3. Data stored on your device only</h2>
+    <p>The following stays on your phone and is not uploaded to our servers:</p>
+    <ul>
+      <li>App settings (theme, units, language, map radius, filters)</li>
+      <li>Onboarding progress and UI preferences</li>
+      <li>Cached map data for faster loading</li>
+      <li>Your login session token</li>
+    </ul>
 
-  <h2>4. Location</h2>
-  <p>SunNomad uses your location <strong>while the app is open</strong> to centre the map and show nearby destinations. We do <strong>not</strong> store your GPS coordinates on our servers.</p>
-  <p>Coordinates may be sent to third-party services when you use certain features:</p>
-  <ul>
-    <li><strong>Open-Meteo</strong> — to fetch weather forecasts for a location</li>
-    <li><strong>Google Places</strong> — when you search for a place (search text, not continuous tracking)</li>
-    <li><strong>Apple / Google Maps</strong> — when you tap to navigate to a destination</li>
-  </ul>
+    <h2>4. Location</h2>
+    <p>SunNomad uses your location <strong>while the app is open</strong> to centre the map and show nearby destinations. We do <strong>not</strong> store your GPS coordinates on our servers.</p>
+    <p>Coordinates may be sent to third-party services when you use certain features:</p>
+    <ul>
+      <li><strong>Open-Meteo</strong> — to fetch weather forecasts for a location</li>
+      <li><strong>Google Places</strong> — when you search for a place (search text, not continuous tracking)</li>
+      <li><strong>Apple / Google Maps</strong> — when you tap to navigate to a destination</li>
+    </ul>
 
-  <h2>5. Analytics &amp; crash reporting</h2>
-  <p>In production builds, we use:</p>
-  <ul>
-    <li><strong>Mixpanel</strong> (EU servers) — anonymous usage analytics to understand how the app is used (e.g. screens viewed, features used, search queries). After login, events are linked to your user ID, not your email.</li>
-    <li><strong>Sentry</strong> — crash and error reports to help us fix bugs.</li>
-  </ul>
-  <p>We do not use advertising trackers and do not sell your data.</p>
+    <h2>5. Analytics &amp; crash reporting</h2>
+    <p>In production builds, we use:</p>
+    <ul>
+      <li><strong>Mixpanel</strong> (EU servers) — anonymous usage analytics to understand how the app is used (e.g. screens viewed, features used, search queries). After login, events are linked to your user ID, not your email.</li>
+      <li><strong>Sentry</strong> — crash and error reports to help us fix bugs.</li>
+    </ul>
+    <p>We do not use advertising trackers and do not sell your data.</p>
 
-  <h2>6. Third-party services</h2>
-  <ul>
-    <li><strong>Supabase</strong> — authentication, database, and file storage</li>
-    <li><strong>Open-Meteo</strong> (<a href="https://open-meteo.com" target="_blank" rel="noopener">open-meteo.com</a>) — weather data</li>
-    <li><strong>Google Places &amp; Maps</strong> — place search and navigation</li>
-    <li><strong>Mixpanel</strong> — product analytics (EU)</li>
-    <li><strong>Sentry</strong> — crash reporting</li>
-  </ul>
-  <p>These providers may process data on servers outside the EU. We choose services with appropriate safeguards where available.</p>
+    <h2>6. Third-party services</h2>
+    <ul>
+      <li><strong>Supabase</strong> — authentication, database, and file storage</li>
+      <li><strong>Open-Meteo</strong> (<a href="https://open-meteo.com" target="_blank" rel="noopener">open-meteo.com</a>) — weather data</li>
+      <li><strong>Google Places &amp; Maps</strong> — place search and navigation</li>
+      <li><strong>Mixpanel</strong> — product analytics (EU)</li>
+      <li><strong>Sentry</strong> — crash reporting</li>
+    </ul>
+    <p>These providers may process data on servers outside the EU. We choose services with appropriate safeguards where available.</p>
 
-  <h2>7. Data retention</h2>
-  <p>Account data, profile, and favourites are kept until you delete your account. Weather forecast data on our servers is automatically purged after a few weeks and is not linked to your identity.</p>
+    <h2>7. Data retention</h2>
+    <p>Account data, profile, and favourites are kept until you delete your account. Weather forecast data on our servers is automatically purged after a few weeks and is not linked to your identity.</p>
 
-  <h2>8. Your rights</h2>
-  <p>You can:</p>
-  <ul>
-    <li><strong>Delete your account</strong> — in the app under Profile → Delete Account. This permanently removes your account, profile, and favourites from our servers.</li>
-    <li><strong>Request access or correction</strong> — email us at <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></li>
-    <li><strong>Withdraw consent</strong> — you can stop using the app and delete your account at any time</li>
-  </ul>
-  <p>If you are in the EU/EEA, you have additional rights under GDPR including the right to lodge a complaint with your local data protection authority.</p>
+    <h2>8. Your rights</h2>
+    <p>You can:</p>
+    <ul>
+      <li><strong>Delete your account</strong> — in the app under Profile → Delete Account. This permanently removes your account, profile, and favourites from our servers.</li>
+      <li><strong>Request access or correction</strong> — email us at <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></li>
+      <li><strong>Withdraw consent</strong> — you can stop using the app and delete your account at any time</li>
+    </ul>
+    <p>If you are in the EU/EEA, you have additional rights under GDPR including the right to lodge a complaint with your local data protection authority.</p>
 
-  <h2>9. Children's privacy</h2>
-  <p>SunNomad is not directed at children under 13 (or 16 in the EU). We do not knowingly collect data from children.</p>
+    <h2>9. Children's privacy</h2>
+    <p>SunNomad is not directed at children under 13 (or 16 in the EU). We do not knowingly collect data from children.</p>
 
-  <h2>10. Changes</h2>
-  <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+    <h2>10. Changes</h2>
+    <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
 
-  <div class="card">
-    <h2>11. Contact</h2>
-    <p>Questions about this policy or your data?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
-    <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
-  </div>
+    <div class="card">
+      <h2>11. Contact</h2>
+      <p>Questions about this policy or your data?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+      <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
+    </div>
+  </section>
+
+  <section id="de" class="lang-section lang-divider">
+    <h1 style="font-size:clamp(32px,4vw,44px);margin-bottom:10px;">Datenschutzerklärung</h1>
+    <p class="updated" style="margin-bottom:32px;">Stand: August 2026</p>
+
+    <p>SunNomad wird von GoldieApps betrieben. Diese Erklärung beschreibt, welche Daten wir bei der Nutzung der App erheben, wo sie gespeichert werden und welche Rechte du hast.</p>
+
+    <h2>1. Konto &amp; Profildaten</h2>
+    <p>Für SunNomad ist ein Konto erforderlich. Bei der Registrierung speichern wir:</p>
+    <ul>
+      <li><strong>E-Mail-Adresse</strong> und <strong>Passwort</strong> (über Supabase Auth — Passwörter werden nicht im Klartext gespeichert)</li>
+      <li><strong>Benutzername</strong> (Pflicht) und optional einen <strong>Anzeigenamen</strong></li>
+      <li><strong>Kontometadaten</strong> wie Erstellungsdatum und Zeitpunkt des letzten App-Starts</li>
+    </ul>
+    <p>Diese Daten liegen auf unseren Servern (Supabase), damit du dich anmelden und Favoriten geräteübergreifend synchronisieren kannst.</p>
+
+    <h2>2. Favoriten &amp; Feedback</h2>
+    <ul>
+      <li><strong>Favoriten</strong> — gespeicherte Orte werden in deinem Konto auf unseren Servern mit deiner User-ID verknüpft. Sie synchronisieren sich, wenn du dich auf einem anderen Gerät anmeldest.</li>
+      <li><strong>Feedback</strong> — wenn du Feedback in der App sendest, speichern wir deine Nachricht und ggf. deine E-Mail-Adresse, falls du sie angibst.</li>
+    </ul>
+
+    <h2>3. Nur auf dem Gerät gespeichert</h2>
+    <p>Folgende Daten bleiben auf deinem Gerät und werden nicht auf unsere Server hochgeladen:</p>
+    <ul>
+      <li>App-Einstellungen (Design, Einheiten, Sprache, Kartenradius, Filter)</li>
+      <li>Onboarding-Fortschritt und UI-Einstellungen</li>
+      <li>Zwischengespeicherte Kartendaten</li>
+      <li>Dein Anmelde-Session-Token</li>
+    </ul>
+
+    <h2>4. Standort</h2>
+    <p>SunNomad nutzt deinen Standort <strong>nur während die App geöffnet ist</strong>, um die Karte zu zentrieren und Orte in der Nähe anzuzeigen. GPS-Koordinaten werden <strong>nicht</strong> auf unseren Servern gespeichert.</p>
+    <p>Koordinaten können bei bestimmten Funktionen an Dienste weitergegeben werden:</p>
+    <ul>
+      <li><strong>Open-Meteo</strong> — Wettervorhersagen für einen Ort</li>
+      <li><strong>Google Places</strong> — bei der Ortssuche (Suchtext, kein dauerhaftes Tracking)</li>
+      <li><strong>Apple / Google Maps</strong> — wenn du zur Navigation tippst</li>
+    </ul>
+
+    <h2>5. Analyse &amp; Absturzberichte</h2>
+    <p>In Produktions-Builds setzen wir ein:</p>
+    <ul>
+      <li><strong>Mixpanel</strong> (EU-Server) — anonyme Nutzungsanalyse (z. B. angesehene Screens, genutzte Funktionen, Suchanfragen). Nach dem Login werden Ereignisse mit deiner User-ID verknüpft, nicht mit deiner E-Mail.</li>
+      <li><strong>Sentry</strong> — Absturz- und Fehlerberichte zur Fehlerbehebung.</li>
+    </ul>
+    <p>Wir verwenden keine Werbe-Tracker und verkaufen keine Daten.</p>
+
+    <h2>6. Drittanbieter</h2>
+    <ul>
+      <li><strong>Supabase</strong> — Authentifizierung, Datenbank, Dateispeicher</li>
+      <li><strong>Open-Meteo</strong> (<a href="https://open-meteo.com" target="_blank" rel="noopener">open-meteo.com</a>) — Wetterdaten</li>
+      <li><strong>Google Places &amp; Maps</strong> — Ortssuche und Navigation</li>
+      <li><strong>Mixpanel</strong> — Produktanalyse (EU)</li>
+      <li><strong>Sentry</strong> — Absturzberichte</li>
+    </ul>
+    <p>Diese Anbieter können Daten auf Servern außerhalb der EU verarbeiten. Wir wählen Dienste mit angemessenen Schutzmaßnahmen, soweit verfügbar.</p>
+
+    <h2>7. Speicherdauer</h2>
+    <p>Konto-, Profil- und Favoritendaten bleiben gespeichert, bis du dein Konto löschst. Wetterdaten auf unseren Servern werden nach wenigen Wochen automatisch gelöscht und sind nicht mit deiner Identität verknüpft.</p>
+
+    <h2>8. Deine Rechte</h2>
+    <p>Du kannst:</p>
+    <ul>
+      <li><strong>Dein Konto löschen</strong> — in der App unter Profil → Konto löschen. Damit werden Konto, Profil und Favoriten dauerhaft von unseren Servern entfernt.</li>
+      <li><strong>Auskunft oder Berichtigung verlangen</strong> — per E-Mail an <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></li>
+      <li><strong>Einwilligung widerrufen</strong> — jederzeit durch Beendigung der Nutzung und Löschung deines Kontos</li>
+    </ul>
+    <p>In der EU/des EWR hast du zusätzliche Rechte nach der DSGVO, einschließlich des Rechts, dich bei deiner Datenschutzbehörde zu beschweren.</p>
+
+    <h2>9. Kinder</h2>
+    <p>SunNomad richtet sich nicht an Kinder unter 13 Jahren (in der EU unter 16). Wir erheben wissentlich keine Daten von Kindern.</p>
+
+    <h2>10. Änderungen</h2>
+    <p>Wir können diese Erklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit aktualisiertem Datum veröffentlicht.</p>
+
+    <div class="card">
+      <h2>11. Kontakt</h2>
+      <p>Fragen zu dieser Erklärung oder deinen Daten?<br><a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>
+      <p style="margin:0;">GoldieApps · <a href="https://sunnomad.app">sunnomad.app</a></p>
+    </div>
+  </section>
 </div>
 
 <footer class="footer">
