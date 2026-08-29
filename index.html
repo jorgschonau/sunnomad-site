@@ -116,12 +116,12 @@
             <div class="feature__title">Available in <strong>EN · DE · <span style="opacity:0.35">FR</span></strong></div>
           </div>
           <div class="feature">
-            <div class="feature__icon">🗺️</div>
-            <div class="feature__title">Trip Planning</div>
+            <div class="feature__icon">🏕️</div>
+            <div class="feature__title"><strong>Stop &amp; Stay</strong></div>
           </div>
           <div class="feature">
-            <div class="feature__icon">✨</div>
-            <div class="feature__title">Smart Guidance</div>
+            <div class="feature__icon">⭐</div>
+            <div class="feature__title"><strong>Favourites</strong> sync</div>
           </div>
         </div>
       </div>
@@ -142,13 +142,13 @@
           <div class="ss-phone"><div class="ss-screen"><img src="assets/filter_us.webp" alt="SunNomad filter panel" loading="lazy"></div></div>
           <div class="ss-phone"><div class="ss-screen"><img src="assets/moab_stopstay.webp" alt="SunNomad Stop & Stay Moab" loading="lazy"></div></div>
         </div>
-        <p class="ss-label">The World Looks Better in the Sun</p>
+        <p class="ss-label">Places in the app</p>
         <div class="ss-grid ss-editorial">
           <div class="ss-phone"><div class="ss-screen"><img src="assets/malaga_grafiti.webp" alt="Málaga" loading="lazy"></div></div>
           <div class="ss-phone"><div class="ss-screen"><img src="assets/bardenas.webp" alt="SunNomad — Bardenas Reales" loading="lazy"></div></div>
           <div class="ss-phone"><div class="ss-screen"><img src="assets/pacific_coast_highway.webp" alt="SunNomad — Pacific Coast Highway" loading="lazy"></div></div>
         </div>
-        <p class="ss-label">From Corsica to Temple Bar</p>
+        <p class="ss-label">Hero destinations</p>
         <div class="ss-grid">
           <div class="ss-phone"><div class="ss-screen"><img src="assets/monument_valley_goldie.webp" alt="Monument Valley" loading="lazy"></div></div>
           <div class="ss-phone"><div class="ss-screen"><img src="assets/plage_de_saleccia.webp" alt="Plage de Saleccia" loading="lazy"></div></div>
@@ -161,12 +161,20 @@
       <h2 class="h2">What SunNomad does</h2>
       <div class="seo-grid">
         <div class="seo-block">
-          <h3 class="seo-block__title">Find sunny spots on the map</h3>
-          <p class="body">Set a radius and see where the sun is. Pick a day, filter by weather, and find your next stop.</p>
+          <h3 class="seo-block__title">Weather map &amp; filters</h3>
+          <p class="body">Set a radius, pick a day, and filter by sun, rain, snow, or wind. See where the weather is good before you drive.</p>
         </div>
         <div class="seo-block">
-          <h3 class="seo-block__title">Plan around the weather</h3>
-          <p class="body">For van lifers, campers, and road trippers who'd rather drive to the sun than wait for it.</p>
+          <h3 class="seo-block__title">Stop &amp; Stay</h3>
+          <p class="body">Camping hints for each place — best spot, alternative, and whether freestanding is an option.</p>
+        </div>
+        <div class="seo-block">
+          <h3 class="seo-block__title">Place details</h3>
+          <p class="body">Forecasts, weather badges, and Stop &amp; Stay hints for each destination — open a place and decide if it's worth the drive.</p>
+        </div>
+        <div class="seo-block">
+          <h3 class="seo-block__title">Guest or account</h3>
+          <p class="body">Browse the map, filters, and place details without signing in. Create an account to save favourites and sync across devices.</p>
         </div>
       </div>
     </section>
@@ -175,8 +183,9 @@
       <div class="card">
         <h2 class="h2">About SunNomad</h2>
         <p class="body">
-          SunNomad is built for people who live on the road.<br />
-          <strong>Always know where the weather is good.</strong> Set a radius, pick a day, and find your next sunny stop — simple as that.
+          SunNomad is built for people who live on the road — van lifers, campers, and overlanders.<br />
+          <strong>Browse without an account:</strong> map, weather filters, forecasts, and place details.<br />
+          <strong>Sign in when you want:</strong> favourites, profile, and rig settings synced across devices.
         </p>
       </div>
     </section>
@@ -186,19 +195,23 @@
       <div class="faq">
         <details class="faq__item">
           <summary>What is SunNomad?</summary>
-          <p>A map app that shows sunny destinations. Set a radius, pick a day, find your next stop.</p>
+          <p>A weather map for road trippers. Set a radius, pick a day, filter the map, and open place details with forecasts and camping hints.</p>
         </details>
         <details class="faq__item">
           <summary>Who is SunNomad for?</summary>
-          <p>Van lifers, campers, motorhomers, overlanders.</p>
+          <p>Van lifers, campers, motorhomers, and overlanders who plan around the weather.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Do I need an account?</summary>
+          <p>No. You can use SunNomad as a guest — map, filters, forecasts, and place details work without signing in. An account is only needed for favourites, profile, and rig settings.</p>
         </details>
         <details class="faq__item">
           <summary>How do I get SunNomad?</summary>
-          <p>SunNomad is available on iOS — use the button at the top of this page or <a href="https://testflight.apple.com/join/rq18zhUX">click here</a>. App Store release coming soon.</p>
+          <p>SunNomad is on iOS via TestFlight — use the button at the top of this page or <a href="https://testflight.apple.com/join/rq18zhUX">click here</a>. App Store release coming soon.</p>
         </details>
         <details class="faq__item">
           <summary>What regions does SunNomad cover?</summary>
-          <p>SunNomad covers the United States, Canada, Mexico, Europe, Turkey, and North Africa.</p>
+          <p>United States, Canada, Mexico, Europe, Turkey, and North Africa.</p>
         </details>
       </div>
     </section>
@@ -270,7 +283,7 @@
     function openModal(type){
       const text = {
         imprint: `<h2 id="modalTitle">Imprint</h2><p><strong>GoldieApps</strong></p><p>© GoldieApps 2026</p><p>Email: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`,
-        privacy: `<h2 id="modalTitle">Privacy</h2><p>No tracking by default.</p><p>Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`
+        privacy: `<h2 id="modalTitle">Privacy</h2><p>See our <a href="/privacy">Privacy Policy</a> for what we collect and how guest vs. account data works.</p><p>Contact: <a href="mailto:hola@sunnomad.app">hola@sunnomad.app</a></p>`
       };
       modalText.innerHTML = text[type] || "<h2 id='modalTitle'>Info</h2><p>Not found.</p>";
       modal.classList.add("modal--open");
