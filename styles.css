@@ -137,6 +137,11 @@ img{ display:block; max-width:100%; height:auto; }
   color:#fff;
   border-color:#0f1b2d;
 }
+.btn--dark .btn__icon{
+  display:inline-flex;
+  align-items:center;
+  line-height:0;
+}
 .btn--light{ background:#fff; }
 .btn--ghost{ background:rgba(255,255,255,.6); }
 
