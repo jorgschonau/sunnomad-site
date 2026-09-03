@@ -11,7 +11,7 @@
   <meta property="og:description" content="SunNomad shows you where the sun is. Find sunny stops, dodge the rain, and plan your next road trip around better weather." />
   <meta property="og:url" content="https://sunnomad.app/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://sunnomad.app/assets/hero-beta.png" />
+  <meta property="og:image" content="https://sunnomad.app/assets/update-app-store-approved.webp" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
@@ -46,6 +46,21 @@
   .modal--open { display: flex; }
   .card p { font-weight: 400; }
   .footer { font-weight: 400; }
+  .hero-store-banner {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(15,27,45,.14);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .hero-store-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(15,27,45,.18);
+  }
+  .hero-store-banner img { width: 100%; display: block; }
   @media (max-width: 640px) {
     .screenshots-section { padding: 40px 16px; }
     .ss-wrap { max-width: 100%; }
@@ -86,19 +101,14 @@
           SunNomad helps you navigate around the rain and park in the sun.
         </p>
 
-        <a class="btn btn--tf btn--tf-hero" href="https://testflight.apple.com/join/rq18zhUX">
-          <span class="btn__icon">🚀</span>
-          <div class="btn--tf-hero__text">
-            <span class="btn--tf-hero__label">Join the SunNomad Beta</span>
-            <span class="btn--tf-hero__sub">iOS · via TestFlight</span>
-          </div>
+        <a class="hero-store-banner" href="https://apps.apple.com/app/id6759536165" aria-label="Download SunNomad on the App Store">
+          <img src="assets/update-app-store-approved.webp" alt="Goldie returned — SunNomad is live on the App Store" />
         </a>
 
         <div id="download" class="cta">
-          <a class="btn btn--dark btn--soon" href="#" aria-disabled="true" data-state="soon">
+          <a class="btn btn--dark" href="https://apps.apple.com/app/id6759536165">
             <span class="btn__icon"></span>
             <span class="btn__text">App Store</span>
-            <span class="btn__badge">Coming soon</span>
           </a>
           <a class="btn btn--light btn--disabled" href="#" aria-disabled="true" data-state="disabled">
             <span class="btn__icon">▶</span>
@@ -126,8 +136,8 @@
         </div>
       </div>
       <div class="hero__right">
-        <a class="phoneWrap phoneWrap--link" href="https://testflight.apple.com/join/rq18zhUX" aria-label="Join the SunNomad Beta on TestFlight">
-          <img class="phone" src="assets/hero-beta.png" alt="SunNomad iOS Beta — Now on TestFlight" />
+        <a class="phoneWrap phoneWrap--link" href="https://apps.apple.com/app/id6759536165" aria-label="Download SunNomad on the App Store">
+          <img class="phone" src="assets/update-app-store-approved.webp" alt="Goldie returned — SunNomad is live on the App Store" />
         </a>
       </div>
     </section>
@@ -207,7 +217,7 @@
         </details>
         <details class="faq__item">
           <summary>How do I get SunNomad?</summary>
-          <p>SunNomad is on iOS via TestFlight — use the button at the top of this page or <a href="https://testflight.apple.com/join/rq18zhUX">click here</a>. App Store release coming soon.</p>
+          <p>SunNomad is live on the <a href="https://apps.apple.com/app/id6759536165">App Store</a> for iPhone.</p>
         </details>
         <details class="faq__item">
           <summary>What regions does SunNomad cover?</summary>
