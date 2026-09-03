@@ -46,21 +46,6 @@
   .modal--open { display: flex; }
   .card p { font-weight: 400; }
   .footer { font-weight: 400; }
-  .hero-store-banner {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    margin-bottom: 14px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 12px 32px rgba(15,27,45,.14);
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .hero-store-banner:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 18px 40px rgba(15,27,45,.18);
-  }
-  .hero-store-banner img { width: 100%; display: block; }
   @media (max-width: 640px) {
     .screenshots-section { padding: 40px 16px; }
     .ss-wrap { max-width: 100%; }
@@ -101,8 +86,12 @@
           SunNomad helps you navigate around the rain and park in the sun.
         </p>
 
-        <a class="hero-store-banner" href="https://apps.apple.com/app/id6759536165" aria-label="Download SunNomad on the App Store">
-          <img src="assets/update-app-store-approved.webp" alt="Goldie returned — SunNomad is live on the App Store" />
+        <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/id6759536165">
+          <span class="btn__icon">🚀</span>
+          <div class="btn--tf-hero__text">
+            <span class="btn--tf-hero__label">Download the app</span>
+            <span class="btn--tf-hero__sub">iOS · App Store</span>
+          </div>
         </a>
 
         <div id="download" class="cta">
