@@ -641,18 +641,15 @@ img{ display:block; max-width:100%; height:auto; }
   inset:0;
   background: rgba(10,15,25,.55);
   backdrop-filter: blur(14px);
-  display:flex;
+  -webkit-backdrop-filter: blur(14px);
+  display:none;
   justify-content:center;
   align-items:center;
-  opacity:0;
-  visibility:hidden;
-  transition:.25s ease;
   z-index:9999;
 }
 
 .lightbox.active{
-  opacity:1;
-  visibility:visible;
+  display:flex;
 }
 
 .lightbox img{
