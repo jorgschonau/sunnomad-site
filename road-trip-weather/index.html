@@ -4,413 +4,469 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Find Better Weather for Your Next Road Trip — SunNomad</title>
-  <meta name="description" content="Discover sunnier destinations within driving distance. Compare weather, sunshine and travel distance with SunNomad — free for iPhone." />
-  <meta name="theme-color" content="#fbf7ef" />
+  <meta name="description" content="Discover sunnier destinations within driving distance. Compare forecasts, find places worth the drive, and turn better weather into your next adventure with SunNomad." />
+  <meta name="theme-color" content="#f4efe6" />
   <link rel="canonical" href="https://sunnomad.app/road-trip-weather" />
-  <meta property="og:title" content="Find better weather for your next road trip" />
-  <meta property="og:description" content="Discover sunnier destinations within driving distance. Compare weather, sunshine and travel distance — and find places worth the drive." />
+  <meta property="og:title" content="Find better weather. Go somewhere better" />
+  <meta property="og:description" content="Discover sunnier destinations within driving distance. Compare forecasts, find places worth the drive, and turn better weather into your next adventure." />
   <meta property="og:url" content="https://sunnomad.app/road-trip-weather" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://sunnomad.app/assets/road-trip-weather/hero-map.webp" />
+  <meta property="og:image" content="https://sunnomad.app/assets/road-trip-weather/01-weather-map.webp" />
   <link rel="icon" href="/assets/logo.png" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
     :root{
-      --lp-cream:#fbf7ef;
-      --lp-ink:var(--ink,#0f1b2d);
-      --lp-muted:rgba(15,27,45,.68);
-      --lp-max:1080px;
-      --lp-store:https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8;
+      --rt-cream:#f4efe6;
+      --rt-sand:#ebe3d4;
+      --rt-ink:#152033;
+      --rt-navy:#1a2740;
+      --rt-muted:rgba(21,32,51,.68);
+      --rt-orange:#c45a12;
+      --rt-amber:#d4893a;
+      --rt-max:1120px;
+      --rt-store:https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8;
     }
 
-    .lp-page{ background:var(--lp-cream); overflow-x:hidden; }
+    body.rt{
+      background:var(--rt-cream);
+      color:var(--rt-ink);
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
 
-    .lp-wrap{
-      max-width:var(--lp-max);
+    .rt-header.header{
+      max-width:var(--rt-max);
+      padding:14px 20px 6px;
+    }
+    .rt-header .brand__logo--hero{ height:48px; }
+
+    .rt-wrap{
+      max-width:var(--rt-max);
       margin:0 auto;
       padding:0 20px;
     }
 
-    /* —— Hero —— */
-    .lp-hero{
-      padding:28px 0 48px;
+    .rt-eyebrow{
+      margin:0 0 14px;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--rt-orange);
     }
-    .lp-hero__grid{
+
+    .rt-cta{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      padding:16px 22px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#1a9e5c,#1a7f4b);
+      color:#fff !important;
+      text-decoration:none !important;
+      font-weight:800;
+      box-shadow:0 8px 28px rgba(26,127,75,.35);
+      border:1px solid #1a7f4b;
+      transition:transform .15s ease, box-shadow .15s ease;
+      max-width:100%;
+    }
+    .rt-cta:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 34px rgba(26,127,75,.45);
+    }
+    .rt-cta__icon{ flex-shrink:0; line-height:0; }
+    .rt-cta__label{ font-size:16px; letter-spacing:-.01em; display:block; }
+    .rt-cta__sub{ font-size:12px; font-weight:600; opacity:.85; display:block; margin-top:2px; }
+    .rt-micro{
+      margin:10px 0 0;
+      font-size:13px;
+      font-weight:600;
+      color:rgba(21,32,51,.55);
+    }
+
+    .rt-phone{
+      background:#111;
+      border-radius:34px;
+      padding:9px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.07) inset,
+        0 28px 70px rgba(15,27,45,.22);
+      overflow:hidden;
+      aspect-ratio:9 / 19.5;
+    }
+    .rt-phone img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:26px;
+      display:block;
+    }
+    .rt-phone--lg{ width:min(340px,100%); margin:0 auto; }
+    .rt-phone--md{ width:min(300px,100%); margin:0 auto; }
+    .rt-phone--sm{ width:min(210px,100%); }
+    .rt-phone--xl{ width:min(380px,100%); margin:0 auto; }
+
+    /* —— 1 Hero —— */
+    .rt-hero{
+      padding:18px 0 56px;
+      position:relative;
+    }
+    .rt-hero__stage{
       display:grid;
-      grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+      grid-template-columns:minmax(0,1fr) minmax(280px,.85fr);
+      gap:28px 40px;
+      align-items:end;
+    }
+    .rt-hero h1{
+      margin:0 0 16px;
+      font-size:clamp(40px,6vw,64px);
+      font-weight:800;
+      letter-spacing:-.045em;
+      line-height:1.02;
+      color:var(--rt-ink);
+    }
+    .rt-hero h1 span{ display:block; }
+    .rt-hero__sub{
+      margin:0 0 26px;
+      max-width:32em;
+      font-size:clamp(16px,1.8vw,19px);
+      line-height:1.55;
+      color:var(--rt-muted);
+    }
+    .rt-hero__visual{
+      position:relative;
+      justify-self:end;
+      width:100%;
+      max-width:380px;
+    }
+    .rt-hero__glow{
+      position:absolute;
+      inset:-18% -12% auto -12%;
+      height:70%;
+      background:radial-gradient(ellipse at center, rgba(196,90,18,.18), transparent 70%);
+      pointer-events:none;
+      z-index:0;
+    }
+    .rt-hero__visual .rt-phone{ position:relative; z-index:1; }
+
+    /* —— 2 Central idea —— */
+    .rt-idea{
+      padding:48px 0;
+      border-top:1px solid rgba(21,32,51,.08);
+      border-bottom:1px solid rgba(21,32,51,.08);
+      background:var(--rt-sand);
+    }
+    .rt-idea__inner{ max-width:760px; }
+    .rt-idea h2{
+      margin:0 0 16px;
+      font-size:clamp(32px,4.5vw,48px);
+      font-weight:800;
+      letter-spacing:-.04em;
+      line-height:1.08;
+      color:var(--rt-ink);
+    }
+    .rt-idea h2 span{ display:block; }
+    .rt-idea p{
+      margin:0;
+      font-size:clamp(17px,2vw,20px);
+      line-height:1.55;
+      color:var(--rt-muted);
+      max-width:28em;
+    }
+
+    /* —— Shared feature rows —— */
+    .rt-feature{
+      padding:64px 0;
+    }
+    .rt-feature__grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(260px,.9fr);
       gap:40px;
       align-items:center;
     }
-    .lp-kicker{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:7px 14px; border-radius:999px;
-      background:rgba(197,106,26,.12); color:var(--accent);
-      font-weight:800; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
-      margin:0 0 18px;
+    .rt-feature--flip .rt-feature__grid{
+      grid-template-columns:minmax(260px,.9fr) minmax(0,1fr);
     }
-    .lp-hero h1{
-      font-size:clamp(34px,4.6vw,52px);
+    .rt-feature--flip .rt-feature__copy{ order:2; }
+    .rt-feature--flip .rt-feature__media{ order:1; }
+    .rt-feature h2{
+      margin:0 0 10px;
+      font-size:clamp(28px,3.5vw,40px);
+      font-weight:800;
+      letter-spacing:-.035em;
+      line-height:1.1;
+      color:var(--rt-ink);
+    }
+    .rt-feature__lede{
+      margin:0 0 18px;
+      font-size:18px;
+      line-height:1.45;
+      color:var(--rt-muted);
+      max-width:28em;
+    }
+    .rt-feature ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .rt-feature li{
+      position:relative;
+      padding:0 0 10px 18px;
+      font-size:15px;
+      line-height:1.5;
+      color:var(--rt-muted);
+    }
+    .rt-feature li::before{
+      content:"";
+      position:absolute;
+      left:0; top:.55em;
+      width:7px; height:7px;
+      border-radius:50%;
+      background:var(--rt-orange);
+    }
+
+    /* —— 5 Feeling Lucky —— */
+    .rt-lucky{
+      padding:64px 0;
+      background:
+        radial-gradient(700px 420px at 85% 20%, rgba(212,137,58,.22), transparent 60%),
+        linear-gradient(165deg, #2a1a10 0%, #3d2414 45%, #1f160f 100%);
+      color:#f7efe4;
+    }
+    .rt-lucky .rt-eyebrow{ color:var(--rt-amber); }
+    .rt-lucky__grid{
+      display:grid;
+      grid-template-columns:minmax(0,.95fr) minmax(280px,1.05fr);
+      gap:36px 48px;
+      align-items:center;
+    }
+    .rt-lucky h2{
+      margin:0 0 10px;
+      font-size:clamp(36px,5vw,56px);
       font-weight:800;
       letter-spacing:-.04em;
-      line-height:1.06;
-      margin:0 0 16px;
-      color:var(--lp-ink);
+      line-height:1.02;
+      color:#fff;
     }
-    .lp-hero__sub{
-      margin:0 0 26px;
-      font-size:clamp(16px,1.7vw,19px);
-      line-height:1.55;
-      color:var(--lp-muted);
-      max-width:34em;
+    .rt-lucky__sub{
+      margin:0 0 14px;
+      font-size:20px;
+      font-weight:700;
+      color:rgba(247,239,228,.88);
     }
-    .lp-cta-stack{ max-width:420px; }
-    .lp-cta-stack .btn--tf-hero{ margin-bottom:10px; text-decoration:none; }
-    .lp-micro{
-      margin:0;
-      font-size:13px;
-      color:rgba(15,27,45,.55);
-      font-weight:600;
-    }
-    .lp-hero__visual{ position:relative; }
-    .lp-hero__frame{
-      position:relative;
-      border-radius:28px;
-      overflow:hidden;
-      background:#111;
-      box-shadow:
-        0 0 0 1px rgba(15,27,45,.06),
-        0 28px 70px rgba(15,27,45,.18);
-      aspect-ratio:9 / 16;
-      max-width:360px;
-      margin:0 auto;
-    }
-    .lp-hero__frame img{
-      width:100%; height:100%;
-      object-fit:cover;
-      object-position:center top;
-      display:block;
-    }
-
-    /* —— Benefits —— */
-    .lp-benefits{
-      padding:8px 0 52px;
-    }
-    .lp-benefits__grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-    }
-    .lp-benefit{
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(15,27,45,.08);
-      border-radius:16px;
-      padding:18px 18px 16px;
-      box-shadow:0 10px 28px rgba(15,27,45,.04);
-    }
-    .lp-benefit__icon{
-      width:36px; height:36px;
-      border-radius:10px;
-      background:rgba(197,106,26,.12);
-      color:var(--accent);
-      display:flex; align-items:center; justify-content:center;
-      margin-bottom:12px;
-    }
-    .lp-benefit__icon svg{ width:20px; height:20px; }
-    .lp-benefit h2{
-      font-size:16px; font-weight:800; letter-spacing:-.015em;
-      margin:0 0 6px; color:var(--lp-ink);
-    }
-    .lp-benefit p{
-      margin:0; font-size:14px; line-height:1.5; color:var(--lp-muted);
-    }
-
-    /* —— How it works —— */
-    .lp-how{ padding:12px 0 56px; }
-    .lp-how__intro{
-      text-align:center;
-      max-width:36em;
-      margin:0 auto 36px;
-    }
-    .lp-how__intro h2{
-      font-size:clamp(26px,3.2vw,34px);
-      font-weight:800;
-      letter-spacing:-.03em;
-      margin:0 0 10px;
-      color:var(--lp-ink);
-    }
-    .lp-how__intro p{
-      margin:0; font-size:16px; line-height:1.55; color:var(--lp-muted);
-    }
-    .lp-step{
-      display:grid;
-      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
-      gap:36px;
-      align-items:center;
-      margin-bottom:48px;
-    }
-    .lp-step:nth-child(even){ grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
-    .lp-step:nth-child(even) .lp-step__copy{ order:2; }
-    .lp-step:nth-child(even) .lp-step__media{ order:1; }
-    .lp-step:last-child{ margin-bottom:0; }
-    .lp-step__num{
-      display:inline-block;
-      font-size:12px; font-weight:800; letter-spacing:.08em;
-      text-transform:uppercase; color:var(--accent);
-      margin:0 0 10px;
-    }
-    .lp-step h3{
-      font-size:clamp(22px,2.6vw,28px);
-      font-weight:800;
-      letter-spacing:-.025em;
-      margin:0 0 10px;
-      color:var(--lp-ink);
-    }
-    .lp-step p{
-      margin:0;
+    .rt-lucky__body{
+      margin:0 0 14px;
       font-size:16px;
       line-height:1.6;
-      color:var(--lp-muted);
-      max-width:32em;
+      color:rgba(247,239,228,.72);
+      max-width:30em;
     }
-    .lp-phone{
-      position:relative;
-      width:min(280px,78%);
+    .rt-lucky__close{
+      margin:0 0 24px;
+      font-size:15px;
+      font-style:italic;
+      color:rgba(247,239,228,.62);
+    }
+    .rt-lucky .rt-cta{
+      background:linear-gradient(135deg,#e08a2e,#c45a12);
+      border-color:#c45a12;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .rt-lucky .rt-micro{ color:rgba(247,239,228,.55); }
+    .rt-lucky .rt-phone{
+      width:min(400px,100%);
       margin:0 auto;
-      border-radius:36px;
-      background:#111;
-      padding:10px;
       box-shadow:
-        0 0 0 1px rgba(255,255,255,.08) inset,
-        0 30px 70px rgba(15,27,45,.22);
-      aspect-ratio:9 / 19.5;
-      overflow:hidden;
-    }
-    .lp-phone img{
-      width:100%; height:100%;
-      object-fit:cover;
-      object-position:center top;
-      border-radius:28px;
-      display:block;
+        0 0 0 1px rgba(255,255,255,.1) inset,
+        0 40px 90px rgba(0,0,0,.45);
     }
 
-    /* —— Mid CTA —— */
-    .lp-band{
-      margin:8px 0 56px;
-      padding:36px 28px;
-      border-radius:22px;
-      background:linear-gradient(160deg, rgba(197,106,26,.10), rgba(255,255,255,.55));
-      border:1px solid rgba(197,106,26,.16);
-      text-align:center;
+    /* —— 7 Personality —— */
+    .rt-persona{
+      padding:64px 0;
+      background:var(--rt-sand);
     }
-    .lp-band h2{
-      font-size:clamp(26px,3vw,34px);
-      font-weight:800;
-      letter-spacing:-.03em;
-      margin:0 0 8px;
-      color:var(--lp-ink);
-    }
-    .lp-band__sub{
-      margin:0 auto 22px;
-      max-width:28em;
-      font-size:17px;
-      line-height:1.5;
-      color:var(--lp-muted);
-    }
-    .lp-band .lp-cta-stack{
-      margin:0 auto;
-    }
-    .lp-band .lp-micro{ margin-top:4px; }
-
-    /* —— Brand —— */
-    .lp-brand{
+    .rt-persona__grid{
       display:grid;
-      grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
-      gap:32px;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+      gap:36px;
       align-items:center;
-      padding:8px 0 56px;
     }
-    .lp-brand h2{
-      font-size:clamp(24px,3vw,32px);
+    .rt-persona h2{
+      margin:0 0 14px;
+      font-size:clamp(30px,4vw,44px);
       font-weight:800;
-      letter-spacing:-.03em;
-      margin:0 0 12px;
-      color:var(--lp-ink);
+      letter-spacing:-.035em;
+      line-height:1.08;
     }
-    .lp-brand p{
+    .rt-persona p{
       margin:0;
-      font-size:16px;
-      line-height:1.65;
-      color:var(--lp-muted);
-      max-width:34em;
+      font-size:17px;
+      line-height:1.6;
+      color:var(--rt-muted);
+      max-width:28em;
     }
-    .lp-brand__visual{
-      position:relative;
+    .rt-persona__visual{
       display:flex;
       justify-content:center;
       align-items:flex-end;
-      gap:14px;
-    }
-    .lp-brand__road{
-      width:min(260px,70%);
-      border-radius:36px;
-      overflow:hidden;
-      background:#111;
-      padding:8px;
-      aspect-ratio:9 / 19.5;
-      box-shadow:0 24px 56px rgba(15,27,45,.18);
-    }
-    .lp-brand__road img{
-      width:100%; height:100%;
-      object-fit:cover;
-      object-position:center 18%;
-      border-radius:28px;
-      display:block;
-    }
-    .lp-brand__goldie{
-      width:min(120px,32%);
-      border-radius:22px;
-      overflow:hidden;
-      background:#111;
-      padding:5px;
-      aspect-ratio:9 / 19.5;
-      box-shadow:0 16px 36px rgba(15,27,45,.16);
-      transform:translateY(18px);
-    }
-    .lp-brand__goldie img{
-      width:100%; height:100%;
-      object-fit:cover;
-      object-position:center top;
-      border-radius:18px;
-      display:block;
+      gap:16px;
     }
 
+    /* —— 8 Final CTA —— */
+    .rt-final{
+      padding:72px 0;
+      text-align:center;
+      background:
+        radial-gradient(600px 320px at 50% 0%, rgba(196,90,18,.12), transparent 70%),
+        var(--rt-cream);
+    }
+    .rt-final h2{
+      margin:0 0 12px;
+      font-size:clamp(32px,4.5vw,48px);
+      font-weight:800;
+      letter-spacing:-.04em;
+      line-height:1.08;
+    }
+    .rt-final__sub{
+      margin:0 auto 26px;
+      max-width:24em;
+      font-size:18px;
+      line-height:1.5;
+      color:var(--rt-muted);
+    }
+    .rt-final .rt-cta{ margin:0 auto; }
+    .rt-final .rt-micro{ margin-top:12px; }
+
     /* —— FAQ —— */
-    .lp-faq{ padding:0 0 72px; max-width:720px; margin:0 auto; }
-    .lp-faq h2{
-      font-size:26px; font-weight:800; letter-spacing:-.02em;
-      margin:0 0 16px; color:var(--lp-ink);
+    .rt-faq{
+      padding:0 0 80px;
+      max-width:680px;
+      margin:0 auto;
     }
-    .lp-faq details{
-      background:rgba(255,255,255,.7);
-      border:1px solid rgba(15,27,45,.08);
-      border-radius:14px;
-      padding:14px 16px;
-      margin-bottom:10px;
+    .rt-faq h2{
+      margin:0 0 16px;
+      font-size:24px;
+      font-weight:800;
+      letter-spacing:-.02em;
     }
-    .lp-faq summary{
+    .rt-faq details{
+      border-top:1px solid rgba(21,32,51,.1);
+      padding:14px 0;
+    }
+    .rt-faq details:last-child{ border-bottom:1px solid rgba(21,32,51,.1); }
+    .rt-faq summary{
       cursor:pointer;
       font-weight:700;
-      color:var(--lp-ink);
+      color:var(--rt-ink);
       list-style:none;
     }
-    .lp-faq summary::-webkit-details-marker{ display:none; }
-    .lp-faq details p{
+    .rt-faq summary::-webkit-details-marker{ display:none; }
+    .rt-faq details p{
       margin:10px 0 0;
       font-size:15px;
       line-height:1.55;
-      color:var(--lp-muted);
+      color:var(--rt-muted);
     }
 
-    /* —— Sticky CTA —— */
-    .lp-sticky{
+    /* sticky */
+    .rt-sticky{
       position:fixed;
       left:0; right:0; bottom:0;
       z-index:90;
-      padding:12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
-      background:rgba(251,247,239,.92);
+      padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+      background:rgba(244,239,230,.94);
       backdrop-filter:blur(12px);
       -webkit-backdrop-filter:blur(12px);
-      border-top:1px solid rgba(15,27,45,.08);
-      transform:translateY(110%);
-      transition:transform .25s ease;
+      border-top:1px solid rgba(21,32,51,.1);
+      transform:translateY(120%);
+      transition:transform .22s ease;
       pointer-events:none;
     }
-    .lp-sticky.is-visible{
+    .rt-sticky.is-on{
       transform:translateY(0);
       pointer-events:auto;
     }
-    .lp-sticky__inner{
+    .rt-sticky .rt-cta{
+      width:100%;
       max-width:480px;
       margin:0 auto;
-    }
-    .lp-sticky .btn--tf-hero{
-      margin:0;
-      padding:14px 18px;
       justify-content:center;
-      text-decoration:none;
+      padding:14px 18px;
     }
-    .lp-sticky .btn--tf-hero__label{ font-size:16px; }
-    .lp-sticky .btn--tf-hero__sub{ font-size:12px; opacity:.85; }
+    body.rt-has-sticky{ padding-bottom:84px; }
 
-    .lp-page.has-sticky{ padding-bottom:88px; }
-
-    .lp-footer-pad{ height:8px; }
-
-    @media (max-width:860px){
-      .lp-hero__grid{
+    @media (max-width:900px){
+      .rt-hero__stage,
+      .rt-feature__grid,
+      .rt-feature--flip .rt-feature__grid,
+      .rt-lucky__grid,
+      .rt-persona__grid{
         grid-template-columns:1fr;
         gap:28px;
       }
-      .lp-hero__visual{ order:2; }
-      .lp-hero__frame{ max-width:300px; }
-      .lp-benefits__grid{ grid-template-columns:1fr; }
-      .lp-step,
-      .lp-step:nth-child(even){
-        grid-template-columns:1fr;
-        gap:20px;
+      .rt-hero__visual{
+        justify-self:center;
+        max-width:300px;
+        order:3;
       }
-      .lp-step:nth-child(even) .lp-step__copy,
-      .lp-step:nth-child(even) .lp-step__media{ order:unset; }
-      .lp-step__media{ order:-1; }
-      .lp-brand{
-        grid-template-columns:1fr;
-        text-align:left;
-      }
-      .lp-brand__visual{ order:-1; margin-bottom:8px; }
+      .rt-feature--flip .rt-feature__copy,
+      .rt-feature--flip .rt-feature__media{ order:unset; }
+      .rt-feature__media{ order:-1; }
+      .rt-lucky__grid .rt-lucky__media{ order:-1; }
+      .rt-persona__visual{ order:-1; }
+      .rt-lucky .rt-phone,
+      .rt-phone--lg{ width:min(300px,86%); }
     }
 
     @media (max-width:420px){
-      .lp-phone{ width:min(240px,84%); }
-      .lp-hero__frame{ max-width:260px; }
+      .rt-hero h1{ font-size:36px; }
+      .rt-phone--lg{ width:min(270px,88%); }
+      .rt-lucky .rt-phone{ width:min(290px,92%); }
     }
   </style>
 </head>
-<body class="lp-page">
+<body class="rt">
 
-<header class="header">
+<header class="header rt-header">
   <a class="brand" href="/" aria-label="SunNomad home">
     <img class="brand__logo--hero" src="/assets/sunnomad-logo.png" alt="SunNomad logo" />
   </a>
-  <a href="/" class="back-link">← Back to Home</a>
+  <a href="/" class="back-link">← Home</a>
 </header>
 
 <main>
-  <section class="lp-hero">
-    <div class="lp-wrap lp-hero__grid">
-      <div class="lp-hero__copy">
-        <div class="lp-kicker">☀️ Road trip weather</div>
-        <h1>Find better weather for your next road trip</h1>
-        <p class="lp-hero__sub">Discover sunnier destinations within driving distance. Compare weather, sunshine and travel distance — and find places worth the drive</p>
-        <div class="lp-cta-stack" id="lp-hero-cta">
-          <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
-            <span class="btn__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+  <!-- 1 Hero -->
+  <section class="rt-hero">
+    <div class="rt-wrap rt-hero__stage">
+      <div>
+        <p class="rt-eyebrow">The road looks better from here</p>
+        <h1>
+          <span>Find better weather</span>
+          <span>Go somewhere better</span>
+        </h1>
+        <p class="rt-hero__sub">Discover sunnier destinations within driving distance. Compare forecasts, find places worth the drive, and turn better weather into your next adventure</p>
+        <div id="rt-hero-cta">
+          <a class="rt-cta" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
+            <span class="rt-cta__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             </span>
-            <div class="btn--tf-hero__text">
-              <span class="btn--tf-hero__label">Download free on the App Store</span>
-              <span class="btn--tf-hero__sub">SunNomad for iPhone</span>
-            </div>
+            <span>
+              <span class="rt-cta__label">Download free on the App Store</span>
+              <span class="rt-cta__sub">SunNomad for iPhone</span>
+            </span>
           </a>
-          <p class="lp-micro">Free for iPhone · No account required to explore</p>
+          <p class="rt-micro">Free for iPhone · No account needed to explore</p>
         </div>
       </div>
-      <div class="lp-hero__visual">
-        <div class="lp-hero__frame">
+      <div class="rt-hero__visual">
+        <div class="rt-hero__glow" aria-hidden="true"></div>
+        <div class="rt-phone rt-phone--lg">
           <img
-            src="/assets/road-trip-weather/hero-map.webp"
-            alt="SunNomad weather map showing destinations within driving distance"
-            width="773"
-            height="1445"
+            src="/assets/road-trip-weather/01-weather-map.webp"
+            alt="SunNomad weather map with destinations within driving distance"
+            width="853"
+            height="1844"
             fetchpriority="high"
           />
         </div>
@@ -418,144 +474,169 @@
     </div>
   </section>
 
-  <section class="lp-benefits" aria-label="Why SunNomad">
-    <div class="lp-wrap lp-benefits__grid">
-      <article class="lp-benefit">
-        <div class="lp-benefit__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </div>
-        <h2>Find somewhere better</h2>
-        <p>Discover destinations with better weather instead of checking forecasts one location at a time</p>
-      </article>
-      <article class="lp-benefit">
-        <div class="lp-benefit__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        </div>
-        <h2>Know when to go</h2>
-        <p>Compare sunshine, temperatures, rain and weather trends before setting off</p>
-      </article>
-      <article class="lp-benefit">
-        <div class="lp-benefit__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-4 7 4v12"/><path d="M9 21v-6h6v6"/></svg>
-        </div>
-        <h2>Know where you can stay</h2>
-        <p>Get practical camping and overnight information at selected destinations</p>
-      </article>
+  <!-- 2 Central idea -->
+  <section class="rt-idea">
+    <div class="rt-wrap rt-idea__inner">
+      <h2>
+        <span>Don't just check the weather</span>
+        <span>Go where it's better</span>
+      </h2>
+      <p>Most weather apps tell you what to expect where you are. SunNomad helps you discover where you could be instead</p>
     </div>
   </section>
 
-  <section class="lp-how" aria-labelledby="how-heading">
-    <div class="lp-wrap">
-      <div class="lp-how__intro">
-        <h2 id="how-heading">How SunNomad works</h2>
-        <p>Three steps from a grey local forecast to a place worth the drive</p>
+  <!-- 3 Weather discovery -->
+  <section class="rt-feature">
+    <div class="rt-wrap rt-feature__grid">
+      <div class="rt-feature__copy">
+        <h2>See what's worth the drive</h2>
+        <p class="rt-feature__lede">Sunshine, temperature, rain and driving distance — all on one map</p>
+        <ul>
+          <li>Find warmer, cooler or sunnier destinations</li>
+          <li>Choose how far you're willing to drive</li>
+          <li>Compare the weather without checking one town after another</li>
+        </ul>
       </div>
-
-      <article class="lp-step">
-        <div class="lp-step__media">
-          <div class="lp-phone">
-            <img src="/assets/road-trip-weather/feature-map.webp" alt="SunNomad map with weather filters and destinations" width="853" height="1844" loading="lazy" />
-          </div>
+      <div class="rt-feature__media">
+        <div class="rt-phone rt-phone--xl">
+          <img src="/assets/road-trip-weather/01-weather-map.webp" alt="SunNomad map filtered by weather and distance" width="853" height="1844" loading="lazy" />
         </div>
-        <div class="lp-step__copy">
-          <span class="lp-step__num">Step 1</span>
-          <h3>Find your weather</h3>
-          <p>Set your driving radius, choose your weather preferences and discover destinations on the map</p>
-        </div>
-      </article>
-
-      <article class="lp-step">
-        <div class="lp-step__media">
-          <div class="lp-phone">
-            <img src="/assets/road-trip-weather/feature-worth-the-drive.webp" alt="SunNomad place card with weather badges and Worth the Drive" width="853" height="1844" loading="lazy" />
-          </div>
-        </div>
-        <div class="lp-step__copy">
-          <span class="lp-step__num">Step 2</span>
-          <h3>See what's worth the drive</h3>
-          <p>Compare weather conditions, driving distance and useful weather badges before deciding where to go</p>
-        </div>
-      </article>
-
-      <article class="lp-step">
-        <div class="lp-step__media">
-          <div class="lp-phone">
-            <img src="/assets/road-trip-weather/feature-stay.webp" alt="SunNomad Stop and Stay overnight camping information" width="853" height="1844" loading="lazy" />
-          </div>
-        </div>
-        <div class="lp-step__copy">
-          <span class="lp-step__num">Step 3</span>
-          <h3>Know where you can stay</h3>
-          <p>Explore practical overnight information, campsite options and local restrictions for selected destinations</p>
-        </div>
-      </article>
+      </div>
     </div>
   </section>
 
-  <section class="lp-wrap" aria-label="Download SunNomad">
-    <div class="lp-band">
-      <h2>Better weather is out there</h2>
-      <p class="lp-band__sub">Find your next sunny escape with SunNomad</p>
-      <div class="lp-cta-stack">
-        <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
-          <span class="btn__icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+  <!-- 4 Destination experience -->
+  <section class="rt-feature rt-feature--flip" style="background:rgba(235,227,212,.45);">
+    <div class="rt-wrap rt-feature__grid">
+      <div class="rt-feature__copy">
+        <h2>Know before you go</h2>
+        <p class="rt-feature__lede">A better forecast is just the beginning</p>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--rt-muted);max-width:30em;">
+          Open a destination to see weather, sunshine, distance and badges like Worth the Drive and Sunny Streak — enough to decide if the trip is worth it
+        </p>
+      </div>
+      <div class="rt-feature__media">
+        <div class="rt-phone rt-phone--md">
+          <img src="/assets/road-trip-weather/02-worth-the-drive.webp" alt="SunNomad destination with Worth the Drive and weather badges" width="853" height="1844" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 Feeling Lucky -->
+  <section class="rt-lucky">
+    <div class="rt-wrap rt-lucky__grid">
+      <div>
+        <p class="rt-eyebrow">The unexpected detour</p>
+        <h2>Feeling Lucky?</h2>
+        <p class="rt-lucky__sub">No destination? No problem</p>
+        <p class="rt-lucky__body">Chase the sun, escape the heat, head into the wild, or just get out of here. Pick your mood, choose your distance, and let SunNomad surprise you</p>
+        <p class="rt-lucky__close">Sometimes the best trips start with a roll of the dice</p>
+        <a class="rt-cta" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
+          <span>
+            <span class="rt-cta__label">Download free on the App Store</span>
+            <span class="rt-cta__sub">Try Feeling Lucky on iPhone</span>
           </span>
-          <div class="btn--tf-hero__text">
-            <span class="btn--tf-hero__label">Get SunNomad free</span>
-            <span class="btn--tf-hero__sub">Available now on iPhone</span>
-          </div>
         </a>
-        <p class="lp-micro">Available now on iPhone</p>
+        <p class="rt-micro">Free for iPhone</p>
+      </div>
+      <div class="rt-lucky__media">
+        <div class="rt-phone">
+          <img
+            src="/assets/road-trip-weather/06-feeling-lucky-auto-sales.webp"
+            alt="Feeling Lucky screen with Djordje and Goldie at Djordje's Auto Sales"
+            width="946"
+            height="2048"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="lp-wrap lp-brand" aria-labelledby="brand-heading">
-    <div>
-      <h2 id="brand-heading">A little less forecasting. A lot more exploring</h2>
-      <p>SunNomad is built for spontaneous detours, unexpected destinations and those days when you'd rather go somewhere with better weather</p>
-    </div>
-    <div class="lp-brand__visual">
-      <div class="lp-brand__road">
-        <img src="/assets/road-trip-weather/feature-road-trip.webp" alt="SunNomad destination view on a road trip" width="853" height="1844" loading="lazy" />
+  <!-- 6 Stop & Stay -->
+  <section class="rt-feature">
+    <div class="rt-wrap rt-feature__grid">
+      <div class="rt-feature__copy">
+        <h2>Find your place to stay</h2>
+        <p class="rt-feature__lede">Because a good destination deserves a good place to stop</p>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--rt-muted);max-width:30em;">
+          Selected destinations include practical overnight notes — camping options, alternatives and local rules. Planning hints, not a booking marketplace
+        </p>
       </div>
-      <div class="lp-brand__goldie">
-        <img src="/assets/road-trip-weather/feature-goldie.webp" alt="Goldie, SunNomad's travel companion" width="853" height="1844" loading="lazy" />
+      <div class="rt-feature__media">
+        <div class="rt-phone rt-phone--md">
+          <img src="/assets/road-trip-weather/03-stop-and-stay.webp" alt="SunNomad Stop and Stay overnight information" width="853" height="1844" loading="lazy" />
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="lp-wrap lp-faq" aria-labelledby="faq-heading">
-    <h2 id="faq-heading">FAQ</h2>
+  <!-- 7 Personality -->
+  <section class="rt-persona">
+    <div class="rt-wrap rt-persona__grid">
+      <div>
+        <h2>Made for the unexpected</h2>
+        <p>For spontaneous weekends, scenic detours, chasing sunshine and finding somewhere you hadn't thought of going</p>
+      </div>
+      <div class="rt-persona__visual">
+        <div class="rt-phone rt-phone--md">
+          <img src="/assets/road-trip-weather/04-road-trip.webp" alt="SunNomad road trip destination view" width="853" height="1844" loading="lazy" />
+        </div>
+        <div class="rt-phone rt-phone--sm">
+          <img src="/assets/road-trip-weather/05-goldie.webp" alt="Goldie, SunNomad travel companion" width="853" height="1844" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Final CTA -->
+  <section class="rt-final">
+    <div class="rt-wrap">
+      <h2>Your next escape starts here</h2>
+      <p class="rt-final__sub">Find better weather. Discover somewhere new. Hit the road</p>
+      <a class="rt-cta" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
+        <span class="rt-cta__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        </span>
+        <span>
+          <span class="rt-cta__label">Download SunNomad free</span>
+          <span class="rt-cta__sub">Available now for iPhone</span>
+        </span>
+      </a>
+      <p class="rt-micro">Available now for iPhone</p>
+    </div>
+  </section>
+
+  <!-- 9 FAQ -->
+  <section class="rt-wrap rt-faq" aria-labelledby="rt-faq-h">
+    <h2 id="rt-faq-h">FAQ</h2>
     <details>
       <summary>Is SunNomad free?</summary>
       <p>Yes. SunNomad is free to download on the App Store for iPhone</p>
     </details>
     <details>
       <summary>Do I need an account?</summary>
-      <p>No. You can explore the map, filters and place details as a guest. An account is only needed for favourites and sync across devices</p>
+      <p>No. Map, filters and place details work as a guest. An account is only needed for favourites and sync</p>
     </details>
     <details>
-      <summary>Where is SunNomad available?</summary>
-      <p>Coverage includes the United States, Canada, Mexico, Europe, Turkey and North Africa</p>
+      <summary>Where can I use SunNomad?</summary>
+      <p>United States, Canada, Mexico, Europe, Turkey and North Africa</p>
     </details>
     <details>
-      <summary>Is Android supported?</summary>
+      <summary>Is SunNomad available on Android?</summary>
       <p>SunNomad is currently available for iPhone. Android is not available yet</p>
     </details>
   </section>
 </main>
 
-<div class="lp-sticky" id="lp-sticky" aria-hidden="true">
-  <div class="lp-sticky__inner">
-    <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
-      <div class="btn--tf-hero__text">
-        <span class="btn--tf-hero__label">Download free on the App Store</span>
-        <span class="btn--tf-hero__sub">Free for iPhone</span>
-      </div>
-    </a>
-  </div>
+<div class="rt-sticky" id="rt-sticky" aria-hidden="true">
+  <a class="rt-cta" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
+    <span>
+      <span class="rt-cta__label">Download free on the App Store</span>
+      <span class="rt-cta__sub">Free for iPhone</span>
+    </span>
+  </a>
 </div>
 
 <footer class="footer">
@@ -577,25 +658,18 @@
     <a href="mailto:hola@sunnomad.app">Contact</a>
   </div>
 </footer>
-<div class="lp-footer-pad" aria-hidden="true"></div>
 
 <script>
   (function () {
-    var heroCta = document.getElementById("lp-hero-cta");
-    var sticky = document.getElementById("lp-sticky");
-    if (!heroCta || !sticky || !("IntersectionObserver" in window)) return;
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        var entry = entries[0];
-        var show = entry && !entry.isIntersecting;
-        sticky.classList.toggle("is-visible", show);
-        sticky.setAttribute("aria-hidden", show ? "false" : "true");
-        document.body.classList.toggle("has-sticky", show);
-      },
-      { threshold: 0, rootMargin: "0px 0px 0px 0px" }
-    );
-    observer.observe(heroCta);
+    var hero = document.getElementById("rt-hero-cta");
+    var sticky = document.getElementById("rt-sticky");
+    if (!hero || !sticky || !("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (entries) {
+      var show = entries[0] && !entries[0].isIntersecting;
+      sticky.classList.toggle("is-on", show);
+      sticky.setAttribute("aria-hidden", show ? "false" : "true");
+      document.body.classList.toggle("rt-has-sticky", show);
+    }, { threshold: 0 }).observe(hero);
   })();
 </script>
 
