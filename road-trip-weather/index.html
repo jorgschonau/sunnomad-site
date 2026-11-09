@@ -84,42 +84,55 @@
     }
 
     .rt-phone{
+      --pw:320px;
+      --pmh:680px;
       background:#111;
-      border-radius:34px;
-      padding:9px;
+      border-radius:30px;
+      padding:8px;
       box-shadow:
         0 0 0 1px rgba(255,255,255,.07) inset,
-        0 28px 70px rgba(15,27,45,.22);
+        0 18px 48px rgba(15,27,45,.18);
       overflow:hidden;
+      /* Width capped by --pw and by height budget so aspect stays true */
+      width:min(var(--pw), calc(var(--pmh) * 9 / 19.5), 100%);
+      max-width:100%;
       aspect-ratio:9 / 19.5;
+      height:auto;
+      margin:0 auto;
     }
     .rt-phone img{
       width:100%;
       height:100%;
       object-fit:cover;
       object-position:center top;
-      border-radius:26px;
+      border-radius:22px;
       display:block;
     }
-    .rt-phone--lg{ width:min(340px,100%); margin:0 auto; }
-    .rt-phone--md{ width:min(300px,100%); margin:0 auto; }
-    .rt-phone--sm{ width:min(210px,100%); }
-    .rt-phone--xl{ width:min(380px,100%); margin:0 auto; }
+    /* Hero: strong, slightly under the map showcase */
+    .rt-phone--hero{ --pw:320px; --pmh:690px; }
+    /* Weather discovery: primary product showcase */
+    .rt-phone--showcase{ --pw:360px; --pmh:740px; }
+    /* Feeling Lucky: highlight, not giant */
+    .rt-phone--lucky{ --pw:340px; --pmh:700px; }
+    /* Supporting features — compact */
+    .rt-phone--support{ --pw:260px; --pmh:540px; }
+    .rt-phone--persona{ --pw:220px; --pmh:460px; }
+    .rt-phone--accent{ --pw:150px; --pmh:320px; }
 
     /* —— 1 Hero —— */
     .rt-hero{
-      padding:18px 0 56px;
+      padding:12px 0 40px;
       position:relative;
     }
     .rt-hero__stage{
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(280px,.85fr);
-      gap:28px 40px;
-      align-items:end;
+      grid-template-columns:minmax(0,1.05fr) minmax(260px,.8fr);
+      gap:24px 36px;
+      align-items:center;
     }
     .rt-hero h1{
-      margin:0 0 16px;
-      font-size:clamp(40px,6vw,64px);
+      margin:0 0 14px;
+      font-size:clamp(36px,5.2vw,58px);
       font-weight:800;
       letter-spacing:-.045em;
       line-height:1.02;
@@ -127,10 +140,10 @@
     }
     .rt-hero h1 span{ display:block; }
     .rt-hero__sub{
-      margin:0 0 26px;
-      max-width:32em;
-      font-size:clamp(16px,1.8vw,19px);
-      line-height:1.55;
+      margin:0 0 22px;
+      max-width:30em;
+      font-size:clamp(15px,1.6vw,18px);
+      line-height:1.5;
       color:var(--rt-muted);
     }
     .rt-hero__visual{
@@ -141,9 +154,9 @@
     }
     .rt-hero__glow{
       position:absolute;
-      inset:-18% -12% auto -12%;
-      height:70%;
-      background:radial-gradient(ellipse at center, rgba(196,90,18,.18), transparent 70%);
+      inset:-14% -10% auto -10%;
+      height:65%;
+      background:radial-gradient(ellipse at center, rgba(196,90,18,.16), transparent 70%);
       pointer-events:none;
       z-index:0;
     }
@@ -151,15 +164,15 @@
 
     /* —— 2 Central idea —— */
     .rt-idea{
-      padding:48px 0;
+      padding:36px 0;
       border-top:1px solid rgba(21,32,51,.08);
       border-bottom:1px solid rgba(21,32,51,.08);
       background:var(--rt-sand);
     }
-    .rt-idea__inner{ max-width:760px; }
+    .rt-idea__inner{ max-width:720px; }
     .rt-idea h2{
-      margin:0 0 16px;
-      font-size:clamp(32px,4.5vw,48px);
+      margin:0 0 12px;
+      font-size:clamp(28px,3.8vw,42px);
       font-weight:800;
       letter-spacing:-.04em;
       line-height:1.08;
@@ -168,41 +181,57 @@
     .rt-idea h2 span{ display:block; }
     .rt-idea p{
       margin:0;
-      font-size:clamp(17px,2vw,20px);
-      line-height:1.55;
+      font-size:clamp(16px,1.7vw,19px);
+      line-height:1.5;
       color:var(--rt-muted);
       max-width:28em;
     }
 
     /* —— Shared feature rows —— */
     .rt-feature{
-      padding:64px 0;
+      padding:48px 0;
     }
+    .rt-feature--compact{ padding:40px 0; }
+    .rt-feature--showcase{ padding:52px 0; }
     .rt-feature__grid{
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(260px,.9fr);
-      gap:40px;
+      grid-template-columns:minmax(0,1.1fr) minmax(240px,.75fr);
+      gap:28px 36px;
       align-items:center;
     }
+    .rt-feature--showcase .rt-feature__grid{
+      grid-template-columns:minmax(0,1fr) minmax(280px,.95fr);
+      gap:32px 40px;
+    }
     .rt-feature--flip .rt-feature__grid{
-      grid-template-columns:minmax(260px,.9fr) minmax(0,1fr);
+      grid-template-columns:minmax(240px,.75fr) minmax(0,1.1fr);
     }
     .rt-feature--flip .rt-feature__copy{ order:2; }
     .rt-feature--flip .rt-feature__media{ order:1; }
     .rt-feature h2{
-      margin:0 0 10px;
-      font-size:clamp(28px,3.5vw,40px);
+      margin:0 0 8px;
+      font-size:clamp(26px,3.2vw,36px);
       font-weight:800;
       letter-spacing:-.035em;
       line-height:1.1;
       color:var(--rt-ink);
     }
+    .rt-feature--showcase h2{
+      font-size:clamp(28px,3.5vw,40px);
+    }
     .rt-feature__lede{
-      margin:0 0 18px;
-      font-size:18px;
-      line-height:1.45;
+      margin:0 0 14px;
+      font-size:17px;
+      line-height:1.4;
       color:var(--rt-muted);
       max-width:28em;
+    }
+    .rt-feature__note{
+      margin:0;
+      font-size:15px;
+      line-height:1.5;
+      color:var(--rt-muted);
+      max-width:30em;
     }
     .rt-feature ul{
       margin:0;
@@ -211,9 +240,9 @@
     }
     .rt-feature li{
       position:relative;
-      padding:0 0 10px 18px;
+      padding:0 0 8px 18px;
       font-size:15px;
-      line-height:1.5;
+      line-height:1.45;
       color:var(--rt-muted);
     }
     .rt-feature li::before{
@@ -225,47 +254,41 @@
       background:var(--rt-orange);
     }
 
-    /* —— 5 Feeling Lucky —— */
+    /* —— Feeling Lucky —— */
     .rt-lucky{
-      padding:64px 0;
+      padding:52px 0;
       background:
-        radial-gradient(700px 420px at 85% 20%, rgba(212,137,58,.22), transparent 60%),
+        radial-gradient(640px 380px at 88% 18%, rgba(212,137,58,.2), transparent 60%),
         linear-gradient(165deg, #2a1a10 0%, #3d2414 45%, #1f160f 100%);
       color:#f7efe4;
     }
-    .rt-lucky .rt-eyebrow{ color:var(--rt-amber); }
+    .rt-lucky .rt-eyebrow{ color:var(--rt-amber); margin-bottom:10px; }
     .rt-lucky__grid{
       display:grid;
-      grid-template-columns:minmax(0,.95fr) minmax(280px,1.05fr);
-      gap:36px 48px;
+      grid-template-columns:minmax(0,1fr) minmax(260px,.95fr);
+      gap:28px 40px;
       align-items:center;
     }
     .rt-lucky h2{
-      margin:0 0 10px;
-      font-size:clamp(36px,5vw,56px);
+      margin:0 0 8px;
+      font-size:clamp(34px,4.6vw,52px);
       font-weight:800;
       letter-spacing:-.04em;
       line-height:1.02;
       color:#fff;
     }
     .rt-lucky__sub{
-      margin:0 0 14px;
-      font-size:20px;
+      margin:0 0 12px;
+      font-size:19px;
       font-weight:700;
       color:rgba(247,239,228,.88);
     }
     .rt-lucky__body{
-      margin:0 0 14px;
+      margin:0 0 20px;
       font-size:16px;
-      line-height:1.6;
+      line-height:1.55;
       color:rgba(247,239,228,.72);
-      max-width:30em;
-    }
-    .rt-lucky__close{
-      margin:0 0 24px;
-      font-size:15px;
-      font-style:italic;
-      color:rgba(247,239,228,.62);
+      max-width:28em;
     }
     .rt-lucky .rt-cta{
       background:linear-gradient(135deg,#e08a2e,#c45a12);
@@ -274,35 +297,33 @@
     }
     .rt-lucky .rt-micro{ color:rgba(247,239,228,.55); }
     .rt-lucky .rt-phone{
-      width:min(400px,100%);
-      margin:0 auto;
       box-shadow:
         0 0 0 1px rgba(255,255,255,.1) inset,
-        0 40px 90px rgba(0,0,0,.45);
+        0 28px 70px rgba(0,0,0,.4);
     }
 
-    /* —— 7 Personality —— */
+    /* —— Personality —— */
     .rt-persona{
-      padding:64px 0;
+      padding:44px 0;
       background:var(--rt-sand);
     }
     .rt-persona__grid{
       display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
-      gap:36px;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+      gap:28px;
       align-items:center;
     }
     .rt-persona h2{
-      margin:0 0 14px;
-      font-size:clamp(30px,4vw,44px);
+      margin:0 0 10px;
+      font-size:clamp(26px,3.4vw,38px);
       font-weight:800;
       letter-spacing:-.035em;
       line-height:1.08;
     }
     .rt-persona p{
       margin:0;
-      font-size:17px;
-      line-height:1.6;
+      font-size:16px;
+      line-height:1.55;
       color:var(--rt-muted);
       max-width:28em;
     }
@@ -310,37 +331,37 @@
       display:flex;
       justify-content:center;
       align-items:flex-end;
-      gap:16px;
+      gap:12px;
     }
 
-    /* —— 8 Final CTA —— */
+    /* —— Final CTA —— */
     .rt-final{
-      padding:72px 0;
+      padding:56px 0;
       text-align:center;
       background:
-        radial-gradient(600px 320px at 50% 0%, rgba(196,90,18,.12), transparent 70%),
+        radial-gradient(560px 280px at 50% 0%, rgba(196,90,18,.1), transparent 70%),
         var(--rt-cream);
     }
     .rt-final h2{
-      margin:0 0 12px;
-      font-size:clamp(32px,4.5vw,48px);
+      margin:0 0 10px;
+      font-size:clamp(28px,4vw,42px);
       font-weight:800;
       letter-spacing:-.04em;
       line-height:1.08;
     }
     .rt-final__sub{
-      margin:0 auto 26px;
+      margin:0 auto 22px;
       max-width:24em;
-      font-size:18px;
-      line-height:1.5;
+      font-size:17px;
+      line-height:1.45;
       color:var(--rt-muted);
     }
     .rt-final .rt-cta{ margin:0 auto; }
-    .rt-final .rt-micro{ margin-top:12px; }
+    .rt-final .rt-micro{ margin-top:10px; }
 
     /* —— FAQ —— */
     .rt-faq{
-      padding:0 0 80px;
+      padding:0 0 64px;
       max-width:680px;
       margin:0 auto;
     }
@@ -400,29 +421,43 @@
       .rt-hero__stage,
       .rt-feature__grid,
       .rt-feature--flip .rt-feature__grid,
+      .rt-feature--showcase .rt-feature__grid,
       .rt-lucky__grid,
       .rt-persona__grid{
         grid-template-columns:1fr;
-        gap:28px;
+        gap:20px;
       }
       .rt-hero__visual{
         justify-self:center;
-        max-width:300px;
+        max-width:280px;
         order:3;
       }
       .rt-feature--flip .rt-feature__copy,
       .rt-feature--flip .rt-feature__media{ order:unset; }
-      .rt-feature__media{ order:-1; }
-      .rt-lucky__grid .rt-lucky__media{ order:-1; }
-      .rt-persona__visual{ order:-1; }
-      .rt-lucky .rt-phone,
-      .rt-phone--lg{ width:min(300px,86%); }
+      /* Copy first on mobile — then screenshot */
+      .rt-feature__media,
+      .rt-lucky__media,
+      .rt-persona__visual{ order:unset; }
+      .rt-phone--hero{ --pw:280px; --pmh:600px; }
+      .rt-phone--showcase{ --pw:300px; --pmh:620px; }
+      .rt-phone--lucky{ --pw:300px; --pmh:620px; }
+      .rt-phone--support{ --pw:240px; --pmh:500px; }
+      .rt-phone--persona{ --pw:210px; --pmh:440px; }
+      .rt-phone--accent{ --pw:150px; --pmh:320px; }
+      .rt-feature,
+      .rt-feature--showcase,
+      .rt-feature--compact{ padding:36px 0; }
+      .rt-lucky{ padding:40px 0; }
+      .rt-persona{ padding:36px 0; }
+      .rt-final{ padding:44px 0; }
     }
 
     @media (max-width:420px){
-      .rt-hero h1{ font-size:36px; }
-      .rt-phone--lg{ width:min(270px,88%); }
-      .rt-lucky .rt-phone{ width:min(290px,92%); }
+      .rt-hero h1{ font-size:34px; }
+      .rt-phone--hero{ --pw:250px; --pmh:540px; }
+      .rt-phone--showcase,
+      .rt-phone--lucky{ --pw:270px; --pmh:560px; }
+      .rt-phone--support{ --pw:220px; --pmh:460px; }
     }
   </style>
 </head>
@@ -461,7 +496,7 @@
       </div>
       <div class="rt-hero__visual">
         <div class="rt-hero__glow" aria-hidden="true"></div>
-        <div class="rt-phone rt-phone--lg">
+        <div class="rt-phone rt-phone--hero">
           <img
             src="/assets/road-trip-weather/01-weather-map.webp"
             alt="SunNomad weather map with destinations within driving distance"
@@ -485,8 +520,8 @@
     </div>
   </section>
 
-  <!-- 3 Weather discovery -->
-  <section class="rt-feature">
+  <!-- 3 Weather discovery (primary showcase) -->
+  <section class="rt-feature rt-feature--showcase">
     <div class="rt-wrap rt-feature__grid">
       <div class="rt-feature__copy">
         <h2>See what's worth the drive</h2>
@@ -498,40 +533,21 @@
         </ul>
       </div>
       <div class="rt-feature__media">
-        <div class="rt-phone rt-phone--xl">
+        <div class="rt-phone rt-phone--showcase">
           <img src="/assets/road-trip-weather/01-weather-map.webp" alt="SunNomad map filtered by weather and distance" width="853" height="1844" loading="lazy" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4 Destination experience -->
-  <section class="rt-feature rt-feature--flip" style="background:rgba(235,227,212,.45);">
-    <div class="rt-wrap rt-feature__grid">
-      <div class="rt-feature__copy">
-        <h2>Know before you go</h2>
-        <p class="rt-feature__lede">A better forecast is just the beginning</p>
-        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--rt-muted);max-width:30em;">
-          Open a destination to see weather, sunshine, distance and badges like Worth the Drive and Sunny Streak — enough to decide if the trip is worth it
-        </p>
-      </div>
-      <div class="rt-feature__media">
-        <div class="rt-phone rt-phone--md">
-          <img src="/assets/road-trip-weather/02-worth-the-drive.webp" alt="SunNomad destination with Worth the Drive and weather badges" width="853" height="1844" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5 Feeling Lucky -->
+  <!-- 4 Feeling Lucky (visual highlight) -->
   <section class="rt-lucky">
     <div class="rt-wrap rt-lucky__grid">
       <div>
         <p class="rt-eyebrow">The unexpected detour</p>
         <h2>Feeling Lucky?</h2>
         <p class="rt-lucky__sub">No destination? No problem</p>
-        <p class="rt-lucky__body">Chase the sun, escape the heat, head into the wild, or just get out of here. Pick your mood, choose your distance, and let SunNomad surprise you</p>
-        <p class="rt-lucky__close">Sometimes the best trips start with a roll of the dice</p>
+        <p class="rt-lucky__body">Pick your mood, choose your distance, and let SunNomad surprise you</p>
         <a class="rt-cta" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
           <span>
             <span class="rt-cta__label">Download on the App Store</span>
@@ -541,7 +557,7 @@
         <p class="rt-micro">Available for iPhone</p>
       </div>
       <div class="rt-lucky__media">
-        <div class="rt-phone">
+        <div class="rt-phone rt-phone--lucky">
           <img
             src="/assets/road-trip-weather/06-feeling-lucky-auto-sales.webp"
             alt="Feeling Lucky screen with Djordje and Goldie at Djordje's Auto Sales"
@@ -554,18 +570,36 @@
     </div>
   </section>
 
-  <!-- 6 Stop & Stay -->
-  <section class="rt-feature">
+  <!-- 5 Destination / Worth the Drive (supporting) -->
+  <section class="rt-feature rt-feature--compact rt-feature--flip" style="background:rgba(235,227,212,.4);">
+    <div class="rt-wrap rt-feature__grid">
+      <div class="rt-feature__copy">
+        <h2>Know before you go</h2>
+        <p class="rt-feature__lede">A better forecast is just the beginning</p>
+        <p class="rt-feature__note">
+          Open a destination to see weather, sunshine, distance and badges like Worth the Drive and Sunny Streak
+        </p>
+      </div>
+      <div class="rt-feature__media">
+        <div class="rt-phone rt-phone--support">
+          <img src="/assets/road-trip-weather/02-worth-the-drive.webp" alt="SunNomad destination with Worth the Drive and weather badges" width="853" height="1844" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Stop & Stay (supporting) -->
+  <section class="rt-feature rt-feature--compact">
     <div class="rt-wrap rt-feature__grid">
       <div class="rt-feature__copy">
         <h2>Find your place to stay</h2>
         <p class="rt-feature__lede">Because a good destination deserves a good place to stop</p>
-        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--rt-muted);max-width:30em;">
-          Selected destinations include practical overnight notes — camping options, alternatives and local rules. Planning hints, not a booking marketplace
+        <p class="rt-feature__note">
+          Selected destinations include practical overnight notes — camping options, alternatives and local rules
         </p>
       </div>
       <div class="rt-feature__media">
-        <div class="rt-phone rt-phone--md">
+        <div class="rt-phone rt-phone--support">
           <img src="/assets/road-trip-weather/03-stop-and-stay.webp" alt="SunNomad Stop and Stay overnight information" width="853" height="1844" loading="lazy" />
         </div>
       </div>
@@ -580,10 +614,10 @@
         <p>For spontaneous weekends, scenic detours, chasing sunshine and finding somewhere you hadn't thought of going</p>
       </div>
       <div class="rt-persona__visual">
-        <div class="rt-phone rt-phone--md">
+        <div class="rt-phone rt-phone--persona">
           <img src="/assets/road-trip-weather/04-road-trip.webp" alt="SunNomad road trip destination view" width="853" height="1844" loading="lazy" />
         </div>
-        <div class="rt-phone rt-phone--sm">
+        <div class="rt-phone rt-phone--accent">
           <img src="/assets/road-trip-weather/05-goldie.webp" alt="Goldie, SunNomad travel companion" width="853" height="1844" loading="lazy" />
         </div>
       </div>
@@ -604,7 +638,6 @@
           <span class="rt-cta__sub">Available now for iPhone</span>
         </span>
       </a>
-      <p class="rt-micro">Available now for iPhone</p>
     </div>
   </section>
 
