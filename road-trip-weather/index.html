@@ -3,95 +3,379 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>How to Find Better Weather for Your Next Road Trip — SunNomad</title>
-  <meta name="description" content="Learn how to find better weather within driving distance. Compare forecasts, sunshine, and destinations with SunNomad — the free road trip weather app for iPhone." />
+  <title>Find Better Weather for Your Next Road Trip — SunNomad</title>
+  <meta name="description" content="Discover sunnier destinations within driving distance. Compare weather, sunshine and travel distance with SunNomad — free for iPhone." />
   <meta name="theme-color" content="#fbf7ef" />
   <link rel="canonical" href="https://sunnomad.app/road-trip-weather" />
-  <meta property="og:title" content="How to Find Better Weather for Your Next Road Trip" />
-  <meta property="og:description" content="Grey skies at home do not mean grey skies everywhere. See how SunNomad helps you find better weather within driving distance." />
+  <meta property="og:title" content="Find better weather for your next road trip" />
+  <meta property="og:description" content="Discover sunnier destinations within driving distance. Compare weather, sunshine and travel distance — and find places worth the drive." />
   <meta property="og:url" content="https://sunnomad.app/road-trip-weather" />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://sunnomad.app/assets/berlin_map.webp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sunnomad.app/assets/road-trip-weather/hero-map.webp" />
   <link rel="icon" href="/assets/logo.png" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
-    .lp{ max-width:760px; margin:0 auto; padding:20px 20px 80px; }
-    .lp__pill{
+    :root{
+      --lp-cream:#fbf7ef;
+      --lp-ink:var(--ink,#0f1b2d);
+      --lp-muted:rgba(15,27,45,.68);
+      --lp-max:1080px;
+      --lp-store:https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8;
+    }
+
+    .lp-page{ background:var(--lp-cream); overflow-x:hidden; }
+
+    .lp-wrap{
+      max-width:var(--lp-max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* —— Hero —— */
+    .lp-hero{
+      padding:28px 0 48px;
+    }
+    .lp-hero__grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+      gap:40px;
+      align-items:center;
+    }
+    .lp-kicker{
       display:inline-flex; align-items:center; gap:8px;
       padding:7px 14px; border-radius:999px;
       background:rgba(197,106,26,.12); color:var(--accent);
       font-weight:800; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
-      margin-bottom:20px;
+      margin:0 0 18px;
     }
-    .lp h1{
-      font-size:clamp(34px,5vw,48px); font-weight:800;
-      letter-spacing:-.04em; line-height:1.08; margin:0 0 14px;
+    .lp-hero h1{
+      font-size:clamp(34px,4.6vw,52px);
+      font-weight:800;
+      letter-spacing:-.04em;
+      line-height:1.06;
+      margin:0 0 16px;
+      color:var(--lp-ink);
     }
-    .lp .lead{
-      color:var(--muted); font-size:18px; line-height:1.65; margin:0 0 28px;
+    .lp-hero__sub{
+      margin:0 0 26px;
+      font-size:clamp(16px,1.7vw,19px);
+      line-height:1.55;
+      color:var(--lp-muted);
+      max-width:34em;
     }
-    .lp h2{
-      font-size:24px; font-weight:800; letter-spacing:-.02em;
-      margin:44px 0 12px; line-height:1.2;
+    .lp-cta-stack{ max-width:420px; }
+    .lp-cta-stack .btn--tf-hero{ margin-bottom:10px; text-decoration:none; }
+    .lp-micro{
+      margin:0;
+      font-size:13px;
+      color:rgba(15,27,45,.55);
+      font-weight:600;
     }
-    .lp h3{
-      font-size:17px; font-weight:700; margin:28px 0 8px; letter-spacing:-.01em;
+    .lp-hero__visual{ position:relative; }
+    .lp-hero__frame{
+      position:relative;
+      border-radius:28px;
+      overflow:hidden;
+      background:#111;
+      box-shadow:
+        0 0 0 1px rgba(15,27,45,.06),
+        0 28px 70px rgba(15,27,45,.18);
+      aspect-ratio:9 / 16;
+      max-width:360px;
+      margin:0 auto;
     }
-    .lp p{
-      margin:0 0 14px; color:rgba(15,27,45,.72); font-size:16px; line-height:1.7;
+    .lp-hero__frame img{
+      width:100%; height:100%;
+      object-fit:cover;
+      object-position:center top;
+      display:block;
     }
-    .lp ul{
-      margin:0 0 18px; padding-left:22px;
-      color:rgba(15,27,45,.72); font-size:16px; line-height:1.7;
+
+    /* —— Benefits —— */
+    .lp-benefits{
+      padding:8px 0 52px;
     }
-    .lp li{ margin-bottom:8px; }
-    .lp a:not(.btn):not(.back-link){
-      color:var(--accent); text-decoration:underline; text-underline-offset:2px;
+    .lp-benefits__grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
     }
-    .lp__cta{ margin:28px 0 8px; }
-    .lp__cta .btn--tf-hero{ max-width:420px; }
-    .lp-example{
-      background:rgba(255,255,255,.80);
+    .lp-benefit{
+      background:rgba(255,255,255,.72);
       border:1px solid rgba(15,27,45,.08);
-      border-radius:18px;
-      padding:22px 22px 18px;
-      margin:18px 0 28px;
-      box-shadow:0 12px 32px rgba(15,27,45,.06);
+      border-radius:16px;
+      padding:18px 18px 16px;
+      box-shadow:0 10px 28px rgba(15,27,45,.04);
     }
-    .lp-example__label{
-      font-size:11px; font-weight:700; letter-spacing:.08em;
-      text-transform:uppercase; color:rgba(15,27,45,.45); margin:0 0 8px;
+    .lp-benefit__icon{
+      width:36px; height:36px;
+      border-radius:10px;
+      background:rgba(197,106,26,.12);
+      color:var(--accent);
+      display:flex; align-items:center; justify-content:center;
+      margin-bottom:12px;
     }
-    .lp-phones{
-      display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
-      margin:28px 0 8px;
+    .lp-benefit__icon svg{ width:20px; height:20px; }
+    .lp-benefit h2{
+      font-size:16px; font-weight:800; letter-spacing:-.015em;
+      margin:0 0 6px; color:var(--lp-ink);
+    }
+    .lp-benefit p{
+      margin:0; font-size:14px; line-height:1.5; color:var(--lp-muted);
+    }
+
+    /* —— How it works —— */
+    .lp-how{ padding:12px 0 56px; }
+    .lp-how__intro{
+      text-align:center;
+      max-width:36em;
+      margin:0 auto 36px;
+    }
+    .lp-how__intro h2{
+      font-size:clamp(26px,3.2vw,34px);
+      font-weight:800;
+      letter-spacing:-.03em;
+      margin:0 0 10px;
+      color:var(--lp-ink);
+    }
+    .lp-how__intro p{
+      margin:0; font-size:16px; line-height:1.55; color:var(--lp-muted);
+    }
+    .lp-step{
+      display:grid;
+      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+      gap:36px;
+      align-items:center;
+      margin-bottom:48px;
+    }
+    .lp-step:nth-child(even){ grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
+    .lp-step:nth-child(even) .lp-step__copy{ order:2; }
+    .lp-step:nth-child(even) .lp-step__media{ order:1; }
+    .lp-step:last-child{ margin-bottom:0; }
+    .lp-step__num{
+      display:inline-block;
+      font-size:12px; font-weight:800; letter-spacing:.08em;
+      text-transform:uppercase; color:var(--accent);
+      margin:0 0 10px;
+    }
+    .lp-step h3{
+      font-size:clamp(22px,2.6vw,28px);
+      font-weight:800;
+      letter-spacing:-.025em;
+      margin:0 0 10px;
+      color:var(--lp-ink);
+    }
+    .lp-step p{
+      margin:0;
+      font-size:16px;
+      line-height:1.6;
+      color:var(--lp-muted);
+      max-width:32em;
     }
     .lp-phone{
-      border-radius:28px; background:#111; padding:8px;
-      box-shadow:0 18px 40px rgba(0,0,0,.16);
-      aspect-ratio:9/19.5; overflow:hidden;
+      position:relative;
+      width:min(280px,78%);
+      margin:0 auto;
+      border-radius:36px;
+      background:#111;
+      padding:10px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.08) inset,
+        0 30px 70px rgba(15,27,45,.22);
+      aspect-ratio:9 / 19.5;
+      overflow:hidden;
     }
     .lp-phone img{
-      width:100%; height:100%; object-fit:cover; object-position:top;
-      border-radius:22px; display:block;
+      width:100%; height:100%;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:28px;
+      display:block;
     }
-    .lp-caption{
-      font-size:13px; color:rgba(15,27,45,.55); margin:10px 0 0; line-height:1.45;
+
+    /* —— Mid CTA —— */
+    .lp-band{
+      margin:8px 0 56px;
+      padding:36px 28px;
+      border-radius:22px;
+      background:linear-gradient(160deg, rgba(197,106,26,.10), rgba(255,255,255,.55));
+      border:1px solid rgba(197,106,26,.16);
+      text-align:center;
     }
-    .lp-close{
-      margin-top:48px; padding:28px;
-      background:rgba(197,106,26,.08);
-      border:1px solid rgba(197,106,26,.18);
+    .lp-band h2{
+      font-size:clamp(26px,3vw,34px);
+      font-weight:800;
+      letter-spacing:-.03em;
+      margin:0 0 8px;
+      color:var(--lp-ink);
+    }
+    .lp-band__sub{
+      margin:0 auto 22px;
+      max-width:28em;
+      font-size:17px;
+      line-height:1.5;
+      color:var(--lp-muted);
+    }
+    .lp-band .lp-cta-stack{
+      margin:0 auto;
+    }
+    .lp-band .lp-micro{ margin-top:4px; }
+
+    /* —— Brand —— */
+    .lp-brand{
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+      gap:32px;
+      align-items:center;
+      padding:8px 0 56px;
+    }
+    .lp-brand h2{
+      font-size:clamp(24px,3vw,32px);
+      font-weight:800;
+      letter-spacing:-.03em;
+      margin:0 0 12px;
+      color:var(--lp-ink);
+    }
+    .lp-brand p{
+      margin:0;
+      font-size:16px;
+      line-height:1.65;
+      color:var(--lp-muted);
+      max-width:34em;
+    }
+    .lp-brand__visual{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      gap:14px;
+    }
+    .lp-brand__road{
+      width:min(260px,70%);
+      border-radius:36px;
+      overflow:hidden;
+      background:#111;
+      padding:8px;
+      aspect-ratio:9 / 19.5;
+      box-shadow:0 24px 56px rgba(15,27,45,.18);
+    }
+    .lp-brand__road img{
+      width:100%; height:100%;
+      object-fit:cover;
+      object-position:center 18%;
+      border-radius:28px;
+      display:block;
+    }
+    .lp-brand__goldie{
+      width:min(120px,32%);
+      border-radius:22px;
+      overflow:hidden;
+      background:#111;
+      padding:5px;
+      aspect-ratio:9 / 19.5;
+      box-shadow:0 16px 36px rgba(15,27,45,.16);
+      transform:translateY(18px);
+    }
+    .lp-brand__goldie img{
+      width:100%; height:100%;
+      object-fit:cover;
+      object-position:center top;
       border-radius:18px;
+      display:block;
     }
-    .lp-close h2{ margin-top:0; }
-    @media (max-width:640px){
-      .lp-phones{ grid-template-columns:1fr 1fr; gap:10px; }
-      .lp-phones .lp-phone:last-child{ grid-column:1 / -1; max-width:55%; margin:0 auto; }
+
+    /* —— FAQ —— */
+    .lp-faq{ padding:0 0 72px; max-width:720px; margin:0 auto; }
+    .lp-faq h2{
+      font-size:26px; font-weight:800; letter-spacing:-.02em;
+      margin:0 0 16px; color:var(--lp-ink);
+    }
+    .lp-faq details{
+      background:rgba(255,255,255,.7);
+      border:1px solid rgba(15,27,45,.08);
+      border-radius:14px;
+      padding:14px 16px;
+      margin-bottom:10px;
+    }
+    .lp-faq summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--lp-ink);
+      list-style:none;
+    }
+    .lp-faq summary::-webkit-details-marker{ display:none; }
+    .lp-faq details p{
+      margin:10px 0 0;
+      font-size:15px;
+      line-height:1.55;
+      color:var(--lp-muted);
+    }
+
+    /* —— Sticky CTA —— */
+    .lp-sticky{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      z-index:90;
+      padding:12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+      background:rgba(251,247,239,.92);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border-top:1px solid rgba(15,27,45,.08);
+      transform:translateY(110%);
+      transition:transform .25s ease;
+      pointer-events:none;
+    }
+    .lp-sticky.is-visible{
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+    .lp-sticky__inner{
+      max-width:480px;
+      margin:0 auto;
+    }
+    .lp-sticky .btn--tf-hero{
+      margin:0;
+      padding:14px 18px;
+      justify-content:center;
+      text-decoration:none;
+    }
+    .lp-sticky .btn--tf-hero__label{ font-size:16px; }
+    .lp-sticky .btn--tf-hero__sub{ font-size:12px; opacity:.85; }
+
+    .lp-page.has-sticky{ padding-bottom:88px; }
+
+    .lp-footer-pad{ height:8px; }
+
+    @media (max-width:860px){
+      .lp-hero__grid{
+        grid-template-columns:1fr;
+        gap:28px;
+      }
+      .lp-hero__visual{ order:2; }
+      .lp-hero__frame{ max-width:300px; }
+      .lp-benefits__grid{ grid-template-columns:1fr; }
+      .lp-step,
+      .lp-step:nth-child(even){
+        grid-template-columns:1fr;
+        gap:20px;
+      }
+      .lp-step:nth-child(even) .lp-step__copy,
+      .lp-step:nth-child(even) .lp-step__media{ order:unset; }
+      .lp-step__media{ order:-1; }
+      .lp-brand{
+        grid-template-columns:1fr;
+        text-align:left;
+      }
+      .lp-brand__visual{ order:-1; margin-bottom:8px; }
+    }
+
+    @media (max-width:420px){
+      .lp-phone{ width:min(240px,84%); }
+      .lp-hero__frame{ max-width:260px; }
     }
   </style>
 </head>
-<body>
+<body class="lp-page">
 
 <header class="header">
   <a class="brand" href="/" aria-label="SunNomad home">
@@ -100,141 +384,179 @@
   <a href="/" class="back-link">← Back to Home</a>
 </header>
 
-<main class="lp">
-  <div class="lp__pill">☀️ Road trip weather</div>
-  <h1>How to find better weather for your next road trip</h1>
-  <p class="lead">
-    A local forecast only answers one question: what happens where you already are.
-    Road trips need a different map — one that shows where the weather gets better within driving distance.
-  </p>
+<main>
+  <section class="lp-hero">
+    <div class="lp-wrap lp-hero__grid">
+      <div class="lp-hero__copy">
+        <div class="lp-kicker">☀️ Road trip weather</div>
+        <h1>Find better weather for your next road trip</h1>
+        <p class="lp-hero__sub">Discover sunnier destinations within driving distance. Compare weather, sunshine and travel distance — and find places worth the drive</p>
+        <div class="lp-cta-stack" id="lp-hero-cta">
+          <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
+            <span class="btn__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            </span>
+            <div class="btn--tf-hero__text">
+              <span class="btn--tf-hero__label">Download free on the App Store</span>
+              <span class="btn--tf-hero__sub">SunNomad for iPhone</span>
+            </div>
+          </a>
+          <p class="lp-micro">Free for iPhone · No account required to explore</p>
+        </div>
+      </div>
+      <div class="lp-hero__visual">
+        <div class="lp-hero__frame">
+          <img
+            src="/assets/road-trip-weather/hero-map.webp"
+            alt="SunNomad weather map showing destinations within driving distance"
+            width="773"
+            height="1445"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="lp__cta">
+  <section class="lp-benefits" aria-label="Why SunNomad">
+    <div class="lp-wrap lp-benefits__grid">
+      <article class="lp-benefit">
+        <div class="lp-benefit__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </div>
+        <h2>Find somewhere better</h2>
+        <p>Discover destinations with better weather instead of checking forecasts one location at a time</p>
+      </article>
+      <article class="lp-benefit">
+        <div class="lp-benefit__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h2>Know when to go</h2>
+        <p>Compare sunshine, temperatures, rain and weather trends before setting off</p>
+      </article>
+      <article class="lp-benefit">
+        <div class="lp-benefit__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-4 7 4v12"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <h2>Know where you can stay</h2>
+        <p>Get practical camping and overnight information at selected destinations</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="lp-how" aria-labelledby="how-heading">
+    <div class="lp-wrap">
+      <div class="lp-how__intro">
+        <h2 id="how-heading">How SunNomad works</h2>
+        <p>Three steps from a grey local forecast to a place worth the drive</p>
+      </div>
+
+      <article class="lp-step">
+        <div class="lp-step__media">
+          <div class="lp-phone">
+            <img src="/assets/road-trip-weather/feature-map.webp" alt="SunNomad map with weather filters and destinations" width="853" height="1844" loading="lazy" />
+          </div>
+        </div>
+        <div class="lp-step__copy">
+          <span class="lp-step__num">Step 1</span>
+          <h3>Find your weather</h3>
+          <p>Set your driving radius, choose your weather preferences and discover destinations on the map</p>
+        </div>
+      </article>
+
+      <article class="lp-step">
+        <div class="lp-step__media">
+          <div class="lp-phone">
+            <img src="/assets/road-trip-weather/feature-worth-the-drive.webp" alt="SunNomad place card with weather badges and Worth the Drive" width="853" height="1844" loading="lazy" />
+          </div>
+        </div>
+        <div class="lp-step__copy">
+          <span class="lp-step__num">Step 2</span>
+          <h3>See what's worth the drive</h3>
+          <p>Compare weather conditions, driving distance and useful weather badges before deciding where to go</p>
+        </div>
+      </article>
+
+      <article class="lp-step">
+        <div class="lp-step__media">
+          <div class="lp-phone">
+            <img src="/assets/road-trip-weather/feature-stay.webp" alt="SunNomad Stop and Stay overnight camping information" width="853" height="1844" loading="lazy" />
+          </div>
+        </div>
+        <div class="lp-step__copy">
+          <span class="lp-step__num">Step 3</span>
+          <h3>Know where you can stay</h3>
+          <p>Explore practical overnight information, campsite options and local restrictions for selected destinations</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="lp-wrap" aria-label="Download SunNomad">
+    <div class="lp-band">
+      <h2>Better weather is out there</h2>
+      <p class="lp-band__sub">Find your next sunny escape with SunNomad</p>
+      <div class="lp-cta-stack">
+        <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
+          <span class="btn__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          </span>
+          <div class="btn--tf-hero__text">
+            <span class="btn--tf-hero__label">Get SunNomad free</span>
+            <span class="btn--tf-hero__sub">Available now on iPhone</span>
+          </div>
+        </a>
+        <p class="lp-micro">Available now on iPhone</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-wrap lp-brand" aria-labelledby="brand-heading">
+    <div>
+      <h2 id="brand-heading">A little less forecasting. A lot more exploring</h2>
+      <p>SunNomad is built for spontaneous detours, unexpected destinations and those days when you'd rather go somewhere with better weather</p>
+    </div>
+    <div class="lp-brand__visual">
+      <div class="lp-brand__road">
+        <img src="/assets/road-trip-weather/feature-road-trip.webp" alt="SunNomad destination view on a road trip" width="853" height="1844" loading="lazy" />
+      </div>
+      <div class="lp-brand__goldie">
+        <img src="/assets/road-trip-weather/feature-goldie.webp" alt="Goldie, SunNomad's travel companion" width="853" height="1844" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-wrap lp-faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">FAQ</h2>
+    <details>
+      <summary>Is SunNomad free?</summary>
+      <p>Yes. SunNomad is free to download on the App Store for iPhone</p>
+    </details>
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>No. You can explore the map, filters and place details as a guest. An account is only needed for favourites and sync across devices</p>
+    </details>
+    <details>
+      <summary>Where is SunNomad available?</summary>
+      <p>Coverage includes the United States, Canada, Mexico, Europe, Turkey and North Africa</p>
+    </details>
+    <details>
+      <summary>Is Android supported?</summary>
+      <p>SunNomad is currently available for iPhone. Android is not available yet</p>
+    </details>
+  </section>
+</main>
+
+<div class="lp-sticky" id="lp-sticky" aria-hidden="true">
+  <div class="lp-sticky__inner">
     <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
-      <span class="btn__icon">🚀</span>
       <div class="btn--tf-hero__text">
-        <span class="btn--tf-hero__label">Download on the App Store</span>
-        <span class="btn--tf-hero__sub">SunNomad · free for iPhone</span>
+        <span class="btn--tf-hero__label">Download free on the App Store</span>
+        <span class="btn--tf-hero__sub">Free for iPhone</span>
       </div>
     </a>
   </div>
-
-  <h2>The problem with “checking the weather”</h2>
-  <p>
-    Most weather apps are built for staying put. You open the forecast for your city,
-    see rain or grey skies, and decide the weekend is ruined.
-  </p>
-  <p>
-    For a road trip that is the wrong framing. The useful question is not
-    “Will it rain here?” — it is “Where is it better within a few hours’ drive?”
-    Sunshine, cooler air, less wind, dry ground for camping: those conditions often exist nearby,
-    just not on the pin you checked first.
-  </p>
-
-  <h2>What “better weather” means on the road</h2>
-  <p>Better is not one number. Depending on the trip, it might mean:</p>
-  <ul>
-    <li>More sunshine hours for a coastal weekend</li>
-    <li>Warmer days when winter has settled in at home</li>
-    <li>Cooler, drier air when heat sits over the plains</li>
-    <li>Less rain before you commit to a mountain pass or a wild camp</li>
-  </ul>
-  <p>
-    Distance matters too. A perfect forecast 900&nbsp;km away is not the same as a good one
-    180&nbsp;km away. Road-trip weather is always a trade: conditions versus drive time.
-  </p>
-
-  <h2>How SunNomad answers that</h2>
-  <p>
-    SunNomad is a weather map built for that trade. You set a radius, pick a day
-    (up to +10), and see destinations that match what you are looking for —
-    not a single city forecast, but a field of options.
-  </p>
-
-  <div class="lp-phones">
-    <div class="lp-phone"><img src="/assets/berlin_map.webp" alt="SunNomad weather map showing destinations around a radius" loading="lazy" /></div>
-    <div class="lp-phone"><img src="/assets/filter_us.webp" alt="SunNomad filters for weather and landscape" loading="lazy" /></div>
-    <div class="lp-phone"><img src="/assets/moab_stopstay.webp" alt="SunNomad place detail with Stop &amp; Stay hints" loading="lazy" /></div>
-  </div>
-  <p class="lp-caption">Map → filters → place details. From “somewhere better” to “is this worth the drive?”</p>
-
-  <h3>1. Start from where you are</h3>
-  <p>
-    Open the map, set your location, and choose how far you are willing to drive.
-    That radius turns a vague hope (“maybe the coast is nicer”) into a searchable field.
-  </p>
-
-  <h3>2. Filter for the weather you actually want</h3>
-  <p>
-    Use weather chips for sun, rain, snow, and more — plus landscape filters for
-    mountains, coast, or lakes. Sort warmer or cooler when the season demands it.
-    Badges such as Worth the Drive, Warm &amp; Dry, Sunny Streak, or Indian Summer
-    highlight conditions that are useful for a trip, not just a temperature number.
-  </p>
-
-  <div class="lp-example">
-    <p class="lp-example__label">Example</p>
-    <p style="margin:0;">
-      Grey Friday in Berlin. You set 250&nbsp;km, filter for more sun, and the map lights up
-      places that look better for Saturday — before you pack the van on a guess.
-    </p>
-  </div>
-
-  <h3>3. Open a place and decide</h3>
-  <p>
-    Each destination has forecasts, badges, and Stop &amp; Stay hints —
-    where camping looks realistic, what the alternative is, whether freestanding is an option.
-    That is the step weather apps usually skip: connecting the forecast to a place you can actually go.
-  </p>
-
-  <div class="lp-example">
-    <p class="lp-example__label">Example</p>
-    <p style="margin:0;">
-      Moab looks dry and clear for the day you picked. You open Stop &amp; Stay,
-      check overnight options, then open directions in Apple Maps or Google Maps —
-      your preferred maps app is remembered next time.
-    </p>
-  </div>
-
-  <h3>4. Or let the dice decide</h3>
-  <p>
-    Feeling Lucky is for when you know the mood — sunshine, cooler air, wilderness, get away —
-    but not the pin. Set the radius, roll, and if the first result is wrong, roll again from that destination.
-    Useful when November sits on the calendar and you need an escape more than a spreadsheet.
-  </p>
-
-  <h2>A simple checklist before you drive</h2>
-  <ul>
-    <li>How far are you willing to go — really?</li>
-    <li>Which day matters most (arrival, weekend peak, or the day of a hike)?</li>
-    <li>What does “better” mean this time: sun, cooler, drier, less wind?</li>
-    <li>Is there a place worth the drive, not only a nicer forecast?</li>
-    <li>Where can you stay if the day runs long?</li>
-  </ul>
-  <p>
-    SunNomad is built around those questions. Guest mode covers map, filters, and place details;
-    an account is only needed for favourites and sync.
-  </p>
-
-  <div class="lp-close">
-    <h2>Ready to look past the local forecast?</h2>
-    <p>
-      SunNomad is free on the App Store for iPhone. Coverage includes the United States,
-      Canada, Mexico, Europe, Turkey, and North Africa.
-    </p>
-    <div class="lp__cta">
-      <a class="btn btn--tf btn--tf-hero" href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_road_trip_weather&mt=8">
-        <span class="btn__icon">🚀</span>
-        <div class="btn--tf-hero__text">
-          <span class="btn--tf-hero__label">Download SunNomad</span>
-          <span class="btn--tf-hero__sub">Find better weather. Drive there.</span>
-        </div>
-      </a>
-    </div>
-    <p style="margin:16px 0 0;font-size:14px;color:rgba(15,27,45,.55);">
-      Or go back to the <a href="/">homepage</a> · see <a href="/updates.html">Updates</a>
-    </p>
-  </div>
-</main>
+</div>
 
 <footer class="footer">
   <div class="footer__left">
@@ -252,10 +574,30 @@
     <a href="/terms">Terms</a>
     <a href="/privacy">Privacy</a>
     <a href="/support">Support</a>
-    <a href="https://www.linkedin.com/company/goldieapps" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href="mailto:hola@sunnomad.app">Contact</a>
   </div>
 </footer>
+<div class="lp-footer-pad" aria-hidden="true"></div>
+
+<script>
+  (function () {
+    var heroCta = document.getElementById("lp-hero-cta");
+    var sticky = document.getElementById("lp-sticky");
+    if (!heroCta || !sticky || !("IntersectionObserver" in window)) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        var entry = entries[0];
+        var show = entry && !entry.isIntersecting;
+        sticky.classList.toggle("is-visible", show);
+        sticky.setAttribute("aria-hidden", show ? "false" : "true");
+        document.body.classList.toggle("has-sticky", show);
+      },
+      { threshold: 0, rootMargin: "0px 0px 0px 0px" }
+    );
+    observer.observe(heroCta);
+  })();
+</script>
 
 </body>
 </html>
