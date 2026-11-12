@@ -29,7 +29,19 @@
     }
     .bd-lead{
       color:var(--muted); font-size:clamp(16px,2vw,19px);
-      line-height:1.5; margin:0 0 40px; max-width:34em;
+      line-height:1.5; margin:0 0 28px; max-width:34em;
+    }
+    .bd-hero{
+      margin:0 0 44px; max-width:420px;
+    }
+    .bd-hero img{
+      display:block; width:100%; height:auto;
+      border-radius:18px;
+      box-shadow:0 18px 48px rgba(15,27,45,.14);
+    }
+    .bd-hero figcaption{
+      margin:12px 0 0; font-size:15px; line-height:1.45;
+      color:rgba(15,27,45,.68); max-width:34em;
     }
     .bd-cat{ margin:0 0 36px; }
     .bd-cat h2{
@@ -107,6 +119,17 @@
   <div class="bd-pill">☀️ Weather Badges</div>
   <h1>Every Badge Tells a Weather Story</h1>
   <p class="bd-lead">From glorious sunshine to spectacularly bad luck.</p>
+
+  <figure class="bd-hero">
+    <img
+      src="/assets/badges/map-symbols.webp"
+      alt="SunNomad map with weather chips and small badge symbols on destinations"
+      width="473"
+      height="1024"
+      loading="eager"
+    />
+    <figcaption>What do those little symbols on the map mean? Here&rsquo;s the decoder.</figcaption>
+  </figure>
 
   <section class="bd-cat" aria-labelledby="cat-drive">
     <h2 id="cat-drive">Worth the trip</h2>
