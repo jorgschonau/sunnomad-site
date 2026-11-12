@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Badges — SunNomad</title>
+  <meta name="description" content="Every SunNomad weather badge explained — Worth the Drive, Sunny Streak, Heatwave, Weather Curse, Indian Summer and more. See when each badge appears." />
+  <meta name="theme-color" content="#fbf7ef" />
+  <link rel="canonical" href="https://sunnomad.app/badges" />
+  <meta property="og:title" content="Every Badge Tells a Weather Story" />
+  <meta property="og:description" content="From glorious sunshine to spectacularly bad luck — all SunNomad weather badges and when they appear." />
+  <meta property="og:url" content="https://sunnomad.app/badges" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sunnomad.app/assets/sunnomad-logo.png" />
+  <link rel="icon" href="/assets/logo.png" />
+  <link rel="stylesheet" href="/styles.css?v=20261109e" />
+  <style>
+    .bd-page{ max-width:1120px; margin:0 auto; padding:20px 20px 80px; }
+    .bd-pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 14px; border-radius:999px;
+      background:rgba(197,106,26,.12); color:var(--accent);
+      font-weight:800; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .bd-page h1{
+      font-size:clamp(32px,4.5vw,52px); font-weight:800;
+      letter-spacing:-.04em; line-height:1.08; margin:0 0 12px; color:var(--ink);
+    }
+    .bd-lead{
+      color:var(--muted); font-size:clamp(16px,2vw,19px);
+      line-height:1.5; margin:0 0 40px; max-width:34em;
+    }
+    .bd-cat{ margin:0 0 36px; }
+    .bd-cat h2{
+      font-size:13px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+      color:rgba(15,27,45,.45); margin:0 0 16px; padding-bottom:10px;
+      border-bottom:1px solid rgba(15,27,45,.08);
+    }
+    .bd-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:18px;
+    }
+    .bd-card{
+      background:rgba(255,255,255,.82);
+      border:1px solid rgba(15,27,45,.08);
+      border-radius:18px;
+      padding:22px 20px 20px;
+      box-shadow:0 12px 32px rgba(15,27,45,.06);
+      display:flex; flex-direction:column; gap:10px;
+      min-height:100%;
+    }
+    .bd-card__top{ display:flex; align-items:center; gap:14px; }
+    .bd-icon{
+      width:52px; height:52px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; font-size:26px; line-height:1;
+      box-shadow:0 0 0 1px rgba(15,27,45,.06) inset;
+    }
+    .bd-icon img{ width:52px; height:52px; border-radius:50%; object-fit:cover; display:block; }
+    .bd-icon svg{ display:block; }
+    .bd-card h3{
+      margin:0; font-size:18px; font-weight:800; letter-spacing:-.02em;
+      color:var(--ink); line-height:1.2;
+    }
+    .bd-blurb{
+      margin:0; font-size:14px; font-weight:600;
+      color:rgba(15,27,45,.62); line-height:1.35;
+    }
+    .bd-when{
+      margin:4px 0 0; font-size:14px; line-height:1.55;
+      color:rgba(15,27,45,.72);
+    }
+    .bd-when strong{
+      display:block; font-size:11px; font-weight:800;
+      letter-spacing:.08em; text-transform:uppercase;
+      color:rgba(15,27,45,.4); margin-bottom:4px;
+    }
+    .bd-note{
+      margin:8px 0 0; padding:16px 18px;
+      background:rgba(197,106,26,.08); border-radius:14px;
+      font-size:14px; line-height:1.55; color:rgba(15,27,45,.7);
+      max-width:42em;
+    }
+    .bd-cta{ margin-top:28px; }
+    .bd-cta a{
+      color:var(--accent); font-weight:700; text-decoration:none;
+    }
+    .bd-cta a:hover{ text-decoration:underline; }
+    @media (max-width:520px){
+      .bd-grid{ grid-template-columns:1fr; gap:14px; }
+      .bd-card{ padding:18px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a class="brand" href="/" aria-label="SunNomad home">
+    <img class="brand__logo--hero" src="/assets/sunnomad-logo.png" alt="SunNomad logo" />
+  </a>
+  <a href="/" class="back-link">← Back to Home</a>
+</header>
+
+<main class="bd-page">
+  <div class="bd-pill">☀️ Weather Badges</div>
+  <h1>Every Badge Tells a Weather Story</h1>
+  <p class="bd-lead">From glorious sunshine to spectacularly bad luck.</p>
+
+  <section class="bd-cat" aria-labelledby="cat-drive">
+    <h2 id="cat-drive">Worth the trip</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#FFD700;" aria-hidden="true">🚗</div>
+          <div>
+            <h3>Worth the Drive</h3>
+            <p class="bd-blurb">Best weather gain per km</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          A place at least ~30 km away that is clearly better than where you are — warmer in warm mode, or cooler in cool mode — with enough weather gain for the drive. Skipped when a Weather Curse or a severe forecast drop would spoil the trip. Road-isolated island/mainland mismatches are excluded.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#4CAF50;" aria-hidden="true">💰</div>
+          <div>
+            <h3>Budget Pick</h3>
+            <p class="bd-blurb">Good weather, closer distance — saves fuel</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          The most efficient nearby escape: solid temperature gain for fewer kilometres (at least ~30 km, usually within half your search radius). Ranked against other places in range — typically the top budget pick.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="bd-cat" aria-labelledby="cat-sun">
+    <h2 id="cat-sun">Sunshine &amp; warmth</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#F5F5F5;" aria-hidden="true">
+            <img src="/assets/badges/warmanddry.png" alt="" width="52" height="52" />
+          </div>
+          <div>
+            <h3>Warm &amp; Dry</h3>
+            <p class="bd-blurb">Max warmth with good conditions</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          Warm enough for the season (≥28 °C in Jun–Aug, ≥22 °C in May/Sep, ≥20 °C otherwise), not rainy or snowy today, wind ≤30 km/h, little precipitation, and mostly dry across the next few forecast days. Not shown with Heatwave or Beach Paradise.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#00BCD4;" aria-hidden="true">🌊</div>
+          <div>
+            <h3>Beach Paradise</h3>
+            <p class="bd-blurb">Perfect beach weather — warm, sunny, light wind</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          Only on beaches: 20–35 °C, sunny or partly cloudy, wind ≤25 km/h.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#FFA726;" aria-hidden="true">☀️</div>
+          <div>
+            <h3>Sunny Streak</h3>
+            <p class="bd-blurb">Days of sunshine in a row — stable weather</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          The selected day is sunny, at least 3 of the next 5 forecast slots are sunny, temperature ≥10 °C, and there’s a long sunny day (≥8 hours of sunshine when that data is available). Not shown with Heatwave.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#F5F5F5;" aria-hidden="true">
+            <img src="/assets/badges/heatwave.png" alt="" width="52" height="52" />
+          </div>
+          <div>
+            <h3>Heatwave</h3>
+            <p class="bd-blurb">Several scorching days with no heavy rain</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          At least 3 days at or above 34 °C, and no heavy rain or thunderstorm in that window. In cool-search mode it only shows if the place is still clearly cooler than where you started.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#7ED957;" aria-hidden="true">🐇</div>
+          <div>
+            <h3>Spring Awakening</h3>
+            <p class="bd-blurb">Pure spring: mild, sunny &amp; perfect for exploring</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          Only 1 March–15 May, north of about 45°N: 16–24 °C, sunny, wind ≤20 km/h.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#6B4938;" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#F4E6C8" aria-hidden="true"><path d="M17 8C8 10 5.9 16.17 3.82 21.33L5.71 22.17C7.25 18.06 9.07 14.22 12.67 12.5C13.5 14.83 14.5 16.83 15.67 18.5C17.5 16.17 19.17 13.5 20.5 10.5C19.33 9.5 18.17 8.67 17 8M12.5 3C10.5 5.5 9.67 7.83 9.5 10C11.83 9.17 14 8.5 16.5 8C15.17 6 13.83 4.33 12.5 3Z"/></svg>
+          </div>
+          <div>
+            <h3>Indian Summer</h3>
+            <p class="bd-blurb">Autumn at its golden best: mild, sunny and perfect for exploring</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          You’re starting from roughly 40°N or further north. Destinations north of 45°N: 1 Sep–31 Oct. Between 35°N and 45°N: 1 Oct–30 Nov. Selected day sunny, 15–29 °C, wind ≤20 km/h, plus at least 2 matching days in a 5-day window. Deserts are excluded.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="bd-cat" aria-labelledby="cat-turns">
+    <h2 id="cat-turns">Plot twists</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#E91E63;" aria-hidden="true">🌈</div>
+          <div>
+            <h3>Weather Miracle</h3>
+            <p class="bd-blurb">Bad today → sunny &amp; warmer soon</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          Today is rainy, snowy or windy, and tomorrow or the day after turns sunny with at least 5 °C warmer.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#37474F;" aria-hidden="true">⛈️</div>
+          <div>
+            <h3>Weather Curse</h3>
+            <p class="bd-blurb">Looking good now — deteriorating soon</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          Today is warmer than 10 °C with decent weather (sunny to overcast), then at least 2 of the next 3 days turn rainy, snowy or windy, and it cools by 5 °C or more.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="bd-cat" aria-labelledby="cat-elements">
+    <h2 id="cat-elements">Snow &amp; rain</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#2196F3;" aria-hidden="true">⛄</div>
+          <div>
+            <h3>Snow King</h3>
+            <p class="bd-blurb">Reliable snow — built for cold adventures</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          Places under ~150k population. Winter (Nov–Mar), or high Alps above 2000 m year-round. Qualifies via heavy snow (≥20 mm/24h, avg ≤2 °C), consistent snow (≥3 snow days, ≥10 mm, avg ≤0 °C), or deep freeze (≥1 snow day, avg ≤−5 °C, max ≤−1 °C).
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#607D8B;" aria-hidden="true">🌧️</div>
+          <div>
+            <h3>Rainy Days</h3>
+            <p class="bd-blurb">A proper wet spell — not just a drizzle</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          <strong>When it appears</strong>
+          At least 3 rainy days in the near forecast, including at least one heavy or intense rain.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <p class="bd-note">
+    Badge rules come straight from the SunNomad app. Thresholds can interact — for example Heatwave suppresses Warm &amp; Dry and Sunny Streak, and Beach Paradise replaces Warm &amp; Dry on beaches.
+  </p>
+
+  <p class="bd-cta">
+    See them live in the app —
+    <a href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_badges&mt=8">Download SunNomad on the App Store</a>
+  </p>
+</main>
+
+<footer class="footer">
+  <div class="footer__left">
+    <div class="publisher">
+      <img class="publisher__logo" src="/assets/goldieapps.png" alt="GoldieApps" />
+      <div class="publisher__text">
+        <div class="publisher__line"><strong><a href="https://www.linkedin.com/company/goldieapps" target="_blank" rel="noopener noreferrer">GoldieApps</a></strong></div>
+        <div class="publisher__line" style="font-size:14px;color:rgba(15,27,45,.60);">© GoldieApps 2026</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__right">
+    <a href="/">Home</a>
+    <a href="/updates.html">Updates</a>
+    <a href="/badges">Weather Badges</a>
+    <a href="/road-trip-weather">Road trip weather</a>
+    <a href="/terms">Terms</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+    <a href="mailto:hola@sunnomad.app">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
