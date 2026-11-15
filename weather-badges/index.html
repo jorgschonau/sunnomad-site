@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Badges — SunNomad</title>
+  <meta name="description" content="Every SunNomad weather badge explained — Worth the Drive, Sunny Streak, Heatwave, Weather Curse, Indian Summer and more. See when each badge appears." />
+  <meta name="theme-color" content="#fbf7ef" />
+  <link rel="canonical" href="https://sunnomad.app/weather-badges" />
+  <meta property="og:title" content="Every Badge Tells a Weather Story" />
+  <meta property="og:description" content="From glorious sunshine to spectacularly bad luck — all SunNomad weather badges and when they appear." />
+  <meta property="og:url" content="https://sunnomad.app/weather-badges" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sunnomad.app/assets/sunnomad-logo.png?v=20261112" />
+  <link rel="icon" href="/assets/logo.png" />
+  <link rel="stylesheet" href="/styles.css?v=20261109e" />
+  <style>
+    .bd-page{ max-width:1120px; margin:0 auto; padding:20px 20px 80px; }
+    .bd-pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 14px; border-radius:999px;
+      background:rgba(197,106,26,.12); color:var(--accent);
+      font-weight:800; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .bd-page h1{
+      font-size:clamp(32px,4.5vw,52px); font-weight:800;
+      letter-spacing:-.04em; line-height:1.08; margin:0 0 12px; color:var(--ink);
+    }
+    .bd-lead{
+      color:var(--muted); font-size:clamp(16px,2vw,19px);
+      line-height:1.5; margin:0 0 28px; max-width:34em;
+    }
+    .bd-hero{
+      margin:0 0 44px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:28px 36px;
+      max-width:720px;
+    }
+    .bd-hero figcaption{
+      margin:0; flex:1 1 0; min-width:0;
+      font-size:clamp(16px,2vw,19px); line-height:1.5;
+      color:rgba(15,27,45,.72); max-width:28em;
+    }
+    .bd-hero img{
+      display:block; width:240px; max-width:42vw; height:auto;
+      flex:0 0 auto;
+      border-radius:0;
+      background:transparent;
+      box-shadow:none;
+      filter:drop-shadow(0 14px 28px rgba(15,27,45,.22));
+    }
+    .bd-cat{ margin:0 0 36px; }
+    .bd-cat h2{
+      font-size:13px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+      color:rgba(15,27,45,.45); margin:0 0 16px; padding-bottom:10px;
+      border-bottom:1px solid rgba(15,27,45,.08);
+    }
+    .bd-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:18px;
+    }
+    .bd-card{
+      background:rgba(255,255,255,.82);
+      border:1px solid rgba(15,27,45,.08);
+      border-radius:18px;
+      padding:22px 20px 20px;
+      box-shadow:0 12px 32px rgba(15,27,45,.06);
+      display:flex; flex-direction:column; gap:10px;
+      min-height:100%;
+    }
+    .bd-card__top{ display:flex; align-items:center; gap:14px; }
+    .bd-icon{
+      width:52px; height:52px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; font-size:26px; line-height:1;
+      box-shadow:0 0 0 1px rgba(15,27,45,.06) inset;
+    }
+    .bd-icon img{ width:52px; height:52px; border-radius:50%; object-fit:cover; display:block; }
+    .bd-icon svg{ display:block; }
+    .bd-card h3{
+      margin:0; font-size:18px; font-weight:800; letter-spacing:-.02em;
+      color:var(--ink); line-height:1.2;
+    }
+    .bd-blurb{
+      margin:0; font-size:14px; font-weight:600;
+      color:rgba(15,27,45,.62); line-height:1.35;
+    }
+    .bd-when{
+      margin:4px 0 0; font-size:14px; line-height:1.55;
+      color:rgba(15,27,45,.72);
+    }
+    .bd-when strong{
+      display:block; font-size:11px; font-weight:800;
+      letter-spacing:.08em; text-transform:uppercase;
+      color:rgba(15,27,45,.4); margin-bottom:4px;
+    }
+    .bd-note{
+      margin:8px 0 0; padding:16px 18px;
+      background:rgba(197,106,26,.08); border-radius:14px;
+      font-size:14px; line-height:1.55; color:rgba(15,27,45,.7);
+      max-width:42em;
+    }
+    .bd-cta{ margin-top:28px; }
+    .bd-cta a{
+      color:var(--accent); font-weight:700; text-decoration:none;
+    }
+    .bd-cta a:hover{ text-decoration:underline; }
+    @media (max-width:640px){
+      .bd-hero{ flex-direction:column; align-items:flex-start; gap:18px; }
+      .bd-hero img{ width:200px; max-width:52vw; align-self:flex-end; }
+    }
+    @media (max-width:520px){
+      .bd-grid{ grid-template-columns:1fr; gap:14px; }
+      .bd-card{ padding:18px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a class="brand" href="/" aria-label="SunNomad home">
+    <img class="brand__logo--hero" src="/assets/sunnomad-logo.png?v=20261112" alt="SunNomad logo" />
+  </a>
+  <a href="/" class="back-link">← Back to Home</a>
+</header>
+
+<main class="bd-page">
+  <div class="bd-pill">☀️ Weather Badges</div>
+  <h1>Every Badge Tells a Weather Story</h1>
+  <p class="bd-lead">From glorious sunshine to spectacularly bad luck.</p>
+
+  <figure class="bd-hero">
+    <figcaption>Ever wondered what those little icons on the SunNomad map mean? Here&rsquo;s how to read them.</figcaption>
+    <img
+      src="/assets/badges/map-symbols.webp?v=20261112e"
+      alt="SunNomad map with weather badges on destinations — car, money bag, and rain cloud"
+      width="498"
+      height="1024"
+      loading="eager"
+    />
+  </figure>
+
+  <section class="bd-cat" aria-labelledby="cat-drive">
+    <h2 id="cat-drive">Worth the trip</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#FFD700;" aria-hidden="true">🚗</div>
+          <div>
+            <h3>Worth the Drive</h3>
+            <p class="bd-blurb">Best weather gain per km</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Marks a place where the weather upgrade clearly pays for the drive. Use it when you want the kilometres to feel worth it.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#4CAF50;" aria-hidden="true">💰</div>
+          <div>
+            <h3>Budget Pick</h3>
+            <p class="bd-blurb">Good weather, closer distance — saves fuel</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Better weather without going far. Helps you upgrade the forecast while keeping fuel and drive time down.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="bd-cat" aria-labelledby="cat-sun">
+    <h2 id="cat-sun">Sunshine &amp; warmth</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#F5F5F5;" aria-hidden="true">
+            <img src="/assets/badges/warmanddry.png" alt="" width="52" height="52" />
+          </div>
+          <div>
+            <h3>Warm &amp; Dry</h3>
+            <p class="bd-blurb">Max warmth with good conditions</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Warm, settled weather with little rain. A reliable pick when you want outdoor days without watching the radar.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#00BCD4;" aria-hidden="true">🌊</div>
+          <div>
+            <h3>Beach Paradise</h3>
+            <p class="bd-blurb">Perfect beach weather — warm, sunny, light wind</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Classic beach weather — warm, sunny, and calm. Spots the days when sand and swim time actually work.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#FFA726;" aria-hidden="true">☀️</div>
+          <div>
+            <h3>Sunny Streak</h3>
+            <p class="bd-blurb">Days of sunshine in a row — stable weather</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          A run of sunny days, not a one-off blue sky. Useful when you need several outdoor days you can count on.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#F5F5F5;" aria-hidden="true">
+            <img src="/assets/badges/heatwave.png" alt="" width="52" height="52" />
+          </div>
+          <div>
+            <h3>Heatwave</h3>
+            <p class="bd-blurb">Several scorching days with no heavy rain</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          A stretch of seriously hot days ahead. Plan shade and quieter midday hours — or look for somewhere cooler.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="bd-cat" aria-labelledby="cat-seasonal">
+    <h2 id="cat-seasonal">Seasonal</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#7ED957;" aria-hidden="true">🐇</div>
+          <div>
+            <h3>Spring Awakening</h3>
+            <p class="bd-blurb">Pure spring: mild, sunny &amp; perfect for exploring</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Mild, sunny spring weather made for getting outside again. Great for early-season trips before summer crowds.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#6B4938;" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#EFA83A" aria-hidden="true"><path d="M21.79,13L16,16L17,18L13,17.25V21H11V17.25L7,18L8,16L2.21,13L3.21,11.27L1.61,8L5.21,7.77L6.21,6L9.63,9.9L8,5H10L12,2L14,5H16L14.37,9.9L17.79,6L18.79,7.73L22.39,7.96L20.79,11.19L21.79,13Z"/></svg>
+          </div>
+          <div>
+            <h3>Indian Summer</h3>
+            <p class="bd-blurb">Autumn at its golden best: mild, sunny and perfect for exploring</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Golden autumn days that still feel mild and sunny. Ideal for late-season drives before winter takes over.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="bd-cat" aria-labelledby="cat-turns">
+    <h2 id="cat-turns">Plot twists</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#E91E63;" aria-hidden="true">🌈</div>
+          <div>
+            <h3>Weather Miracle</h3>
+            <p class="bd-blurb">Bad today → sunny &amp; warmer soon</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Rough today, then a clear turn for the better soon. Helps you wait a day or two instead of canceling the trip.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#37474F;" aria-hidden="true">⛈️</div>
+          <div>
+            <h3>Weather Curse</h3>
+            <p class="bd-blurb">Looking good now — deteriorating soon</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Looks fine now, then weather turns worse. A heads-up to go sooner, shorten the stay, or pick another stop.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="bd-cat" aria-labelledby="cat-elements">
+    <h2 id="cat-elements">Snow &amp; rain</h2>
+    <div class="bd-grid">
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#2196F3;" aria-hidden="true">⛄</div>
+          <div>
+            <h3>Snow King</h3>
+            <p class="bd-blurb">Reliable snow — built for cold adventures</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          Reliable snow for cold adventures. Points you to winter-ready places, not just a light dusting.
+        </p>
+      </article>
+
+      <article class="bd-card">
+        <div class="bd-card__top">
+          <div class="bd-icon" style="background:#607D8B;" aria-hidden="true">🌧️</div>
+          <div>
+            <h3>Rainy Days</h3>
+            <p class="bd-blurb">A proper wet spell — not just a drizzle</p>
+          </div>
+        </div>
+        <p class="bd-when">
+          A proper wet spell ahead. Plan indoor options, flexible timing, or a drier destination.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <p class="bd-cta">
+    See them live in the app —
+    <a href="https://apps.apple.com/app/apple-store/id6759536165?pt=128581418&ct=website_badges&mt=8">Download SunNomad on the App Store</a>
+  </p>
+</main>
+
+<footer class="footer">
+  <div class="footer__left">
+    <div class="publisher">
+      <img class="publisher__logo" src="/assets/goldieapps.png" alt="GoldieApps" />
+      <div class="publisher__text">
+        <div class="publisher__line"><strong><a href="https://www.linkedin.com/company/goldieapps" target="_blank" rel="noopener noreferrer">GoldieApps</a></strong></div>
+        <div class="publisher__line" style="font-size:14px;color:rgba(15,27,45,.60);">© GoldieApps 2026</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__right">
+    <a href="/">Home</a>
+    <a href="/updates.html">Updates</a>
+    <a href="/terms">Terms</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+    <a href="mailto:hola@sunnomad.app">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
